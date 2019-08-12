@@ -1,0 +1,21 @@
+Circuit: * H:\CS301 STUFF\301_Sensor (scheme)\301_Sensor\301_model.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Mon Aug 12 16:26:16 2019
+Total elapsed time: 0.989 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 65970
+traniter = 65940
+tranpoints = 16691
+accept = 11290
+rejected = 5401
+matrix size = 21
+fillins = 6
+solver = Normal
+Matrix Compiler1: 1.20 KB object code size  0.4/0.2/[0.1]
+Matrix Compiler2: off  [0.2]/0.2/0.3
+
