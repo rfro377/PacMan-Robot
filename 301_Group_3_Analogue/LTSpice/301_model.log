@@ -1,64 +1,21 @@
-Circuit: * E:\301\PacMan-Robot\301_Group_3_Analogue\LTSpice\301_model.asc
+Circuit: * D:\PacMan-Robot\301_Group_3_Analogue\LTSpice\301_model.asc
 
-Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
-Starting Gmin stepping
-Gmin = 10
-Gmin = 1.07374
-Gmin = 0.115292
-Gmin = 0.0123794
-Gmin = 0.00132923
-vernier = 0.5
-vernier = 0.25
-Gmin = 0.000453913
-vernier = 0.333333
-vernier = 0.444444
-Gmin = 0.000201478
-vernier = 0.592592
-Gmin = 5.77045e-005
-vernier = 0.790123
-vernier = 1
-Gmin = 8.01401e-006
-Gmin = 8.60498e-007
-vernier = 0.5
-vernier = 0.25
-vernier = 0.125
-vernier = 0.0625
-vernier = 0.03125
-vernier = 0.015625
-vernier = 0.0078125
-vernier = 0.00390625
-vernier = 0.00195313
-Gmin = 8.60498e-007
-vernier = 0.000976563
-vernier = 0.000488281
-Gmin = 0
-Gmin stepping failed
+Direct Newton iteration for .op point succeeded.
 
-Starting source stepping with srcstepmethod=0
-Source Step = 3.0303%
-vernier = 0.25
-Source Step = 0.0177557%
-Starting source stepping with srcstepmethod=1
-Source Step = 3.0303%
-vernier = 0.25
-Source stepping failed
-
-Pseudo Transient succeeded in finding the operating point at 346.893 ms.
-
-Date: Mon Aug 12 23:19:57 2019
-Total elapsed time: 4.802 seconds.
+Date: Tue Aug 13 13:03:48 2019
+Total elapsed time: 0.410 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 90901
-traniter = 72375
-tranpoints = 18401
-accept = 12439
-rejected = 6233
+totiter = 74874
+traniter = 74844
+tranpoints = 18963
+accept = 12828
+rejected = 6135
 matrix size = 23
-fillins = 18
+fillins = 6
 solver = Normal
-Matrix Compiler1: 1.74 KB object code size  2.6/1.8/[0.4]
-Matrix Compiler2: 2.16 KB object code size  1.8/2.9/[0.9]
+Matrix Compiler1: 1.26 KB object code size  0.4/0.2/[0.1]
+Matrix Compiler2: off  [0.2]/0.2/0.3
 
