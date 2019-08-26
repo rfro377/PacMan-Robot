@@ -147,24 +147,15 @@ uint8 dataParser(char rx){
 					UART_index = 0;
 					return 0;
 				}
+				UART_startString = 0;
+				return 0;
 			    break;
 			case 1:
-				if (checkNumeric(rx) == 1){
-					appendChar(indexnumber, rx, UART_index);
-					UART_index++;
+				if (processChar(rx, indexnumber) == 0){
 					return 0;
 				}
-				if (checkComma(rx) == 1){
-					if (UART_index == 0){
-						UART_startString = 0;
-						return 0;
-					}
-					else{
-						UART_comma++;
-						UART_index = 0;
-						return 0;
-					}
-				}
+				UART_startString = 0;
+				return 0;
 			    break;
 			case 2:
 				if (checkLeftBracket(rx) == 1){
@@ -177,59 +168,22 @@ uint8 dataParser(char rx){
 				}
 				break;
 			case 3:
-				if (checkNumeric(rx) == 1){
-					appendChar(xpos, rx, UART_index);
-					UART_index++;
+				if (processChar(rx, xpos) == 0){
 					return 0;
 				}
-				if (checkComma(rx) == 1){
-					if (UART_index == 0){
-						UART_startString = 0;
-						return 0;
-					}
-					else{
-						UART_comma++;
-						UART_index = 0;
-						return 0;
-					}
-				}
+				UART_startString = 0;
+				return 0;
 				break;
-					break;
 			case 4:
-				if (checkNumeric(rx) == 1){
-					appendChar(ypos, rx, UART_index);
-					UART_index++;
+				if (processChar(rx, ypos) == 0){
 					return 0;
 				}
-				if (checkComma(rx) == 1){
-					if (UART_index == 0){
-						UART_startString = 0;
-						return 0;
-					}
-					else{
-						UART_comma++;
-						UART_index = 0;
-						return 0;
-					}
-				}
+				UART_startString = 0;
+				return 0;
 				break;
-					break;
 			case 5:
-				if (checkNumeric(rx) == 1){
-					appendChar(angle10, rx, UART_index);
-					UART_index++;
+				if (processChar(rx, angle10) == 0){
 					return 0;
-				}
-				if (checkComma(rx) == 1){
-					if (UART_index == 0){
-						UART_startString = 0;
-						return 0;
-					}
-					else{
-						UART_comma++;
-						UART_index = 0;
-						return 0;
-					}
 				}
 				if (checkRightBracket(rx) == 1){
 					if (UART_index == 0){
@@ -241,6 +195,8 @@ uint8 dataParser(char rx){
 						return 1;
 					}
 				}
+				UART_startString = 0;
+				return 0;
 				break;
 	    }
 	}
@@ -249,13 +205,13 @@ uint8 dataParser(char rx){
 
 uint8 processChar(char rx, char* s){
 	if (checkNumeric(rx) == 1){
-		appendChar(angle10, rx, UART_index);
+		appendChar(s, rx, UART_index);
 		UART_index++;
 		return 0;
 	}
 	if (checkComma(rx) == 1){
 		if (UART_index == 0){
-			ART_startString = 0;
+			UART_startString = 0;
 			return 0;
 		}
 		else{
