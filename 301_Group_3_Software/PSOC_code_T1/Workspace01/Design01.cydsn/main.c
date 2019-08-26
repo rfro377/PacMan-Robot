@@ -45,6 +45,9 @@ OPT_ROTS equation
     uint8 UART_dataReady = 0;
     char rssi[4];
 	char indexnumber[3];
+    char xloc[4];
+    char yloc[4];
+    char angle10[3];
     uint8 UART_startString = 0;
     uint8 UART_comma = 0;
 	uint8 UART_index = 0;
@@ -54,6 +57,8 @@ OPT_ROTS equation
 uint8 checkNumeric(char rx);
 uint8 checkNegative(char rx);
 uint8 checkComma(char rx);
+uint8 checkLeftBracket(char rx);
+uint8 checkRighttBracket(char rx);
 void appendChar(char* s, char rx, uint8 ind);
 
 void moveForward(){
@@ -154,13 +159,112 @@ uint8 dataParser(char rx){
 						UART_startString = 0;
 						return 0;
 					}
-					UART_startString = 0;
-					return 1;
+					else{
+						UART_comma++;
+						UART_index = 0;
+						return 0;
+					}
 				}
 			    break;
+			case 2:
+				if (checkLeftBracket(rx) == 1){
+					UART_comma++;
+					return 0;
+				}
+				else{
+					UART_startString = 0;
+					return 0;
+				}
+				break;
+			case 3:
+				if (checkNumeric(rx) == 1){
+					appendChar(xpos, rx, UART_index);
+					UART_index++;
+					return 0;
+				}
+				if (checkComma(rx) == 1){
+					if (UART_index == 0){
+						UART_startString = 0;
+						return 0;
+					}
+					else{
+						UART_comma++;
+						UART_index = 0;
+						return 0;
+					}
+				}
+				break;
+					break;
+			case 4:
+				if (checkNumeric(rx) == 1){
+					appendChar(ypos, rx, UART_index);
+					UART_index++;
+					return 0;
+				}
+				if (checkComma(rx) == 1){
+					if (UART_index == 0){
+						UART_startString = 0;
+						return 0;
+					}
+					else{
+						UART_comma++;
+						UART_index = 0;
+						return 0;
+					}
+				}
+				break;
+					break;
+			case 5:
+				if (checkNumeric(rx) == 1){
+					appendChar(angle10, rx, UART_index);
+					UART_index++;
+					return 0;
+				}
+				if (checkComma(rx) == 1){
+					if (UART_index == 0){
+						UART_startString = 0;
+						return 0;
+					}
+					else{
+						UART_comma++;
+						UART_index = 0;
+						return 0;
+					}
+				}
+				if (checkRightBracket(rx) == 1){
+					if (UART_index == 0){
+						UART_startString = 0;
+						return 0;
+					}
+					else{
+						UART_startString = 0;
+						return 1;
+					}
+				}
+				break;
 	    }
 	}
 	return 0;
+}
+
+uint8 processChar(char rx, char* s){
+	if (checkNumeric(rx) == 1){
+		appendChar(angle10, rx, UART_index);
+		UART_index++;
+		return 0;
+	}
+	if (checkComma(rx) == 1){
+		if (UART_index == 0){
+			ART_startString = 0;
+			return 0;
+		}
+		else{
+			UART_comma++;
+			UART_index = 0;
+			return 0;
+		}
+	}
+	return 1;
 }
 
 uint8 checkNumeric(char rx){
@@ -179,6 +283,20 @@ uint8 checkNegative(char rx){
 
 uint8 checkComma(char rx){
 	if (rx == ','){
+		return 1;
+	}
+	return 0;
+}
+
+uint8 checkLeftBracket(char rx){
+	if (rx == '['){
+		return 1;
+	}
+	return 0;
+}
+
+uint8 checkRightBracket(char rx){
+	if (rx == ']'){
 		return 1;
 	}
 	return 0;
@@ -308,14 +426,12 @@ int main()
         {
             char rx = UART_1_ReadRxData();
             if (dataParser(rx) == 1){
-                sprintf(displaystring,"RSSI = %s, Index = %s\r\n",rssi,indexnumber);
+                sprintf(displaystring,"rssi=%s, index=%s, xpos=%s, ypos=%s, angle10=%s\r\n",rssi,indexnumber,xpos,ypos,angle10);
                 usbPutString(displaystring);
             }
             UART_dataReady = 0;
         }
     }
 }
-
-//UART_2_PutChar(char c)
 
 /* [] END OF FILE */
