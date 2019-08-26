@@ -25,7 +25,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="Design01" Path="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn" Version="5.40" Type="Normal">
+  <Project Name="Design01" Path="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn" Version="5.40" Type="Normal">
     <CMSIS_SVD_File>Design01.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -34,14 +34,14 @@
       <LinkerFile Toolchain="ARM IAR Generic">.\Generated_Source\PSoC5\Cm3Iar.icf</LinkerFile>
     </LinkerFiles>
     <Folders>
-      <Folder BuildType="BUILD" Path="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn">
-        <Files Root="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn">
+      <Folder BuildType="BUILD" Path="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn">
+        <Files Root="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn">
           <File BuildType="BUILD" Toolchain="">.\main.c</File>
           <File BuildType="BUILD" Toolchain="">.\cyapicallbacks.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn\Generated_Source\PSoC5">
-        <Files Root="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn">
+      <Folder BuildType="STRICT" Path="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn\Generated_Source\PSoC5">
+        <Files Root="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn">
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\cyfitter_cfg.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\cyfitter_cfg.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\cymetadata.c</File>
@@ -135,6 +135,8 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Timer_1_PM.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\isr_1.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\isr_1.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\isr_2.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\isr_2.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\QuadDec_1.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\QuadDec_1.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\QuadDec_1_PM.c</File>
@@ -194,65 +196,86 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\UART_1_BOOT.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\UART_1_IntClock.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\UART_1_IntClock.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\UART_2.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\UART_2.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\UART_2_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\UART_2_INT.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\UART_2_BOOT.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\UART_2_IntClock.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\UART_2_IntClock.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_audio.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_audio.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_boot.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_cdc.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_cdc.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_cls.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_descr.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_drv.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_episr.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_hid.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_hid.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_pm.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_std.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_vnd.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_midi.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_midi.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_pvt.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_cydmac.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_msc.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_msc.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_Dm_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_Dm.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_Dm.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_Dp_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_Dp.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_Dp.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn\Export\ARM_GCC_Generic">
-        <Files Root="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn">
+      <Folder BuildType="STRICT" Path="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn\Export\ARM_GCC_Generic">
+        <Files Root="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn">
           <File BuildType="BUILD" Toolchain="ARM GCC Generic">.\Export\ARM_GCC_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn\Export\ARM_MDK_Generic">
-        <Files Root="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn">
+      <Folder BuildType="STRICT" Path="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn\Export\ARM_MDK_Generic">
+        <Files Root="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn">
           <File BuildType="BUILD" Toolchain="ARM MDK Generic">.\Export\ARM_MDK_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn\Export\ARM_IAR_Generic">
-        <Files Root="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn">
+      <Folder BuildType="STRICT" Path="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn\Export\ARM_IAR_Generic">
+        <Files Root="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn">
           <File BuildType="BUILD" Toolchain="ARM IAR Generic">.\Export\ARM_IAR_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
-        <Files Root="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn" />
+        <Files Root="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_441">
-        <Files Root="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn" />
+        <Files Root="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_473">
-        <Files Root="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn" />
+        <Files Root="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051_Keil_952">
-        <Files Root="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn" />
+        <Files Root="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051">
-        <Files Root="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn" />
+        <Files Root="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0">
-        <Files Root="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn" />
+        <Files Root="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0p">
-        <Files Root="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn" />
+        <Files Root="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM3">
-        <Files Root="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn" />
+        <Files Root="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM4">
-        <Files Root="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn" />
+        <Files Root="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM7">
-        <Files Root="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn" />
+        <Files Root="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\Generated_Source\PSoC3">
-        <Files Root="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn" />
+        <Files Root="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\Generated_Source\PSoC4">
-        <Files Root="\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn" />
+        <Files Root="D:\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn" />
       </Folder>
     </Folders>
   </Project>

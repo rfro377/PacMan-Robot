@@ -10,6 +10,7 @@
  * ========================================
 */
 #include <project.h>
+#include <stdio.h>
 
 
 /* Macros */
@@ -30,7 +31,6 @@ OPT_ROTS equation
     int16 sensor1;
     int16 batteryVoltage;
     int16 mVolts;
-    uint8 dataReady = 0;
     uint8 disablePWM = 0;
     uint8 pwm1_speed = 89; //hard coded init speeds
     uint8 pwm2_speed = 93; //hard coded init speeds
@@ -38,10 +38,24 @@ OPT_ROTS equation
     int8 Count1 = 10;
     int8 Count2 = 10;
     uint8 led = 0;
-
+    
+/* UART VARIBLES */
+    
+    char displaystring[64];
+    uint8 UART_dataReady = 0;
+    char rssi[4];
+	char indexnumber[3];
+    uint8 UART_startString = 0;
+    uint8 UART_comma = 0;
+	uint8 UART_index = 0;
     
 /* HELPER FUNCTIONS */
     
+uint8 checkNumeric(char rx);
+uint8 checkNegative(char rx);
+uint8 checkComma(char rx);
+void appendChar(char* s, char rx, uint8 ind);
+
 void moveForward(){
     if(Count1 == 0){
         
@@ -73,6 +87,109 @@ void moveForward(){
     PWM_2_WriteCompare2(pwm2_speed);
 }
 
+void usbPutString(char *s)
+{
+// !! Assumes that *s is a string with allocated space >=64 chars     
+//  Since USB implementation retricts data packets to 64 chars, this function truncates the
+//  length to 62 char (63rd char is a '!')
+    
+    while (USBUART_CDCIsReady() == 0);
+    s[63]='\0';
+    s[62]='!';
+    USBUART_PutData((uint8*)s,strlen(s));
+}
+
+void usbPutChar(char c)
+{
+    while (USBUART_CDCIsReady() == 0);
+    USBUART_PutChar(c);
+}
+
+uint8 dataParser(char rx){
+	if (rx == '#'){
+		UART_comma = 0;
+		rssi[0] = '\0';
+		indexnumber[0] = '\0';
+		UART_index = 0;
+		UART_startString = 1;
+		return 0;
+	}
+	else if (UART_startString == 1){
+		switch(UART_comma) {
+			case 0: 
+				if (UART_index == 0){
+					if (checkNegative(rx) == 1){
+						appendChar(rssi, rx, UART_index);
+						UART_index++;
+						return 0;
+					}
+					else{
+						UART_startString = 0;
+						return 0;
+					}
+				}
+				if (checkNumeric(rx) == 1){
+					appendChar(rssi, rx, UART_index);
+					UART_index++;
+					return 0;
+				}
+				if (checkComma(rx) == 1){
+					if (UART_index == 1){
+						UART_startString = 0;
+						return 0;
+					}
+					UART_comma++;
+					UART_index = 0;
+					return 0;
+				}
+			    break;
+			case 1:
+				if (checkNumeric(rx) == 1){
+					appendChar(indexnumber, rx, UART_index);
+					UART_index++;
+					return 0;
+				}
+				if (checkComma(rx) == 1){
+					if (UART_index == 0){
+						UART_startString = 0;
+						return 0;
+					}
+					UART_startString = 0;
+					return 1;
+				}
+			    break;
+	    }
+	}
+	return 0;
+}
+
+uint8 checkNumeric(char rx){
+	if ((rx >= '0') && (rx <= '9')){
+		return 1;
+	}
+	return 0;
+}
+
+uint8 checkNegative(char rx){
+	if (rx == '-'){
+		return 1;
+	}
+	return 0;
+}
+
+uint8 checkComma(char rx){
+	if (rx == ','){
+		return 1;
+	}
+	return 0;
+}
+
+void appendChar(char* s, char rx, uint8 ind) {
+    s[ind] = rx;
+    s[ind+1] = '\0';
+    return;
+}
+
 CY_ISR(Timer_1_Int_Handler)
 {
     int_ready = 1;
@@ -96,6 +213,11 @@ CY_ISR(Timer_1_Int_Handler)
     Timer_1_Enable();
     Timer_1_Start();
 }
+
+CY_ISR(USBUART_Int_Handler)
+{
+    UART_dataReady = 1;
+}
     
 /* MAIN */
 
@@ -103,6 +225,8 @@ int main()
 {
     /* Enable global interrupts. */
     CyGlobalIntEnable; 
+    
+    
     
     
     //Practical Test Modes
@@ -122,8 +246,9 @@ int main()
     Timer_1_Enable();
     Timer_1_Start();
     isr_1_StartEx(Timer_1_Int_Handler);
+    isr_2_StartEx(USBUART_Int_Handler);
     UART_1_Start();
-    UART_2_Start();
+    USBUART_Start(0,USBUART_5V_OPERATION);
     //PIN MAP//
     //ADC Sensor 1 1.5
     //ADC BatterVoltage 1.6
@@ -160,6 +285,8 @@ int main()
         batteryVoltage = batteryVoltage*2;
         if(batteryVoltage > 7500){
             LED_Write(HIGH);
+            sprintf(displaystring,"Battery Voltage =  %dmv\r\n",batteryVoltage);
+            usbPutString(displaystring);
         }else{
             LED_Write(LOW);
         }
@@ -177,8 +304,15 @@ int main()
             disablePWM = 1;
             //LED_Write(HIGH);
         }
-        char rx = UART_1_GetChar();
-        UART_2_PutChar(rx);    
+        if (UART_dataReady == 1)
+        {
+            char rx = UART_1_ReadRxData();
+            if (dataParser(rx) == 1){
+                sprintf(displaystring,"RSSI = %s, Index = %s\r\n",rssi,indexnumber);
+                usbPutString(displaystring);
+            }
+            UART_dataReady = 0;
+        }
     }
 }
 
