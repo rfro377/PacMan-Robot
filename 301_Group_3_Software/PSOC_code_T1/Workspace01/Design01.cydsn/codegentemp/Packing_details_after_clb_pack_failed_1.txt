@@ -1,0 +1,2194 @@
+
+======================================================
+UDB 0
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\Timer_1:TimerUDB:status_tc\
+			\UART_1:BUART:rx_postpoll\
+			Net_6416
+			\QuadDec_2:Cnt8:CounterUDB:reload\
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: \ADC_SAR_Seq_1:bSAR_SEQ:enable\
+
+		 Input nets:
+			MODIN5_0
+			MODIN5_1
+			Net_6515
+			\ADC_SAR_Seq_1:bSAR_SEQ:bus_clk_nrq_reg\
+			\ADC_SAR_Seq_1:bSAR_SEQ:nrq_reg\
+			\QuadDec_2:Cnt8:CounterUDB:overflow\
+			\QuadDec_2:Cnt8:CounterUDB:status_1\
+			\QuadDec_2:Net_1260\
+			\Timer_1:TimerUDB:control_7\
+			\Timer_1:TimerUDB:per_zero\
+
+		 Output nets:
+			Net_6416
+			\QuadDec_2:Cnt8:CounterUDB:reload\
+			\Timer_1:TimerUDB:status_tc\
+			\UART_1:BUART:rx_postpoll\
+
+		 Product terms:
+			!\ADC_SAR_Seq_1:bSAR_SEQ:nrq_reg\ * \ADC_SAR_Seq_1:bSAR_SEQ:bus_clk_nrq_reg\
+			!\QuadDec_2:Cnt8:CounterUDB:overflow\ * !\QuadDec_2:Cnt8:CounterUDB:status_1\ * !\QuadDec_2:Net_1260\
+			MODIN5_0 * Net_6515
+			MODIN5_1
+			\Timer_1:TimerUDB:control_7\ * \Timer_1:TimerUDB:per_zero\
+
+	PLD 1:
+		 Instances:
+			\ADC_SAR_Seq_1:bSAR_SEQ:nrq_reg\
+			\PWM_2:PWMUDB:status_2\
+			\ADC_SAR_Seq_1:bSAR_SEQ:cnt_enable\
+			\QuadDec_2:Cnt8:CounterUDB:status_0\
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: \ADC_SAR_Seq_1:bSAR_SEQ:enable\
+
+		 Input nets:
+			Net_6415
+			\ADC_SAR_Seq_1:bSAR_SEQ:bus_clk_nrq_reg\
+			\ADC_SAR_Seq_1:bSAR_SEQ:load_period\
+			\PWM_2:PWMUDB:runmode_enable\
+			\PWM_2:PWMUDB:tc_i\
+			\QuadDec_2:Cnt8:CounterUDB:cmp_out_i\
+			\QuadDec_2:Cnt8:CounterUDB:prevCompare\
+
+		 Output nets:
+			\ADC_SAR_Seq_1:bSAR_SEQ:cnt_enable\
+			\ADC_SAR_Seq_1:bSAR_SEQ:nrq_reg\
+			\PWM_2:PWMUDB:status_2\
+			\QuadDec_2:Cnt8:CounterUDB:status_0\
+
+		 Product terms:
+			!Net_6415 * !\ADC_SAR_Seq_1:bSAR_SEQ:load_period\
+			!\QuadDec_2:Cnt8:CounterUDB:prevCompare\ * \QuadDec_2:Cnt8:CounterUDB:cmp_out_i\
+			\ADC_SAR_Seq_1:bSAR_SEQ:bus_clk_nrq_reg\
+			\PWM_2:PWMUDB:runmode_enable\ * \PWM_2:PWMUDB:tc_i\
+
+	Datapath:
+		 Instances:
+			\Timer_1:TimerUDB:sT24:timerdp:u0\
+
+		 Clock net: ClockBlock_BUS_CLK
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			ClockBlock_BUS_CLK
+			\Timer_1:TimerUDB:control_7\
+			\Timer_1:TimerUDB:per_zero\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.cmsbo__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.sor__sig\
+
+		 Output nets:
+			\Timer_1:TimerUDB:sT24:timerdp:u0.ce0__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.ce1__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.cfbo__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.cl0__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.cl1__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.co_msb__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.ff0__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.ff1__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.sol_msb__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.z0__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.z1__sig\
+
+	Control, status and sync:
+		 Instances:
+			\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : controlcell
+			\Timer_1:TimerUDB:rstSts:stsreg\ : statusicell
+
+		 Clock net: ClockBlock_BUS_CLK
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			ClockBlock_BUS_CLK
+			\Timer_1:TimerUDB:status_2\
+			\Timer_1:TimerUDB:status_3\
+			\Timer_1:TimerUDB:status_tc\
+
+		 Output nets:
+			Net_2024
+			\Timer_1:TimerUDB:control_7\
+
+	Local clock and reset nets:
+			\ADC_SAR_Seq_1:bSAR_SEQ:enable\
+
+======================================================
+UDB 1
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\PWM_2:PWMUDB:prevCompare2\
+			\PWM_2:PWMUDB:runmode_enable\
+			Net_1725
+			\PWM_2:PWMUDB:status_1\
+
+		 Clock net: Net_1656
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\PWM_2:PWMUDB:cmp2_less\
+			\PWM_2:PWMUDB:control_7\
+			\PWM_2:PWMUDB:prevCompare2\
+			\PWM_2:PWMUDB:runmode_enable\
+
+		 Output nets:
+			Net_1725
+			\PWM_2:PWMUDB:prevCompare2\
+			\PWM_2:PWMUDB:runmode_enable\
+			\PWM_2:PWMUDB:status_1\
+
+		 Product terms:
+			!\PWM_2:PWMUDB:prevCompare2\ * \PWM_2:PWMUDB:cmp2_less\
+			\PWM_2:PWMUDB:cmp2_less\
+			\PWM_2:PWMUDB:cmp2_less\ * \PWM_2:PWMUDB:runmode_enable\
+			\PWM_2:PWMUDB:control_7\
+
+	PLD 1:
+		 Instances:
+			Net_1726
+			\PWM_2:PWMUDB:status_0\
+			\PWM_2:PWMUDB:prevCompare1\
+			\PWM_1:PWMUDB:status_1\
+
+		 Clock net: Net_1656
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\PWM_1:PWMUDB:cmp2_less\
+			\PWM_1:PWMUDB:prevCompare2\
+			\PWM_2:PWMUDB:cmp1_less\
+			\PWM_2:PWMUDB:prevCompare1\
+			\PWM_2:PWMUDB:runmode_enable\
+
+		 Output nets:
+			Net_1726
+			\PWM_1:PWMUDB:status_1\
+			\PWM_2:PWMUDB:prevCompare1\
+			\PWM_2:PWMUDB:status_0\
+
+		 Product terms:
+			!\PWM_1:PWMUDB:prevCompare2\ * \PWM_1:PWMUDB:cmp2_less\
+			!\PWM_2:PWMUDB:prevCompare1\ * \PWM_2:PWMUDB:cmp1_less\
+			\PWM_2:PWMUDB:cmp1_less\
+			\PWM_2:PWMUDB:cmp1_less\ * \PWM_2:PWMUDB:runmode_enable\
+
+	Datapath:
+		 Instances:
+			\Timer_1:TimerUDB:sT24:timerdp:u1\
+
+		 Clock net: ClockBlock_BUS_CLK
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			ClockBlock_BUS_CLK
+			\Timer_1:TimerUDB:control_7\
+			\Timer_1:TimerUDB:per_zero\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.ce0__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.ce1__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.cfbo__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.cl0__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.cl1__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.co_msb__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.ff0__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.ff1__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.sol_msb__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.z0__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u0.z1__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u2.cmsbo__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u2.sor__sig\
+
+		 Output nets:
+			\Timer_1:TimerUDB:sT24:timerdp:u1.ce0__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.ce1__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.cfbo__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.cl0__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.cl1__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.cmsbo__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.co_msb__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.ff0__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.ff1__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.sol_msb__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.sor__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.z0__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.z1__sig\
+
+	Control, status and sync:
+		 Instances:
+			\PWM_2:PWMUDB:genblk1:ctrlreg\ : controlcell
+			\PWM_2:PWMUDB:genblk8:stsreg\ : statusicell
+
+		 Clock net: Net_1656
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			ClockBlock_BUS_CLK
+			\PWM_2:PWMUDB:status_0\
+			\PWM_2:PWMUDB:status_1\
+			\PWM_2:PWMUDB:status_2\
+			\PWM_2:PWMUDB:status_3\
+
+		 Output nets:
+			\PWM_2:PWMUDB:control_7\
+
+	Local clock and reset nets:
+
+======================================================
+UDB 10
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_31\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_32\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_30\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_42\
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+		 Output nets:
+
+		 Product terms:
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+
+	PLD 1:
+		 Instances:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_33\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_35\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_36\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_34\
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+		 Output nets:
+
+		 Product terms:
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+	Datapath:
+
+	Control, status and sync:
+
+	Local clock and reset nets:
+
+======================================================
+UDB 11
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_37\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_39\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_41\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_63\
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+		 Output nets:
+
+		 Product terms:
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+	PLD 1:
+		 Instances:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_43\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_45\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_44\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_46\
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+		 Output nets:
+
+		 Product terms:
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+	Datapath:
+
+	Control, status and sync:
+
+	Local clock and reset nets:
+
+======================================================
+UDB 12
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_48\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_47\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_49\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_62\
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+		 Output nets:
+
+		 Product terms:
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+	PLD 1:
+		 Instances:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_51\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_52\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_50\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_4\
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+		 Output nets:
+
+		 Product terms:
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+	Datapath:
+
+	Control, status and sync:
+
+	Local clock and reset nets:
+
+======================================================
+UDB 13
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_53\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_54\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_55\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_5\
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+		 Output nets:
+
+		 Product terms:
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+	PLD 1:
+		 Instances:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_57\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_60\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_58\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_56\
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+		 Output nets:
+
+		 Product terms:
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+	Datapath:
+
+	Control, status and sync:
+
+	Local clock and reset nets:
+
+======================================================
+UDB 14
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_61\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_8\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_6\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_7\
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+		 Output nets:
+
+		 Product terms:
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+
+	PLD 1:
+		 Instances:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_9\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			\ADC_SAR_Seq_1:ch_addr_0\
+			\ADC_SAR_Seq_1:ch_addr_1\
+			\ADC_SAR_Seq_1:ch_addr_2\
+
+		 Output nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+
+		 Product terms:
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:ch_addr_0\
+			\ADC_SAR_Seq_1:ch_addr_1\
+			\ADC_SAR_Seq_1:ch_addr_2\
+
+	Datapath:
+
+	Control, status and sync:
+
+	Local clock and reset nets:
+
+======================================================
+UDB 15
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\QuadDec_1:Net_1251_split\
+
+		 Clock net: 
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\QuadDec_1:Net_1251\
+			\QuadDec_1:Net_1260\
+			\QuadDec_1:bQuadDec:error\
+			\QuadDec_1:bQuadDec:quad_A_filt\
+			\QuadDec_1:bQuadDec:quad_B_filt\
+			\QuadDec_1:bQuadDec:state_0\
+			\QuadDec_1:bQuadDec:state_1\
+
+		 Output nets:
+			\QuadDec_1:Net_1251_split\
+
+		 Product terms:
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:quad_A_filt\ * !\QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:state_0\ * \QuadDec_1:bQuadDec:state_1\
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:quad_B_filt\ * \QuadDec_1:bQuadDec:quad_A_filt\ * \QuadDec_1:bQuadDec:state_0\ * \QuadDec_1:bQuadDec:state_1\
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:Net_1251\ * \QuadDec_1:bQuadDec:quad_B_filt\
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:quad_A_filt\ * \QuadDec_1:bQuadDec:quad_B_filt\ * \QuadDec_1:bQuadDec:state_0\
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:state_0\ * !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:Net_1251\ * \QuadDec_1:bQuadDec:error\
+			!\QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:quad_A_filt\ * !\QuadDec_1:bQuadDec:state_0\ * !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:Net_1251\
+			!\QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:quad_A_filt\ * !\QuadDec_1:bQuadDec:state_0\ * !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:quad_B_filt\
+			!\QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:state_0\ * !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:Net_1251\ * \QuadDec_1:bQuadDec:quad_B_filt\
+
+	PLD 1:
+		 Instances:
+			\QuadDec_2:Net_1251_split\
+
+		 Clock net: 
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\QuadDec_2:Net_1251\
+			\QuadDec_2:Net_1260\
+			\QuadDec_2:bQuadDec:error\
+			\QuadDec_2:bQuadDec:quad_A_filt\
+			\QuadDec_2:bQuadDec:quad_B_filt\
+			\QuadDec_2:bQuadDec:state_0\
+			\QuadDec_2:bQuadDec:state_1\
+
+		 Output nets:
+			\QuadDec_2:Net_1251_split\
+
+		 Product terms:
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:quad_A_filt\ * !\QuadDec_2:bQuadDec:quad_B_filt\ * !\QuadDec_2:bQuadDec:state_0\ * \QuadDec_2:bQuadDec:state_1\
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:quad_B_filt\ * \QuadDec_2:bQuadDec:quad_A_filt\ * \QuadDec_2:bQuadDec:state_0\ * \QuadDec_2:bQuadDec:state_1\
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:state_1\ * \QuadDec_2:Net_1251\ * \QuadDec_2:bQuadDec:quad_B_filt\
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:state_1\ * \QuadDec_2:bQuadDec:quad_A_filt\ * \QuadDec_2:bQuadDec:quad_B_filt\ * \QuadDec_2:bQuadDec:state_0\
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:state_0\ * !\QuadDec_2:bQuadDec:state_1\ * \QuadDec_2:Net_1251\ * \QuadDec_2:bQuadDec:error\
+			!\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:quad_A_filt\ * !\QuadDec_2:bQuadDec:state_0\ * !\QuadDec_2:bQuadDec:state_1\ * \QuadDec_2:Net_1251\
+			!\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:quad_A_filt\ * !\QuadDec_2:bQuadDec:state_0\ * !\QuadDec_2:bQuadDec:state_1\ * \QuadDec_2:bQuadDec:quad_B_filt\
+			!\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:state_0\ * !\QuadDec_2:bQuadDec:state_1\ * \QuadDec_2:Net_1251\ * \QuadDec_2:bQuadDec:quad_B_filt\
+
+	Datapath:
+		 Instances:
+			\QuadDec_1:Cnt8:CounterUDB:sC8:counterdp:u0\
+
+		 Clock net: Net_3306
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			ClockBlock_BUS_CLK
+			\QuadDec_1:Cnt8:CounterUDB:count_enable\
+			\QuadDec_1:Cnt8:CounterUDB:reload\
+			\QuadDec_1:Net_1251\
+
+		 Output nets:
+			\QuadDec_1:Cnt8:CounterUDB:cmp_out_i\
+			\QuadDec_1:Cnt8:CounterUDB:overflow\
+			\QuadDec_1:Cnt8:CounterUDB:status_1\
+			\QuadDec_1:Cnt8:CounterUDB:status_5\
+			\QuadDec_1:Cnt8:CounterUDB:status_6\
+
+	Control, status and sync:
+		 Instances:
+			\QuadDec_1:Cnt8:CounterUDB:sSTSReg:stsreg\ : statusicell
+
+		 Clock net: Net_3306
+		 Set/Reset net: \QuadDec_1:Net_1260\
+		 Enable net: 
+
+		 Input nets:
+			\QuadDec_1:Cnt8:CounterUDB:status_0\
+			\QuadDec_1:Cnt8:CounterUDB:status_1\
+			\QuadDec_1:Cnt8:CounterUDB:status_2\
+			\QuadDec_1:Cnt8:CounterUDB:status_3\
+			\QuadDec_1:Cnt8:CounterUDB:status_5\
+			\QuadDec_1:Cnt8:CounterUDB:status_6\
+
+		 Output nets:
+
+	Local clock and reset nets:
+			\QuadDec_1:Net_1260\
+
+======================================================
+UDB 16
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\UART_2:BUART:counter_load_not\
+			\UART_2:BUART:tx_bitclk\
+			\UART_2:BUART:tx_state_2\
+
+		 Clock net: \UART_2:Net_9\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\UART_2:BUART:tx_bitclk\
+			\UART_2:BUART:tx_bitclk_enable_pre\
+			\UART_2:BUART:tx_counter_dp\
+			\UART_2:BUART:tx_state_0\
+			\UART_2:BUART:tx_state_1\
+			\UART_2:BUART:tx_state_2\
+
+		 Output nets:
+			\UART_2:BUART:counter_load_not\
+			\UART_2:BUART:tx_bitclk\
+			\UART_2:BUART:tx_state_2\
+
+		 Product terms:
+			!\UART_2:BUART:tx_bitclk_enable_pre\
+			!\UART_2:BUART:tx_state_0\ * !\UART_2:BUART:tx_state_1\ * !\UART_2:BUART:tx_state_2\
+			!\UART_2:BUART:tx_state_0\ * !\UART_2:BUART:tx_state_1\ * \UART_2:BUART:tx_bitclk_enable_pre\
+			!\UART_2:BUART:tx_state_0\ * !\UART_2:BUART:tx_state_1\ * \UART_2:BUART:tx_bitclk_enable_pre\ * \UART_2:BUART:tx_state_2\
+			!\UART_2:BUART:tx_state_0\ * !\UART_2:BUART:tx_state_1\ * \UART_2:BUART:tx_state_2\
+			!\UART_2:BUART:tx_state_2\ * \UART_2:BUART:tx_bitclk\ * \UART_2:BUART:tx_counter_dp\ * \UART_2:BUART:tx_state_1\
+			!\UART_2:BUART:tx_state_2\ * \UART_2:BUART:tx_bitclk\ * \UART_2:BUART:tx_state_0\ * \UART_2:BUART:tx_state_1\
+			\UART_2:BUART:tx_bitclk_enable_pre\ * \UART_2:BUART:tx_state_0\ * \UART_2:BUART:tx_state_1\ * \UART_2:BUART:tx_state_2\
+
+	PLD 1:
+		 Instances:
+			\UART_2:BUART:tx_status_0\
+			\UART_2:BUART:tx_status_2\
+			\UART_2:BUART:tx_state_0\
+			Net_6561
+
+		 Clock net: \UART_2:Net_9\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\UART_2:BUART:tx_bitclk\
+			\UART_2:BUART:tx_bitclk_enable_pre\
+			\UART_2:BUART:tx_fifo_empty\
+			\UART_2:BUART:tx_fifo_notfull\
+			\UART_2:BUART:tx_state_0\
+			\UART_2:BUART:tx_state_1\
+			\UART_2:BUART:tx_state_2\
+			\UART_2:BUART:txn\
+
+		 Output nets:
+			Net_6561
+			\UART_2:BUART:tx_state_0\
+			\UART_2:BUART:tx_status_0\
+			\UART_2:BUART:tx_status_2\
+
+		 Product terms:
+			!\UART_2:BUART:tx_fifo_empty\ * !\UART_2:BUART:tx_state_0\ * !\UART_2:BUART:tx_state_1\ * !\UART_2:BUART:tx_state_2\
+			!\UART_2:BUART:tx_fifo_empty\ * !\UART_2:BUART:tx_state_0\ * !\UART_2:BUART:tx_state_1\ * \UART_2:BUART:tx_bitclk_enable_pre\
+			!\UART_2:BUART:tx_fifo_notfull\
+			!\UART_2:BUART:tx_state_0\ * !\UART_2:BUART:tx_state_1\ * \UART_2:BUART:tx_bitclk_enable_pre\ * \UART_2:BUART:tx_fifo_empty\ * \UART_2:BUART:tx_state_2\
+			!\UART_2:BUART:tx_state_2\ * \UART_2:BUART:tx_bitclk\ * \UART_2:BUART:tx_state_0\
+			!\UART_2:BUART:txn\
+			\UART_2:BUART:tx_bitclk_enable_pre\ * \UART_2:BUART:tx_fifo_empty\ * \UART_2:BUART:tx_state_0\ * \UART_2:BUART:tx_state_1\ * \UART_2:BUART:tx_state_2\
+
+	Datapath:
+		 Instances:
+			\UART_2:BUART:sTX:sCLOCK:TxBitClkGen\
+
+		 Clock net: \UART_2:Net_9\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			ClockBlock_BUS_CLK
+			\UART_2:BUART:counter_load_not\
+
+		 Output nets:
+			\UART_2:BUART:tx_bitclk_enable_pre\
+			\UART_2:BUART:tx_counter_dp\
+
+	Control, status and sync:
+
+	Local clock and reset nets:
+
+======================================================
+UDB 17
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\QuadDec_1:bQuadDec:state_0\
+			\QuadDec_1:bQuadDec:error\
+
+		 Clock net: Net_3306
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\QuadDec_1:Net_1260\
+			\QuadDec_1:bQuadDec:error\
+			\QuadDec_1:bQuadDec:quad_A_filt\
+			\QuadDec_1:bQuadDec:quad_B_filt\
+			\QuadDec_1:bQuadDec:state_0\
+			\QuadDec_1:bQuadDec:state_1\
+
+		 Output nets:
+			\QuadDec_1:bQuadDec:error\
+			\QuadDec_1:bQuadDec:state_0\
+
+		 Product terms:
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:quad_A_filt\ * !\QuadDec_1:bQuadDec:quad_B_filt\ * \QuadDec_1:bQuadDec:state_0\ * \QuadDec_1:bQuadDec:state_1\
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:quad_A_filt\ * !\QuadDec_1:bQuadDec:state_0\ * \QuadDec_1:bQuadDec:quad_B_filt\ * \QuadDec_1:bQuadDec:state_1\
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:quad_A_filt\ * \QuadDec_1:bQuadDec:state_0\
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:error\ * \QuadDec_1:bQuadDec:quad_A_filt\ * \QuadDec_1:bQuadDec:quad_B_filt\ * \QuadDec_1:bQuadDec:state_1\
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:error\ * \QuadDec_1:bQuadDec:quad_B_filt\ * \QuadDec_1:bQuadDec:state_0\
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:state_0\ * !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:error\ * \QuadDec_1:bQuadDec:quad_B_filt\
+			!\QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:quad_A_filt\ * !\QuadDec_1:bQuadDec:state_0\ * !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:quad_B_filt\
+			!\QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:state_0\ * !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:quad_A_filt\ * \QuadDec_1:bQuadDec:quad_B_filt\
+
+	PLD 1:
+		 Instances:
+			\QuadDec_1:bQuadDec:state_1\
+			\QuadDec_2:bQuadDec:state_0\
+
+		 Clock net: Net_3306
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\QuadDec_1:Net_1260\
+			\QuadDec_1:bQuadDec:error\
+			\QuadDec_1:bQuadDec:quad_A_filt\
+			\QuadDec_1:bQuadDec:quad_B_filt\
+			\QuadDec_1:bQuadDec:state_0\
+			\QuadDec_1:bQuadDec:state_1\
+			\QuadDec_2:Net_1260\
+			\QuadDec_2:bQuadDec:error\
+			\QuadDec_2:bQuadDec:quad_A_filt\
+			\QuadDec_2:bQuadDec:quad_B_filt\
+			\QuadDec_2:bQuadDec:state_0\
+			\QuadDec_2:bQuadDec:state_1\
+
+		 Output nets:
+			\QuadDec_1:bQuadDec:state_1\
+			\QuadDec_2:bQuadDec:state_0\
+
+		 Product terms:
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:error\ * \QuadDec_1:bQuadDec:quad_A_filt\ * \QuadDec_1:bQuadDec:quad_B_filt\ * \QuadDec_1:bQuadDec:state_0\
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:error\ * \QuadDec_1:bQuadDec:quad_A_filt\ * \QuadDec_1:bQuadDec:state_1\
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:state_0\ * !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:error\ * \QuadDec_1:bQuadDec:quad_A_filt\
+			!\QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:state_0\ * !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:quad_A_filt\
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:error\ * \QuadDec_2:bQuadDec:quad_A_filt\ * \QuadDec_2:bQuadDec:quad_B_filt\ * \QuadDec_2:bQuadDec:state_1\
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:error\ * \QuadDec_2:bQuadDec:quad_B_filt\ * \QuadDec_2:bQuadDec:state_0\
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:state_0\ * !\QuadDec_2:bQuadDec:state_1\ * \QuadDec_2:bQuadDec:error\ * \QuadDec_2:bQuadDec:quad_B_filt\
+			!\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:quad_A_filt\ * !\QuadDec_2:bQuadDec:state_0\ * !\QuadDec_2:bQuadDec:state_1\ * \QuadDec_2:bQuadDec:quad_B_filt\
+
+	Datapath:
+
+	Control, status and sync:
+		 Instances:
+			\QuadDec_1:bQuadDec:Stsreg\ : statusicell
+
+		 Clock net: Net_3306
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\QuadDec_1:Net_1260\
+			\QuadDec_1:Net_530\
+			\QuadDec_1:Net_611\
+			\QuadDec_1:bQuadDec:error\
+
+		 Output nets:
+
+	Local clock and reset nets:
+
+======================================================
+UDB 18
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\QuadDec_2:bQuadDec:state_1\
+			\QuadDec_2:bQuadDec:error\
+
+		 Clock net: Net_3306
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\QuadDec_2:Net_1260\
+			\QuadDec_2:bQuadDec:error\
+			\QuadDec_2:bQuadDec:quad_A_filt\
+			\QuadDec_2:bQuadDec:quad_B_filt\
+			\QuadDec_2:bQuadDec:state_0\
+			\QuadDec_2:bQuadDec:state_1\
+
+		 Output nets:
+			\QuadDec_2:bQuadDec:error\
+			\QuadDec_2:bQuadDec:state_1\
+
+		 Product terms:
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:quad_A_filt\ * !\QuadDec_2:bQuadDec:quad_B_filt\ * \QuadDec_2:bQuadDec:state_0\ * \QuadDec_2:bQuadDec:state_1\
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:quad_A_filt\ * !\QuadDec_2:bQuadDec:state_0\ * \QuadDec_2:bQuadDec:quad_B_filt\ * \QuadDec_2:bQuadDec:state_1\
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:quad_B_filt\ * !\QuadDec_2:bQuadDec:state_1\ * \QuadDec_2:bQuadDec:quad_A_filt\ * \QuadDec_2:bQuadDec:state_0\
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:error\ * \QuadDec_2:bQuadDec:quad_A_filt\ * \QuadDec_2:bQuadDec:quad_B_filt\ * \QuadDec_2:bQuadDec:state_0\
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:error\ * \QuadDec_2:bQuadDec:quad_A_filt\ * \QuadDec_2:bQuadDec:state_1\
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:state_0\ * !\QuadDec_2:bQuadDec:state_1\ * \QuadDec_2:bQuadDec:error\ * \QuadDec_2:bQuadDec:quad_A_filt\
+			!\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:quad_B_filt\ * !\QuadDec_2:bQuadDec:state_0\ * !\QuadDec_2:bQuadDec:state_1\ * \QuadDec_2:bQuadDec:quad_A_filt\
+			!\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:state_0\ * !\QuadDec_2:bQuadDec:state_1\ * \QuadDec_2:bQuadDec:quad_A_filt\ * \QuadDec_2:bQuadDec:quad_B_filt\
+
+	PLD 1:
+		 Instances:
+			\QuadDec_2:Net_1260\
+			\QuadDec_1:bQuadDec:quad_B_delayed_2\
+			\QuadDec_1:bQuadDec:quad_B_delayed_1\
+			\QuadDec_1:bQuadDec:quad_B_filt\
+
+		 Clock net: Net_3306
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\QuadDec_1:bQuadDec:quad_B_delayed_0\
+			\QuadDec_1:bQuadDec:quad_B_delayed_1\
+			\QuadDec_1:bQuadDec:quad_B_delayed_2\
+			\QuadDec_1:bQuadDec:quad_B_filt\
+			\QuadDec_2:Net_1260\
+			\QuadDec_2:bQuadDec:error\
+			\QuadDec_2:bQuadDec:state_0\
+			\QuadDec_2:bQuadDec:state_1\
+
+		 Output nets:
+			\QuadDec_1:bQuadDec:quad_B_delayed_1\
+			\QuadDec_1:bQuadDec:quad_B_delayed_2\
+			\QuadDec_1:bQuadDec:quad_B_filt\
+			\QuadDec_2:Net_1260\
+
+		 Product terms:
+			!\QuadDec_1:bQuadDec:quad_B_delayed_0\ * !\QuadDec_1:bQuadDec:quad_B_delayed_1\ * !\QuadDec_1:bQuadDec:quad_B_delayed_2\ * \QuadDec_1:bQuadDec:quad_B_filt\
+			!\QuadDec_1:bQuadDec:quad_B_filt\ * \QuadDec_1:bQuadDec:quad_B_delayed_0\ * \QuadDec_1:bQuadDec:quad_B_delayed_1\ * \QuadDec_1:bQuadDec:quad_B_delayed_2\
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:error\
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:state_0\ * !\QuadDec_2:bQuadDec:state_1\
+			!\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:state_0\ * !\QuadDec_2:bQuadDec:state_1\
+			\QuadDec_1:bQuadDec:quad_B_delayed_0\
+			\QuadDec_1:bQuadDec:quad_B_delayed_1\
+
+	Datapath:
+
+	Control, status and sync:
+		 Instances:
+			\QuadDec_2:bQuadDec:Stsreg\ : statusicell
+
+		 Clock net: Net_3306
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\QuadDec_2:Net_1260\
+			\QuadDec_2:Net_530\
+			\QuadDec_2:Net_611\
+			\QuadDec_2:bQuadDec:error\
+
+		 Output nets:
+
+	Local clock and reset nets:
+
+======================================================
+UDB 19
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\QuadDec_1:bQuadDec:quad_A_delayed_0\
+			\QuadDec_1:bQuadDec:quad_A_delayed_1\
+			\QuadDec_1:bQuadDec:quad_A_delayed_2\
+			\QuadDec_1:bQuadDec:quad_A_filt\
+
+		 Clock net: Net_3306
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			Net_3303
+			\QuadDec_1:bQuadDec:quad_A_delayed_0\
+			\QuadDec_1:bQuadDec:quad_A_delayed_1\
+			\QuadDec_1:bQuadDec:quad_A_delayed_2\
+			\QuadDec_1:bQuadDec:quad_A_filt\
+
+		 Output nets:
+			\QuadDec_1:bQuadDec:quad_A_delayed_0\
+			\QuadDec_1:bQuadDec:quad_A_delayed_1\
+			\QuadDec_1:bQuadDec:quad_A_delayed_2\
+			\QuadDec_1:bQuadDec:quad_A_filt\
+
+		 Product terms:
+			!\QuadDec_1:bQuadDec:quad_A_delayed_0\ * !\QuadDec_1:bQuadDec:quad_A_delayed_1\ * !\QuadDec_1:bQuadDec:quad_A_delayed_2\ * \QuadDec_1:bQuadDec:quad_A_filt\
+			!\QuadDec_1:bQuadDec:quad_A_filt\ * \QuadDec_1:bQuadDec:quad_A_delayed_0\ * \QuadDec_1:bQuadDec:quad_A_delayed_1\ * \QuadDec_1:bQuadDec:quad_A_delayed_2\
+			Net_3303
+			\QuadDec_1:bQuadDec:quad_A_delayed_0\
+			\QuadDec_1:bQuadDec:quad_A_delayed_1\
+
+	PLD 1:
+		 Instances:
+			\QuadDec_2:bQuadDec:quad_B_filt\
+			\QuadDec_2:bQuadDec:quad_B_delayed_2\
+			\QuadDec_2:bQuadDec:quad_B_delayed_0\
+			\QuadDec_2:bQuadDec:quad_B_delayed_1\
+
+		 Clock net: Net_3306
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			Net_3471
+			\QuadDec_2:bQuadDec:quad_B_delayed_0\
+			\QuadDec_2:bQuadDec:quad_B_delayed_1\
+			\QuadDec_2:bQuadDec:quad_B_delayed_2\
+			\QuadDec_2:bQuadDec:quad_B_filt\
+
+		 Output nets:
+			\QuadDec_2:bQuadDec:quad_B_delayed_0\
+			\QuadDec_2:bQuadDec:quad_B_delayed_1\
+			\QuadDec_2:bQuadDec:quad_B_delayed_2\
+			\QuadDec_2:bQuadDec:quad_B_filt\
+
+		 Product terms:
+			!\QuadDec_2:bQuadDec:quad_B_delayed_0\ * !\QuadDec_2:bQuadDec:quad_B_delayed_1\ * !\QuadDec_2:bQuadDec:quad_B_delayed_2\ * \QuadDec_2:bQuadDec:quad_B_filt\
+			!\QuadDec_2:bQuadDec:quad_B_filt\ * \QuadDec_2:bQuadDec:quad_B_delayed_0\ * \QuadDec_2:bQuadDec:quad_B_delayed_1\ * \QuadDec_2:bQuadDec:quad_B_delayed_2\
+			Net_3471
+			\QuadDec_2:bQuadDec:quad_B_delayed_0\
+			\QuadDec_2:bQuadDec:quad_B_delayed_1\
+
+	Datapath:
+
+	Control, status and sync:
+
+	Local clock and reset nets:
+
+======================================================
+UDB 2
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			Net_1671
+			\PWM_1:PWMUDB:prevCompare2\
+			\PWM_1:PWMUDB:runmode_enable\
+			Net_543
+
+		 Clock net: Net_1656
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\PWM_1:PWMUDB:cmp1_less\
+			\PWM_1:PWMUDB:cmp2_less\
+			\PWM_1:PWMUDB:control_7\
+			\PWM_1:PWMUDB:runmode_enable\
+
+		 Output nets:
+			Net_1671
+			Net_543
+			\PWM_1:PWMUDB:prevCompare2\
+			\PWM_1:PWMUDB:runmode_enable\
+
+		 Product terms:
+			\PWM_1:PWMUDB:cmp1_less\ * \PWM_1:PWMUDB:runmode_enable\
+			\PWM_1:PWMUDB:cmp2_less\
+			\PWM_1:PWMUDB:cmp2_less\ * \PWM_1:PWMUDB:runmode_enable\
+			\PWM_1:PWMUDB:control_7\
+
+	PLD 1:
+		 Instances:
+			\PWM_1:PWMUDB:status_0\
+			\UART_1:BUART:rx_status_4\
+			\PWM_1:PWMUDB:prevCompare1\
+			\PWM_1:PWMUDB:status_2\
+
+		 Clock net: Net_1656
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\PWM_1:PWMUDB:cmp1_less\
+			\PWM_1:PWMUDB:prevCompare1\
+			\PWM_1:PWMUDB:runmode_enable\
+			\PWM_1:PWMUDB:tc_i\
+			\UART_1:BUART:rx_fifofull\
+			\UART_1:BUART:rx_load_fifo\
+
+		 Output nets:
+			\PWM_1:PWMUDB:prevCompare1\
+			\PWM_1:PWMUDB:status_0\
+			\PWM_1:PWMUDB:status_2\
+			\UART_1:BUART:rx_status_4\
+
+		 Product terms:
+			!\PWM_1:PWMUDB:prevCompare1\ * \PWM_1:PWMUDB:cmp1_less\
+			\PWM_1:PWMUDB:cmp1_less\
+			\PWM_1:PWMUDB:runmode_enable\ * \PWM_1:PWMUDB:tc_i\
+			\UART_1:BUART:rx_fifofull\ * \UART_1:BUART:rx_load_fifo\
+
+	Datapath:
+		 Instances:
+			\Timer_1:TimerUDB:sT24:timerdp:u2\
+
+		 Clock net: ClockBlock_BUS_CLK
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			ClockBlock_BUS_CLK
+			\Timer_1:TimerUDB:control_7\
+			\Timer_1:TimerUDB:per_zero\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.ce0__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.ce1__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.cfbo__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.cl0__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.cl1__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.co_msb__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.ff0__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.ff1__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.sol_msb__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.z0__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u1.z1__sig\
+
+		 Output nets:
+			\Timer_1:TimerUDB:per_zero\
+			\Timer_1:TimerUDB:sT24:timerdp:u2.cmsbo__sig\
+			\Timer_1:TimerUDB:sT24:timerdp:u2.sor__sig\
+			\Timer_1:TimerUDB:status_2\
+			\Timer_1:TimerUDB:status_3\
+
+	Control, status and sync:
+		 Instances:
+			\PWM_1:PWMUDB:genblk1:ctrlreg\ : controlcell
+			\PWM_1:PWMUDB:genblk8:stsreg\ : statusicell
+
+		 Clock net: Net_1656
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			ClockBlock_BUS_CLK
+			\PWM_1:PWMUDB:status_0\
+			\PWM_1:PWMUDB:status_1\
+			\PWM_1:PWMUDB:status_2\
+			\PWM_1:PWMUDB:status_3\
+
+		 Output nets:
+			\PWM_1:PWMUDB:control_7\
+
+	Local clock and reset nets:
+
+======================================================
+UDB 20
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\QuadDec_1:Net_1260\
+			\QuadDec_1:Cnt8:CounterUDB:reload\
+			\QuadDec_1:Net_1276\
+			\QuadDec_1:Cnt8:CounterUDB:overflow_reg_i\
+
+		 Clock net: Net_3306
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\QuadDec_1:Cnt8:CounterUDB:overflow\
+			\QuadDec_1:Cnt8:CounterUDB:status_1\
+			\QuadDec_1:Net_1260\
+			\QuadDec_1:bQuadDec:error\
+			\QuadDec_1:bQuadDec:state_0\
+			\QuadDec_1:bQuadDec:state_1\
+
+		 Output nets:
+			\QuadDec_1:Cnt8:CounterUDB:overflow_reg_i\
+			\QuadDec_1:Cnt8:CounterUDB:reload\
+			\QuadDec_1:Net_1260\
+			\QuadDec_1:Net_1276\
+
+		 Product terms:
+			!\QuadDec_1:Cnt8:CounterUDB:overflow\ * !\QuadDec_1:Cnt8:CounterUDB:status_1\
+			!\QuadDec_1:Cnt8:CounterUDB:overflow\ * !\QuadDec_1:Cnt8:CounterUDB:status_1\ * !\QuadDec_1:Net_1260\
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:error\
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:state_0\ * !\QuadDec_1:bQuadDec:state_1\
+			!\QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:state_0\ * !\QuadDec_1:bQuadDec:state_1\
+			\QuadDec_1:Cnt8:CounterUDB:overflow\
+
+	PLD 1:
+		 Instances:
+			\QuadDec_1:Cnt8:CounterUDB:status_2\
+			\QuadDec_1:Net_530\
+			\QuadDec_1:Cnt8:CounterUDB:status_3\
+			\QuadDec_1:Cnt8:CounterUDB:underflow_reg_i\
+
+		 Clock net: Net_3306
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\QuadDec_1:Cnt8:CounterUDB:overflow\
+			\QuadDec_1:Cnt8:CounterUDB:overflow_reg_i\
+			\QuadDec_1:Cnt8:CounterUDB:prevCompare\
+			\QuadDec_1:Cnt8:CounterUDB:status_1\
+			\QuadDec_1:Cnt8:CounterUDB:underflow_reg_i\
+			\QuadDec_1:Net_1251\
+			\QuadDec_1:Net_1276\
+
+		 Output nets:
+			\QuadDec_1:Cnt8:CounterUDB:status_2\
+			\QuadDec_1:Cnt8:CounterUDB:status_3\
+			\QuadDec_1:Cnt8:CounterUDB:underflow_reg_i\
+			\QuadDec_1:Net_530\
+
+		 Product terms:
+			!\QuadDec_1:Cnt8:CounterUDB:overflow_reg_i\ * \QuadDec_1:Cnt8:CounterUDB:overflow\
+			!\QuadDec_1:Cnt8:CounterUDB:prevCompare\ * \QuadDec_1:Net_1251\ * \QuadDec_1:Net_1276\
+			!\QuadDec_1:Cnt8:CounterUDB:underflow_reg_i\ * \QuadDec_1:Cnt8:CounterUDB:status_1\
+			\QuadDec_1:Cnt8:CounterUDB:status_1\
+
+	Datapath:
+
+	Control, status and sync:
+
+	Local clock and reset nets:
+
+======================================================
+UDB 21
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\QuadDec_2:bQuadDec:quad_A_filt\
+			\QuadDec_2:bQuadDec:quad_A_delayed_2\
+			\QuadDec_2:bQuadDec:quad_A_delayed_1\
+			\QuadDec_2:bQuadDec:quad_A_delayed_0\
+
+		 Clock net: Net_3306
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			Net_3470
+			\QuadDec_2:bQuadDec:quad_A_delayed_0\
+			\QuadDec_2:bQuadDec:quad_A_delayed_1\
+			\QuadDec_2:bQuadDec:quad_A_delayed_2\
+			\QuadDec_2:bQuadDec:quad_A_filt\
+
+		 Output nets:
+			\QuadDec_2:bQuadDec:quad_A_delayed_0\
+			\QuadDec_2:bQuadDec:quad_A_delayed_1\
+			\QuadDec_2:bQuadDec:quad_A_delayed_2\
+			\QuadDec_2:bQuadDec:quad_A_filt\
+
+		 Product terms:
+			!\QuadDec_2:bQuadDec:quad_A_delayed_0\ * !\QuadDec_2:bQuadDec:quad_A_delayed_1\ * !\QuadDec_2:bQuadDec:quad_A_delayed_2\ * \QuadDec_2:bQuadDec:quad_A_filt\
+			!\QuadDec_2:bQuadDec:quad_A_filt\ * \QuadDec_2:bQuadDec:quad_A_delayed_0\ * \QuadDec_2:bQuadDec:quad_A_delayed_1\ * \QuadDec_2:bQuadDec:quad_A_delayed_2\
+			Net_3470
+			\QuadDec_2:bQuadDec:quad_A_delayed_0\
+			\QuadDec_2:bQuadDec:quad_A_delayed_1\
+
+	PLD 1:
+		 Instances:
+			\ADC_SAR_Seq_1:bSAR_SEQ:bus_clk_nrq_reg\
+
+		 Clock net: ClockBlock_BUS_CLK
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			Net_6416
+			\ADC_SAR_Seq_1:Net_3935\
+			\ADC_SAR_Seq_1:bSAR_SEQ:bus_clk_nrq_reg\
+
+		 Output nets:
+			\ADC_SAR_Seq_1:bSAR_SEQ:bus_clk_nrq_reg\
+
+		 Product terms:
+			!Net_6416 * \ADC_SAR_Seq_1:bSAR_SEQ:bus_clk_nrq_reg\
+			\ADC_SAR_Seq_1:Net_3935\
+
+	Datapath:
+
+	Control, status and sync:
+		 Instances:
+			\ADC_SAR_Seq_1:bSAR_SEQ:EOCSts\ : statuscell
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: \ADC_SAR_Seq_1:bSAR_SEQ:enable\
+
+		 Input nets:
+			Net_6416
+
+		 Output nets:
+
+	Local clock and reset nets:
+			\ADC_SAR_Seq_1:bSAR_SEQ:enable\
+
+======================================================
+UDB 22
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\QuadDec_2:Net_530\
+			\QuadDec_2:Net_1276\
+			\QuadDec_2:Cnt8:CounterUDB:overflow_reg_i\
+			\QuadDec_2:Net_611\
+
+		 Clock net: Net_3306
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\QuadDec_2:Cnt8:CounterUDB:overflow\
+			\QuadDec_2:Cnt8:CounterUDB:prevCompare\
+			\QuadDec_2:Cnt8:CounterUDB:status_1\
+			\QuadDec_2:Net_1251\
+			\QuadDec_2:Net_1276\
+
+		 Output nets:
+			\QuadDec_2:Cnt8:CounterUDB:overflow_reg_i\
+			\QuadDec_2:Net_1276\
+			\QuadDec_2:Net_530\
+			\QuadDec_2:Net_611\
+
+		 Product terms:
+			!\QuadDec_2:Cnt8:CounterUDB:overflow\ * !\QuadDec_2:Cnt8:CounterUDB:status_1\
+			!\QuadDec_2:Cnt8:CounterUDB:prevCompare\ * !\QuadDec_2:Net_1251\ * \QuadDec_2:Net_1276\
+			!\QuadDec_2:Cnt8:CounterUDB:prevCompare\ * \QuadDec_2:Net_1251\ * \QuadDec_2:Net_1276\
+			\QuadDec_2:Cnt8:CounterUDB:overflow\
+
+	PLD 1:
+		 Instances:
+			\QuadDec_2:Cnt8:CounterUDB:status_2\
+			\QuadDec_2:Cnt8:CounterUDB:status_3\
+			\QuadDec_2:Cnt8:CounterUDB:underflow_reg_i\
+			\QuadDec_2:Cnt8:CounterUDB:prevCompare\
+
+		 Clock net: Net_3306
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\QuadDec_2:Cnt8:CounterUDB:cmp_out_i\
+			\QuadDec_2:Cnt8:CounterUDB:overflow\
+			\QuadDec_2:Cnt8:CounterUDB:overflow_reg_i\
+			\QuadDec_2:Cnt8:CounterUDB:status_1\
+			\QuadDec_2:Cnt8:CounterUDB:underflow_reg_i\
+
+		 Output nets:
+			\QuadDec_2:Cnt8:CounterUDB:prevCompare\
+			\QuadDec_2:Cnt8:CounterUDB:status_2\
+			\QuadDec_2:Cnt8:CounterUDB:status_3\
+			\QuadDec_2:Cnt8:CounterUDB:underflow_reg_i\
+
+		 Product terms:
+			!\QuadDec_2:Cnt8:CounterUDB:overflow_reg_i\ * \QuadDec_2:Cnt8:CounterUDB:overflow\
+			!\QuadDec_2:Cnt8:CounterUDB:underflow_reg_i\ * \QuadDec_2:Cnt8:CounterUDB:status_1\
+			\QuadDec_2:Cnt8:CounterUDB:cmp_out_i\
+			\QuadDec_2:Cnt8:CounterUDB:status_1\
+
+	Datapath:
+
+	Control, status and sync:
+
+	Local clock and reset nets:
+
+======================================================
+UDB 23
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\QuadDec_1:Cnt8:CounterUDB:count_enable\
+			\QuadDec_1:Cnt8:CounterUDB:prevCompare\
+			\QuadDec_1:Net_611\
+			\QuadDec_1:Cnt8:CounterUDB:status_0\
+
+		 Clock net: Net_3306
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\QuadDec_1:Cnt8:CounterUDB:cmp_out_i\
+			\QuadDec_1:Cnt8:CounterUDB:control_7\
+			\QuadDec_1:Cnt8:CounterUDB:count_stored_i\
+			\QuadDec_1:Cnt8:CounterUDB:prevCompare\
+			\QuadDec_1:Net_1203\
+			\QuadDec_1:Net_1251\
+			\QuadDec_1:Net_1276\
+
+		 Output nets:
+			\QuadDec_1:Cnt8:CounterUDB:count_enable\
+			\QuadDec_1:Cnt8:CounterUDB:prevCompare\
+			\QuadDec_1:Cnt8:CounterUDB:status_0\
+			\QuadDec_1:Net_611\
+
+		 Product terms:
+			!\QuadDec_1:Cnt8:CounterUDB:count_stored_i\ * \QuadDec_1:Cnt8:CounterUDB:control_7\ * \QuadDec_1:Net_1203\
+			!\QuadDec_1:Cnt8:CounterUDB:prevCompare\ * !\QuadDec_1:Net_1251\ * \QuadDec_1:Net_1276\
+			!\QuadDec_1:Cnt8:CounterUDB:prevCompare\ * \QuadDec_1:Cnt8:CounterUDB:cmp_out_i\
+			\QuadDec_1:Cnt8:CounterUDB:cmp_out_i\
+
+	PLD 1:
+		 Instances:
+			\QuadDec_1:bQuadDec:quad_B_delayed_0\
+			\QuadDec_1:Cnt8:CounterUDB:count_stored_i\
+
+		 Clock net: Net_3306
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			Net_3304
+			\QuadDec_1:Net_1203\
+
+		 Output nets:
+			\QuadDec_1:Cnt8:CounterUDB:count_stored_i\
+			\QuadDec_1:bQuadDec:quad_B_delayed_0\
+
+		 Product terms:
+			Net_3304
+			\QuadDec_1:Net_1203\
+
+	Datapath:
+
+	Control, status and sync:
+		 Instances:
+			\QuadDec_1:Cnt8:CounterUDB:sCTRLReg:ctrlreg\ : controlcell
+
+		 Clock net: Net_3306
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			ClockBlock_BUS_CLK
+
+		 Output nets:
+			\QuadDec_1:Cnt8:CounterUDB:control_7\
+
+	Local clock and reset nets:
+
+======================================================
+UDB 24
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\ADC_SAR_Seq_1:ch_addr_3\
+			\ADC_SAR_Seq_1:ch_addr_4\
+			\ADC_SAR_Seq_1:ch_addr_5\
+
+		 Output nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+		 Product terms:
+			\ADC_SAR_Seq_1:ch_addr_3\
+			\ADC_SAR_Seq_1:ch_addr_4\
+			\ADC_SAR_Seq_1:ch_addr_5\
+
+	PLD 1:
+
+	Datapath:
+
+	Control, status and sync:
+
+	Local clock and reset nets:
+
+======================================================
+UDB 3
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\UART_1:BUART:rx_state_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active_split\
+
+		 Clock net: \UART_1:Net_9\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			\ADC_SAR_Seq_1:ch_addr_0\
+			\ADC_SAR_Seq_1:ch_addr_1\
+			\ADC_SAR_Seq_1:ch_addr_2\
+			\ADC_SAR_Seq_1:ch_addr_3\
+			\ADC_SAR_Seq_1:ch_addr_4\
+			\ADC_SAR_Seq_1:ch_addr_5\
+
+		 Output nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active_split\
+			\UART_1:BUART:rx_state_1\
+
+		 Product terms:
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:ch_addr_0\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:ch_addr_1\
+			!\ADC_SAR_Seq_1:ch_addr_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			!\ADC_SAR_Seq_1:ch_addr_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			!\ADC_SAR_Seq_1:ch_addr_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			!\ADC_SAR_Seq_1:ch_addr_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			!\ADC_SAR_Seq_1:ch_addr_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			!\ADC_SAR_Seq_1:ch_addr_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+	PLD 1:
+		 Instances:
+			\UART_1:BUART:rx_load_fifo\
+			\UART_1:BUART:rx_state_3\
+			\UART_1:BUART:rx_status_3\
+			\UART_1:BUART:rx_state_0\
+
+		 Clock net: \UART_1:Net_9\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			MODIN5_0
+			MODIN5_1
+			MODIN8_4
+			MODIN8_5
+			MODIN8_6
+			Net_6515
+			\UART_1:BUART:rx_bitclk_enable\
+			\UART_1:BUART:rx_state_0\
+			\UART_1:BUART:rx_state_1\
+			\UART_1:BUART:rx_state_2\
+			\UART_1:BUART:rx_state_3\
+
+		 Output nets:
+			\UART_1:BUART:rx_load_fifo\
+			\UART_1:BUART:rx_state_0\
+			\UART_1:BUART:rx_state_3\
+			\UART_1:BUART:rx_status_3\
+
+		 Product terms:
+			!MODIN5_0 * !MODIN5_1 * !\UART_1:BUART:rx_state_0\ * !\UART_1:BUART:rx_state_1\ * !\UART_1:BUART:rx_state_3\ * \UART_1:BUART:rx_bitclk_enable\ * \UART_1:BUART:rx_state_2\
+			!MODIN5_0 * !MODIN5_1 * !\UART_1:BUART:rx_state_0\ * !\UART_1:BUART:rx_state_1\ * \UART_1:BUART:rx_bitclk_enable\ * \UART_1:BUART:rx_state_2\ * \UART_1:BUART:rx_state_3\
+			!MODIN5_1 * !Net_6515 * !\UART_1:BUART:rx_state_0\ * !\UART_1:BUART:rx_state_1\ * !\UART_1:BUART:rx_state_3\ * \UART_1:BUART:rx_bitclk_enable\ * \UART_1:BUART:rx_state_2\
+			!MODIN5_1 * !Net_6515 * !\UART_1:BUART:rx_state_0\ * !\UART_1:BUART:rx_state_1\ * \UART_1:BUART:rx_bitclk_enable\ * \UART_1:BUART:rx_state_2\ * \UART_1:BUART:rx_state_3\
+			!MODIN8_4 * !MODIN8_6 * !\UART_1:BUART:rx_state_1\ * !\UART_1:BUART:rx_state_2\ * !\UART_1:BUART:rx_state_3\ * \UART_1:BUART:rx_state_0\
+			!MODIN8_5 * !MODIN8_6 * !\UART_1:BUART:rx_state_1\ * !\UART_1:BUART:rx_state_2\ * !\UART_1:BUART:rx_state_3\ * \UART_1:BUART:rx_state_0\
+			!\UART_1:BUART:rx_state_0\ * !\UART_1:BUART:rx_state_1\ * !\UART_1:BUART:rx_state_2\ * \UART_1:BUART:rx_bitclk_enable\ * \UART_1:BUART:rx_state_3\
+			!\UART_1:BUART:rx_state_0\ * !\UART_1:BUART:rx_state_1\ * \UART_1:BUART:rx_bitclk_enable\ * \UART_1:BUART:rx_state_2\ * \UART_1:BUART:rx_state_3\
+
+	Datapath:
+		 Instances:
+			\UART_1:BUART:sRX:RxShifter:u0\
+
+		 Clock net: \UART_1:Net_9\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			ClockBlock_BUS_CLK
+			\UART_1:BUART:rx_bitclk_enable\
+			\UART_1:BUART:rx_load_fifo\
+			\UART_1:BUART:rx_postpoll\
+			\UART_1:BUART:rx_state_0\
+			\UART_1:BUART:rx_state_1\
+
+		 Output nets:
+			\UART_1:BUART:rx_fifofull\
+			\UART_1:BUART:rx_fifonotempty\
+
+	Control, status and sync:
+		 Instances:
+			\ADC_SAR_Seq_1:bSAR_SEQ:ChannelCounter\ : count7cell
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: \ADC_SAR_Seq_1:bSAR_SEQ:enable\
+
+		 Input nets:
+			\ADC_SAR_Seq_1:bSAR_SEQ:cnt_enable\
+			\ADC_SAR_Seq_1:bSAR_SEQ:load_period\
+
+		 Output nets:
+			\ADC_SAR_Seq_1:ch_addr_0\
+			\ADC_SAR_Seq_1:ch_addr_1\
+			\ADC_SAR_Seq_1:ch_addr_2\
+			\ADC_SAR_Seq_1:ch_addr_3\
+			\ADC_SAR_Seq_1:ch_addr_4\
+			\ADC_SAR_Seq_1:ch_addr_5\
+
+	Local clock and reset nets:
+			\ADC_SAR_Seq_1:bSAR_SEQ:enable\
+
+======================================================
+UDB 4
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\UART_1:BUART:rx_state_2\
+			\UART_1:BUART:rx_last\
+			\UART_1:BUART:rx_counter_load\
+			\UART_1:BUART:rx_state_stop1_reg\
+
+		 Clock net: \UART_1:Net_9\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			MODIN8_4
+			MODIN8_5
+			MODIN8_6
+			Net_6515
+			\UART_1:BUART:rx_bitclk_enable\
+			\UART_1:BUART:rx_last\
+			\UART_1:BUART:rx_state_0\
+			\UART_1:BUART:rx_state_1\
+			\UART_1:BUART:rx_state_2\
+			\UART_1:BUART:rx_state_3\
+
+		 Output nets:
+			\UART_1:BUART:rx_counter_load\
+			\UART_1:BUART:rx_last\
+			\UART_1:BUART:rx_state_2\
+			\UART_1:BUART:rx_state_stop1_reg\
+
+		 Product terms:
+			!MODIN8_4 * !MODIN8_6 * !\UART_1:BUART:rx_state_1\ * !\UART_1:BUART:rx_state_2\ * !\UART_1:BUART:rx_state_3\ * \UART_1:BUART:rx_state_0\
+			!MODIN8_5 * !MODIN8_6 * !\UART_1:BUART:rx_state_1\ * !\UART_1:BUART:rx_state_2\ * !\UART_1:BUART:rx_state_3\ * \UART_1:BUART:rx_state_0\
+			!Net_6515 * !\UART_1:BUART:rx_state_0\ * !\UART_1:BUART:rx_state_1\ * !\UART_1:BUART:rx_state_2\ * !\UART_1:BUART:rx_state_3\ * \UART_1:BUART:rx_last\
+			!\UART_1:BUART:rx_state_0\ * !\UART_1:BUART:rx_state_1\ * !\UART_1:BUART:rx_state_2\ * !\UART_1:BUART:rx_state_3\
+			!\UART_1:BUART:rx_state_0\ * !\UART_1:BUART:rx_state_1\ * \UART_1:BUART:rx_bitclk_enable\ * \UART_1:BUART:rx_state_2\
+			!\UART_1:BUART:rx_state_0\ * !\UART_1:BUART:rx_state_1\ * \UART_1:BUART:rx_bitclk_enable\ * \UART_1:BUART:rx_state_3\
+			!\UART_1:BUART:rx_state_0\ * !\UART_1:BUART:rx_state_1\ * \UART_1:BUART:rx_state_2\ * \UART_1:BUART:rx_state_3\
+			Net_6515
+
+	PLD 1:
+		 Instances:
+			\UART_1:BUART:rx_status_5\
+			MODIN5_0
+			\UART_1:BUART:rx_bitclk_enable\
+			MODIN5_1
+
+		 Clock net: \UART_1:Net_9\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			MODIN5_0
+			MODIN5_1
+			Net_6515
+			\UART_1:BUART:rx_count_0\
+			\UART_1:BUART:rx_count_1\
+			\UART_1:BUART:rx_count_2\
+			\UART_1:BUART:rx_fifonotempty\
+			\UART_1:BUART:rx_state_stop1_reg\
+
+		 Output nets:
+			MODIN5_0
+			MODIN5_1
+			\UART_1:BUART:rx_bitclk_enable\
+			\UART_1:BUART:rx_status_5\
+
+		 Product terms:
+			!MODIN5_0 * !\UART_1:BUART:rx_count_1\ * !\UART_1:BUART:rx_count_2\ * MODIN5_1
+			!MODIN5_0 * !\UART_1:BUART:rx_count_1\ * !\UART_1:BUART:rx_count_2\ * Net_6515
+			!MODIN5_1 * !\UART_1:BUART:rx_count_1\ * !\UART_1:BUART:rx_count_2\ * MODIN5_0 * Net_6515
+			!Net_6515 * !\UART_1:BUART:rx_count_1\ * !\UART_1:BUART:rx_count_2\ * MODIN5_0
+			!Net_6515 * !\UART_1:BUART:rx_count_1\ * !\UART_1:BUART:rx_count_2\ * MODIN5_1
+			!\UART_1:BUART:rx_count_0\ * !\UART_1:BUART:rx_count_1\ * !\UART_1:BUART:rx_count_2\
+			\UART_1:BUART:rx_fifonotempty\ * \UART_1:BUART:rx_state_stop1_reg\
+
+	Datapath:
+		 Instances:
+			\PWM_1:PWMUDB:sP8:pwmdp:u0\
+
+		 Clock net: Net_1656
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			ClockBlock_BUS_CLK
+			\PWM_1:PWMUDB:runmode_enable\
+			\PWM_1:PWMUDB:tc_i\
+
+		 Output nets:
+			\PWM_1:PWMUDB:cmp1_less\
+			\PWM_1:PWMUDB:cmp2_less\
+			\PWM_1:PWMUDB:status_3\
+			\PWM_1:PWMUDB:tc_i\
+
+	Control, status and sync:
+		 Instances:
+			\UART_1:BUART:sRX:RxBitCounter\ : count7cell
+
+		 Clock net: \UART_1:Net_9\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\UART_1:BUART:rx_counter_load\
+
+		 Output nets:
+			MODIN8_4
+			MODIN8_5
+			MODIN8_6
+			\UART_1:BUART:rx_count_0\
+			\UART_1:BUART:rx_count_1\
+			\UART_1:BUART:rx_count_2\
+
+	Local clock and reset nets:
+
+======================================================
+UDB 5
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_2\
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active_split\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			\ADC_SAR_Seq_1:ch_addr_2\
+			\ADC_SAR_Seq_1:ch_addr_3\
+			\ADC_SAR_Seq_1:ch_addr_4\
+			\ADC_SAR_Seq_1:ch_addr_5\
+
+		 Output nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_2\
+
+		 Product terms:
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:ch_addr_2\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:ch_addr_3\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:ch_addr_4\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:ch_addr_5\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active_split\
+
+	PLD 1:
+		 Instances:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_10\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_12\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_11\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_3\
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+		 Output nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_3\
+
+		 Product terms:
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+
+	Datapath:
+		 Instances:
+			\PWM_2:PWMUDB:sP8:pwmdp:u0\
+
+		 Clock net: Net_1656
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			ClockBlock_BUS_CLK
+			\PWM_2:PWMUDB:runmode_enable\
+			\PWM_2:PWMUDB:tc_i\
+
+		 Output nets:
+			\PWM_2:PWMUDB:cmp1_less\
+			\PWM_2:PWMUDB:cmp2_less\
+			\PWM_2:PWMUDB:status_3\
+			\PWM_2:PWMUDB:tc_i\
+
+	Control, status and sync:
+		 Instances:
+			\ADC_SAR_Seq_1:bSAR_SEQ:CtrlReg\ : controlcell
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			ClockBlock_BUS_CLK
+
+		 Output nets:
+			\ADC_SAR_Seq_1:bSAR_SEQ:enable\
+			\ADC_SAR_Seq_1:bSAR_SEQ:load_period\
+
+	Local clock and reset nets:
+
+======================================================
+UDB 6
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\QuadDec_2:Net_1203\
+			\QuadDec_2:Net_1251\
+			\QuadDec_2:Cnt8:CounterUDB:count_stored_i\
+
+		 Clock net: Net_3306
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\QuadDec_2:Net_1203\
+			\QuadDec_2:Net_1251\
+			\QuadDec_2:Net_1251_split\
+			\QuadDec_2:Net_1260\
+			\QuadDec_2:bQuadDec:error\
+			\QuadDec_2:bQuadDec:quad_A_filt\
+			\QuadDec_2:bQuadDec:quad_B_filt\
+			\QuadDec_2:bQuadDec:state_0\
+			\QuadDec_2:bQuadDec:state_1\
+
+		 Output nets:
+			\QuadDec_2:Cnt8:CounterUDB:count_stored_i\
+			\QuadDec_2:Net_1203\
+			\QuadDec_2:Net_1251\
+
+		 Product terms:
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:quad_A_filt\ * !\QuadDec_2:bQuadDec:quad_B_filt\ * !\QuadDec_2:bQuadDec:state_1\ * \QuadDec_2:bQuadDec:state_0\
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:quad_A_filt\ * !\QuadDec_2:bQuadDec:state_0\ * \QuadDec_2:Net_1251\
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:quad_B_filt\ * \QuadDec_2:Net_1251\ * \QuadDec_2:bQuadDec:state_1\
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:error\ * \QuadDec_2:Net_1251\ * \QuadDec_2:bQuadDec:quad_A_filt\ * \QuadDec_2:bQuadDec:state_0\
+			!\QuadDec_2:Net_1260\ * !\QuadDec_2:bQuadDec:state_0\ * !\QuadDec_2:bQuadDec:state_1\ * \QuadDec_2:Net_1203\ * \QuadDec_2:bQuadDec:error\
+			!\QuadDec_2:bQuadDec:error\ * !\QuadDec_2:bQuadDec:quad_A_filt\ * !\QuadDec_2:bQuadDec:state_0\ * !\QuadDec_2:bQuadDec:state_1\ * \QuadDec_2:bQuadDec:quad_B_filt\
+			\QuadDec_2:Net_1203\
+			\QuadDec_2:Net_1251_split\
+
+	PLD 1:
+		 Instances:
+			\QuadDec_1:Net_1251\
+			\QuadDec_2:Cnt8:CounterUDB:count_enable\
+			\QuadDec_1:Net_1203\
+
+		 Clock net: Net_3306
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\QuadDec_1:Net_1203\
+			\QuadDec_1:Net_1251\
+			\QuadDec_1:Net_1251_split\
+			\QuadDec_1:Net_1260\
+			\QuadDec_1:bQuadDec:error\
+			\QuadDec_1:bQuadDec:quad_A_filt\
+			\QuadDec_1:bQuadDec:quad_B_filt\
+			\QuadDec_1:bQuadDec:state_0\
+			\QuadDec_1:bQuadDec:state_1\
+			\QuadDec_2:Cnt8:CounterUDB:control_7\
+			\QuadDec_2:Cnt8:CounterUDB:count_stored_i\
+			\QuadDec_2:Net_1203\
+
+		 Output nets:
+			\QuadDec_1:Net_1203\
+			\QuadDec_1:Net_1251\
+			\QuadDec_2:Cnt8:CounterUDB:count_enable\
+
+		 Product terms:
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:quad_A_filt\ * !\QuadDec_1:bQuadDec:quad_B_filt\ * !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:state_0\
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:quad_A_filt\ * !\QuadDec_1:bQuadDec:state_0\ * \QuadDec_1:Net_1251\
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:quad_B_filt\ * \QuadDec_1:Net_1251\ * \QuadDec_1:bQuadDec:state_1\
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:error\ * \QuadDec_1:Net_1251\ * \QuadDec_1:bQuadDec:quad_A_filt\ * \QuadDec_1:bQuadDec:state_0\
+			!\QuadDec_1:Net_1260\ * !\QuadDec_1:bQuadDec:state_0\ * !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:Net_1203\ * \QuadDec_1:bQuadDec:error\
+			!\QuadDec_1:bQuadDec:error\ * !\QuadDec_1:bQuadDec:quad_A_filt\ * !\QuadDec_1:bQuadDec:state_0\ * !\QuadDec_1:bQuadDec:state_1\ * \QuadDec_1:bQuadDec:quad_B_filt\
+			!\QuadDec_2:Cnt8:CounterUDB:count_stored_i\ * \QuadDec_2:Cnt8:CounterUDB:control_7\ * \QuadDec_2:Net_1203\
+			\QuadDec_1:Net_1251_split\
+
+	Datapath:
+		 Instances:
+			\QuadDec_2:Cnt8:CounterUDB:sC8:counterdp:u0\
+
+		 Clock net: Net_3306
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			ClockBlock_BUS_CLK
+			\QuadDec_2:Cnt8:CounterUDB:count_enable\
+			\QuadDec_2:Cnt8:CounterUDB:reload\
+			\QuadDec_2:Net_1251\
+
+		 Output nets:
+			\QuadDec_2:Cnt8:CounterUDB:cmp_out_i\
+			\QuadDec_2:Cnt8:CounterUDB:overflow\
+			\QuadDec_2:Cnt8:CounterUDB:status_1\
+			\QuadDec_2:Cnt8:CounterUDB:status_5\
+			\QuadDec_2:Cnt8:CounterUDB:status_6\
+
+	Control, status and sync:
+		 Instances:
+			\QuadDec_2:Cnt8:CounterUDB:sCTRLReg:ctrlreg\ : controlcell
+			\QuadDec_2:Cnt8:CounterUDB:sSTSReg:stsreg\ : statusicell
+
+		 Clock net: Net_3306
+		 Set/Reset net: \QuadDec_2:Net_1260\
+		 Enable net: 
+
+		 Input nets:
+			ClockBlock_BUS_CLK
+			\QuadDec_2:Cnt8:CounterUDB:status_0\
+			\QuadDec_2:Cnt8:CounterUDB:status_1\
+			\QuadDec_2:Cnt8:CounterUDB:status_2\
+			\QuadDec_2:Cnt8:CounterUDB:status_3\
+			\QuadDec_2:Cnt8:CounterUDB:status_5\
+			\QuadDec_2:Cnt8:CounterUDB:status_6\
+
+		 Output nets:
+			\QuadDec_2:Cnt8:CounterUDB:control_7\
+
+	Local clock and reset nets:
+			\QuadDec_2:Net_1260\
+
+======================================================
+UDB 7
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\UART_2:BUART:txn\
+			\UART_2:BUART:tx_state_1\
+
+		 Clock net: \UART_2:Net_9\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\UART_2:BUART:tx_bitclk\
+			\UART_2:BUART:tx_bitclk_enable_pre\
+			\UART_2:BUART:tx_counter_dp\
+			\UART_2:BUART:tx_shift_out\
+			\UART_2:BUART:tx_state_0\
+			\UART_2:BUART:tx_state_1\
+			\UART_2:BUART:tx_state_2\
+			\UART_2:BUART:txn\
+
+		 Output nets:
+			\UART_2:BUART:tx_state_1\
+			\UART_2:BUART:txn\
+
+		 Product terms:
+			!\UART_2:BUART:tx_bitclk\ * !\UART_2:BUART:tx_state_1\ * !\UART_2:BUART:tx_state_2\ * \UART_2:BUART:tx_state_0\
+			!\UART_2:BUART:tx_bitclk\ * \UART_2:BUART:tx_state_1\ * \UART_2:BUART:txn\
+			!\UART_2:BUART:tx_counter_dp\ * !\UART_2:BUART:tx_shift_out\ * !\UART_2:BUART:tx_state_0\ * !\UART_2:BUART:tx_state_2\ * \UART_2:BUART:tx_bitclk\ * \UART_2:BUART:tx_state_1\
+			!\UART_2:BUART:tx_shift_out\ * !\UART_2:BUART:tx_state_1\ * !\UART_2:BUART:tx_state_2\ * \UART_2:BUART:tx_state_0\
+			!\UART_2:BUART:tx_state_2\ * \UART_2:BUART:tx_bitclk\ * \UART_2:BUART:tx_counter_dp\ * \UART_2:BUART:tx_state_1\
+			!\UART_2:BUART:tx_state_2\ * \UART_2:BUART:tx_bitclk\ * \UART_2:BUART:tx_state_0\
+			\UART_2:BUART:tx_bitclk_enable_pre\ * \UART_2:BUART:tx_state_0\ * \UART_2:BUART:tx_state_1\ * \UART_2:BUART:tx_state_2\
+			\UART_2:BUART:tx_state_2\ * \UART_2:BUART:txn\
+
+	PLD 1:
+		 Instances:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_13\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_15\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_14\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_38\
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+		 Output nets:
+
+		 Product terms:
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+
+	Datapath:
+		 Instances:
+			\UART_2:BUART:sTX:TxShifter:u0\
+
+		 Clock net: \UART_2:Net_9\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			ClockBlock_BUS_CLK
+			\UART_2:BUART:tx_bitclk_enable_pre\
+			\UART_2:BUART:tx_state_0\
+			\UART_2:BUART:tx_state_1\
+
+		 Output nets:
+			\UART_2:BUART:tx_fifo_empty\
+			\UART_2:BUART:tx_fifo_notfull\
+			\UART_2:BUART:tx_shift_out\
+
+	Control, status and sync:
+		 Instances:
+			\UART_2:BUART:sTX:TxSts\ : statusicell
+
+		 Clock net: \UART_2:Net_9\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\UART_2:BUART:tx_fifo_empty\
+			\UART_2:BUART:tx_fifo_notfull\
+			\UART_2:BUART:tx_status_0\
+			\UART_2:BUART:tx_status_2\
+
+		 Output nets:
+
+	Local clock and reset nets:
+
+======================================================
+UDB 8
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_17\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_16\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_18\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_40\
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+		 Output nets:
+
+		 Product terms:
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+
+	PLD 1:
+		 Instances:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_21\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_22\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_20\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_19\
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+		 Output nets:
+
+		 Product terms:
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+
+	Datapath:
+
+	Control, status and sync:
+		 Instances:
+			\UART_1:BUART:sRX:RxSts\ : statusicell
+
+		 Clock net: \UART_1:Net_9\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\UART_1:BUART:rx_status_3\
+			\UART_1:BUART:rx_status_4\
+			\UART_1:BUART:rx_status_5\
+
+		 Output nets:
+
+	Local clock and reset nets:
+
+======================================================
+UDB 9
+------------------------------------------------------
+	PLD 0:
+		 Instances:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_25\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_24\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_23\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_59\
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+		 Output nets:
+
+		 Product terms:
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+
+	PLD 1:
+		 Instances:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_27\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_29\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_28\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_26\
+
+		 Clock net: \ADC_SAR_Seq_1:clock\
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\
+
+		 Output nets:
+
+		 Product terms:
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+			!\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ * !\ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ * \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\
+
+	Datapath:
+
+	Control, status and sync:
+		 Instances:
+			\ADC_SAR_Seq_1:Sync:genblk1[0]:INST\ : synccell
+
+		 Clock net: ClockBlock_BUS_CLK
+		 Set/Reset net: 
+		 Enable net: 
+
+		 Input nets:
+			\ADC_SAR_Seq_1:nrq\
+
+		 Output nets:
+			\ADC_SAR_Seq_1:Net_3935\
+
+	Local clock and reset nets:

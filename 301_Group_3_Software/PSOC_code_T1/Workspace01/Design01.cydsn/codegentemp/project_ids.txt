@@ -1,0 +1,5 @@
+\\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn\Design01.cyprj|c0043ba6-6274-4a6c-a312-4eda100d15b5
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|f6b149d9-48aa-435f-8ef4-c906781eff43
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|aeaab349-ecc1-4bad-8501-debe0f1a3939
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|10818114-0da3-473d-b996-bf01b75a8066
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|e5c0f32a-7541-44fc-81e8-2a421f02ddbb

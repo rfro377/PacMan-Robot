@@ -1,0 +1,9 @@
+--------------- Build Started: 08/26/2019 11:11:12 Project: Design01, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+The code generation step is up to date.
+The compile step is up to date, no work needs to be done.
+The link step is up to date, no work needs to be done.
+cyelftool.exe -C \\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn\CortexM3\ARM_GCC_493\Debug\Design01.elf --flash_row_size 256 --flash_size 262144
+cyelftool.exe -S \\files.auckland.ac.nz\myhome\Desktop\PacMan-Robot-master\PacMan-Robot-master\301_Group_3_Software\Workspace01\Workspace01\Workspace01\Design01.cydsn\CortexM3\ARM_GCC_493\Debug\Design01.elf
+Flash used: 5376 of 262144 bytes (2.1%).
+SRAM used: 2573 of 65536 bytes (3.9%). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 08/26/2019 11:11:16 ---------------
