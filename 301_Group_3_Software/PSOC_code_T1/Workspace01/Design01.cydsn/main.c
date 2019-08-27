@@ -30,6 +30,7 @@ OPT_ROTS equation
 /* Global Varibles */
     int16 sensor1;
     int16 batteryVoltage;
+    int16 adccount;
     int16 mVolts;
     uint8 disablePWM = 0;
     uint8 pwm1_speed = 89; //hard coded init speeds
@@ -58,7 +59,8 @@ uint8 checkNumeric(char rx);
 uint8 checkNegative(char rx);
 uint8 checkComma(char rx);
 uint8 checkLeftBracket(char rx);
-uint8 checkRighttBracket(char rx);
+uint8 checkRightBracket(char rx);
+uint8 processChar(char, char* );
 void appendChar(char* s, char rx, uint8 ind);
 
 void moveForward(){
@@ -168,14 +170,14 @@ uint8 dataParser(char rx){
 				}
 				break;
 			case 3:
-				if (processChar(rx, xpos) == 0){
+				if (processChar(rx, xloc) == 0){
 					return 0;
 				}
 				UART_startString = 0;
 				return 0;
 				break;
 			case 4:
-				if (processChar(rx, ypos) == 0){
+				if (processChar(rx, yloc) == 0){
 					return 0;
 				}
 				UART_startString = 0;
@@ -349,22 +351,29 @@ int main()
     PWM_2_WriteCompare1(pwm2_speed);
     PWM_2_WriteCompare2(pwm2_speed);
     LED_Write(LOW);
-    
+    int i = 0;
+    while(i != 100000){
+        i++;
+    }
+        
     for(;;)
     {
+        
+            
         sensor1 = ADC_SAR_1_GetResult16();
         sensor1 = ADC_SAR_1_CountsTo_mVolts(sensor1); 
         batteryVoltage = ADC_SAR_Seq_1_GetResult16(0);
+        adccount = batteryVoltage;
         batteryVoltage = ADC_SAR_Seq_1_CountsTo_mVolts(batteryVoltage);
         batteryVoltage = batteryVoltage*2;
         if(batteryVoltage > 7500){
             LED_Write(HIGH);
-            sprintf(displaystring,"Battery Voltage =  %dmv\r\n",batteryVoltage);
+            sprintf(displaystring,"Battery Voltage =  %dmv ADC Count = %d\r\n",batteryVoltage, adccount);
             usbPutString(displaystring);
         }else{
             LED_Write(LOW);
         }
-        if(sensor1 > 2500){
+        if(sensor1 > 2500 && disablePWM == 0){
             if(int_ready == 1){
                
                 int_ready = 0;
@@ -382,7 +391,7 @@ int main()
         {
             char rx = UART_1_ReadRxData();
             if (dataParser(rx) == 1){
-                sprintf(displaystring,"rssi=%s, index=%s, xpos=%s, ypos=%s, angle10=%s\r\n",rssi,indexnumber,xpos,ypos,angle10);
+                sprintf(displaystring,"rssi=%s, index=%s, xpos=%s, ypos=%s, angle10=%s\r\n",rssi,indexnumber,xloc,yloc,angle10);
                 usbPutString(displaystring);
             }
             UART_dataReady = 0;

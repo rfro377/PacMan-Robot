@@ -6,14 +6,14 @@
 <CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
 <userData>
 <dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
-<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Output">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
 <TreeKeys>
 <v>Source</v>
 <v>Components</v>
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace01\Design01\Generated_Source\PSoC5\UART_2\UART_2.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace01\Design01">
 <ExpandedNodeIds>
 <v>Workspace01</v>
 <v>Workspace01\Design01</v>
@@ -195,15 +195,6 @@
 <v>Workspace01\Design01\Generated_Source\PSoC5\UART_1_IntClock</v>
 <v>Workspace01\Design01\Generated_Source\PSoC5\UART_1_IntClock\UART_1_IntClock.c</v>
 <v>Workspace01\Design01\Generated_Source\PSoC5\UART_1_IntClock\UART_1_IntClock.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_2</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_2\UART_2.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_2\UART_2.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_2\UART_2_BOOT.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_2\UART_2_INT.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_2\UART_2_PM.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_2_IntClock</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_2_IntClock\UART_2_IntClock.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_2_IntClock\UART_2_IntClock.h</v>
 <v>Workspace01\Design01\Generated_Source\PSoC5\cycodeshareexport.ld</v>
 <v>Workspace01\Design01\Generated_Source\PSoC5\cycodeshareimport.ld</v>
 <v>Workspace01\Design01\Generated_Source\PSoC5\cycodeshareimport.scat</v>
@@ -226,63 +217,63 @@
 <v>Workspace01\Design01\Generated_Source\PSoC5\project.h</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>Workspace01\Design01\Generated_Source\PSoC5\QuadDec_2\QuadDec_2.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\QuadDec_2\QuadDec_2_PM.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\QuadDec_2_Cnt8</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\QuadDec_2_Cnt8\QuadDec_2_Cnt8.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\QuadDec_2_Cnt8\QuadDec_2_Cnt8.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\QuadDec_2_Cnt8\QuadDec_2_Cnt8_PM.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Sensor1</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Sensor1\Sensor1.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Sensor1\Sensor1.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Sensor1\Sensor1_aliases.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Sensor2</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Sensor2\Sensor2.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Sensor2\Sensor2.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Sensor2\Sensor2_aliases.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Sensor3</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Sensor3\Sensor3.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Sensor3\Sensor3.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Sensor3\Sensor3_aliases.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Sensor4</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Sensor4\Sensor4.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Sensor4\Sensor4.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Sensor4\Sensor4_aliases.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Sensor5</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Sensor5\Sensor5.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Sensor5\Sensor5.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Sensor5\Sensor5_aliases.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Timer_1</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Timer_1\Timer_1.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Timer_1\Timer_1.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\Timer_1\Timer_1_PM.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_1</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_1\UART_1.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_1\UART_1.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_1\UART_1_BOOT.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_1\UART_1_INT.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_1\UART_1_PM.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_1_IntClock</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_1_IntClock\UART_1_IntClock.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_1_IntClock\UART_1_IntClock.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_2</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_2\UART_2.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_2\UART_2.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_2\UART_2_BOOT.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_2\UART_2_INT.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_2\UART_2_PM.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_2_IntClock</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_2_IntClock\UART_2_IntClock.c</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\UART_2_IntClock\UART_2_IntClock.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\cycodeshareexport.ld</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\cycodeshareimport.ld</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\cycodeshareimport.scat</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\cydevice.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\cydevice_trm.h</v>
-<v>Workspace01\Design01\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>Workspace01\Design01\Design01.cydwr</v>
+<v>Workspace01\Design01\Header Files</v>
+<v>Workspace01\Design01\Header Files\cyapicallbacks.h</v>
+<v>Workspace01\Design01\Source Files</v>
+<v>Workspace01\Design01\Source Files\main.c</v>
+<v>Workspace01\Design01\Generated_Source</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_1</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1.c</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1.h</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1_INT.c</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1_PM.c</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_1_ExtVref</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_1_ExtVref\ADC_SAR_1_ExtVref.c</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_1_ExtVref\ADC_SAR_1_ExtVref.h</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_1_ExtVref\ADC_SAR_1_ExtVref_aliases.h</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_1_IRQ</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_1_IRQ\ADC_SAR_1_IRQ.c</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_1_IRQ\ADC_SAR_1_IRQ.h</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_1_theACLK</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_1_theACLK\ADC_SAR_1_theACLK.c</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_1_theACLK\ADC_SAR_1_theACLK.h</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1\ADC_SAR_Seq_1.c</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1\ADC_SAR_Seq_1.h</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1\ADC_SAR_Seq_1_INT.c</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1\ADC_SAR_Seq_1_PM.c</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_FinalBuf</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_FinalBuf\ADC_SAR_Seq_1_FinalBuf_dma.c</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_FinalBuf\ADC_SAR_Seq_1_FinalBuf_dma.h</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_IntClock</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_IntClock\ADC_SAR_Seq_1_IntClock.c</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_IntClock\ADC_SAR_Seq_1_IntClock.h</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_IRQ</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_IRQ\ADC_SAR_Seq_1_IRQ.c</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_IRQ\ADC_SAR_Seq_1_IRQ.h</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_SAR</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_SAR\ADC_SAR_Seq_1_SAR.c</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_SAR\ADC_SAR_Seq_1_SAR.h</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_SAR\ADC_SAR_Seq_1_SAR_INT.c</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_SAR\ADC_SAR_Seq_1_SAR_PM.c</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_SAR_ExtVref</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_SAR_ExtVref\ADC_SAR_Seq_1_SAR_ExtVref.c</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_SAR_ExtVref\ADC_SAR_Seq_1_SAR_ExtVref.h</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_SAR_ExtVref\ADC_SAR_Seq_1_SAR_ExtVref_aliases.h</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_TempBuf</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_TempBuf\ADC_SAR_Seq_1_TempBuf_dma.c</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\ADC_SAR_Seq_1_TempBuf\ADC_SAR_Seq_1_TempBuf_dma.h</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\chA1</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\chA1\chA1.c</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\chA1\chA1.h</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\chA1\chA1_aliases.h</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\chA2</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\chA2\chA2.c</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace01">
 <ExpandedNodeIds>
 <v>Workspace01</v>
 <v>Workspace01\Design01</v>
@@ -340,6 +331,7 @@
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\isr_1.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\isr_2.lst</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\LED.lst</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\PW1_1.lst</v>
@@ -370,11 +362,22 @@
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_1_INT.lst</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_1_IntClock.lst</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_1_PM.lst</v>
-<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_2.lst</v>
-<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_2_BOOT.lst</v>
-<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_2_INT.lst</v>
-<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_2_IntClock.lst</v>
-<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_2_PM.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_audio.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_boot.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_cdc.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_cls.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_descr.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_Dm.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_Dp.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_drv.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_episr.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_hid.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_midi.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_msc.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_pm.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_std.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_vnd.lst</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Design01.elf</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Design01.hex</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Design01.map</v>
@@ -423,6 +426,7 @@
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\isr_1.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\isr_2.lst</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\LED.lst</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\PW1_1.lst</v>
@@ -436,7 +440,6 @@
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\QuadDec_1.lst</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\QuadDec_1_Cnt8.lst</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\QuadDec_1_Cnt8_PM.lst</v>
-<v>Workspace01\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\QuadDec_1_PM.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -456,7 +459,8 @@
 <v>Workspace01\Design01\ADC_SAR_v3_0.pdf</v>
 <v>Workspace01\Design01\cy_clock_v2_20</v>
 <v>Workspace01\Design01\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
-<v>Workspace01\Design01\cy_isr_v1_70.pdf</v>
+<v>Workspace01\Design01\cy_isr_v1_70</v>
+<v>Workspace01\Design01\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>Workspace01\Design01\cy_pins_v2_20</v>
 <v>Workspace01\Design01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>Workspace01\Design01\PWM_v3_30</v>
@@ -464,8 +468,8 @@
 <v>Workspace01\Design01\QuadDec_v3_0</v>
 <v>Workspace01\Design01\QuadDec_v3_0\QuadDec_v3_0.pdf</v>
 <v>Workspace01\Design01\Timer_v2_70.pdf</v>
-<v>Workspace01\Design01\UART_v2_50</v>
-<v>Workspace01\Design01\UART_v2_50\UART_v2_50.pdf</v>
+<v>Workspace01\Design01\UART_v2_50.pdf</v>
+<v>Workspace01\Design01\USBFS_v3_0.pdf</v>
 <v>Workspace01\Design01\ZeroTerminal.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
@@ -479,7 +483,8 @@
 <v>Workspace01\Design01\ADC_SAR_v3_0.pdf</v>
 <v>Workspace01\Design01\cy_clock_v2_20</v>
 <v>Workspace01\Design01\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
-<v>Workspace01\Design01\cy_isr_v1_70.pdf</v>
+<v>Workspace01\Design01\cy_isr_v1_70</v>
+<v>Workspace01\Design01\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>Workspace01\Design01\cy_pins_v2_20</v>
 <v>Workspace01\Design01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>Workspace01\Design01\PWM_v3_30</v>
@@ -487,8 +492,8 @@
 <v>Workspace01\Design01\QuadDec_v3_0</v>
 <v>Workspace01\Design01\QuadDec_v3_0\QuadDec_v3_0.pdf</v>
 <v>Workspace01\Design01\Timer_v2_70.pdf</v>
-<v>Workspace01\Design01\UART_v2_50</v>
-<v>Workspace01\Design01\UART_v2_50\UART_v2_50.pdf</v>
+<v>Workspace01\Design01\UART_v2_50.pdf</v>
+<v>Workspace01\Design01\USBFS_v3_0.pdf</v>
 <v>Workspace01\Design01\ZeroTerminal.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
