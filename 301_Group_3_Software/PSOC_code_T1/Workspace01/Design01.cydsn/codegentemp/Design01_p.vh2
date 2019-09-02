@@ -1,5 +1,5 @@
 -- Project:   Design01
--- Generated: 08/27/2019 13:20:09
+-- Generated: 09/02/2019 18:34:36
 -- PSoC Creator  3.3 CP3
 
 ENTITY Design01 IS
@@ -63,6 +63,7 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     SIGNAL Net_6515 : bit;
     SIGNAL Net_6580 : bit;
     SIGNAL Net_6605 : bit;
+    SIGNAL Net_6608 : bit;
     SIGNAL PW1_1(0)__PA : bit;
     SIGNAL PW1_2(0)__PA : bit;
     SIGNAL PW2_1(0)__PA : bit;
@@ -330,9 +331,27 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     SIGNAL \Timer_1:TimerUDB:control_7\ : bit;
     SIGNAL \Timer_1:TimerUDB:per_zero\ : bit;
     SIGNAL \Timer_1:TimerUDB:sT24:timerdp:u1.ce0__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u0.ce0__sig\ : bit;
     SIGNAL \Timer_1:TimerUDB:status_2\ : bit;
     SIGNAL \Timer_1:TimerUDB:status_3\ : bit;
     SIGNAL \Timer_1:TimerUDB:status_tc\ : bit;
+    SIGNAL \Timer_2:TimerUDB:control_0\ : bit;
+    SIGNAL \Timer_2:TimerUDB:control_1\ : bit;
+    SIGNAL \Timer_2:TimerUDB:control_2\ : bit;
+    SIGNAL \Timer_2:TimerUDB:control_3\ : bit;
+    SIGNAL \Timer_2:TimerUDB:control_4\ : bit;
+    SIGNAL \Timer_2:TimerUDB:control_5\ : bit;
+    SIGNAL \Timer_2:TimerUDB:control_6\ : bit;
+    SIGNAL \Timer_2:TimerUDB:control_7\ : bit;
+    SIGNAL \Timer_2:TimerUDB:per_zero\ : bit;
+    SIGNAL \Timer_2:TimerUDB:run_mode\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u1.ce0__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u2.ce0__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:status_2\ : bit;
+    SIGNAL \Timer_2:TimerUDB:status_3\ : bit;
+    SIGNAL \Timer_2:TimerUDB:status_tc\ : bit;
+    SIGNAL \Timer_2:TimerUDB:timer_enable\ : bit;
+    SIGNAL \Timer_2:TimerUDB:trig_disable\ : bit;
     SIGNAL \UART_1:BUART:pollcount_0\ : bit;
     SIGNAL \UART_1:BUART:pollcount_1\ : bit;
     SIGNAL \UART_1:BUART:rx_bitclk_enable\ : bit;
@@ -423,6 +442,42 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     SIGNAL \Timer_1:TimerUDB:sT24:timerdp:u1.cfbo__sig\ : bit;
     SIGNAL \Timer_1:TimerUDB:sT24:timerdp:u2.sor__sig\ : bit;
     SIGNAL \Timer_1:TimerUDB:sT24:timerdp:u2.cmsbo__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u0.cl0__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u0.z0__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u0.ff0__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u0.ce1__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u0.cl1__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u0.z1__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u0.ff1__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u0.co_msb__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u0.sol_msb__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u0.cfbo__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u1.sor__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u1.cmsbo__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u1.cl0__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u1.z0__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u1.ff0__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u1.ce1__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u1.cl1__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u1.z1__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u1.ff1__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u1.co_msb__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u1.sol_msb__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u1.cfbo__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u2.sor__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u2.cmsbo__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u2.cl0__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u2.z0__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u2.ff0__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u2.ce1__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u2.cl1__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u2.z1__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u2.ff1__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u2.co_msb__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u2.sol_msb__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u2.cfbo__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u3.sor__sig\ : bit;
+    SIGNAL \Timer_2:TimerUDB:sT32:timerdp:u3.cmsbo__sig\ : bit;
     ATTRIBUTE lib_model OF \QuadDec_2:Net_1251_split\ : LABEL IS "macrocell1";
     ATTRIBUTE lib_model OF LED(0) : LABEL IS "iocell1";
     ATTRIBUTE Location OF LED(0) : LABEL IS "P2[1]";
@@ -485,6 +540,7 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     ATTRIBUTE lib_model OF \UART_1:BUART:rx_postpoll\ : LABEL IS "macrocell22";
     ATTRIBUTE lib_model OF \UART_1:BUART:rx_status_4\ : LABEL IS "macrocell23";
     ATTRIBUTE lib_model OF \UART_1:BUART:rx_status_5\ : LABEL IS "macrocell24";
+    ATTRIBUTE lib_model OF \Timer_2:TimerUDB:status_tc\ : LABEL IS "macrocell25";
     ATTRIBUTE lib_model OF \PWM_1:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell1";
     ATTRIBUTE lib_model OF \PWM_1:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell1";
     ATTRIBUTE lib_model OF \PWM_1:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "datapathcell1";
@@ -499,22 +555,22 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     ATTRIBUTE lib_model OF \QuadDec_1:Cnt8:CounterUDB:sCTRLReg:ctrlreg\ : LABEL IS "controlcell4";
     ATTRIBUTE lib_model OF \QuadDec_1:Cnt8:CounterUDB:sSTSReg:stsreg\ : LABEL IS "statusicell4";
     ATTRIBUTE lib_model OF \QuadDec_1:Cnt8:CounterUDB:sC8:counterdp:u0\ : LABEL IS "datapathcell6";
-    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:quad_A_delayed_0\ : LABEL IS "macrocell25";
-    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:quad_A_delayed_1\ : LABEL IS "macrocell26";
-    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:quad_A_delayed_2\ : LABEL IS "macrocell27";
-    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:quad_B_delayed_0\ : LABEL IS "macrocell28";
-    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:quad_B_delayed_1\ : LABEL IS "macrocell29";
-    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:quad_B_delayed_2\ : LABEL IS "macrocell30";
+    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:quad_A_delayed_0\ : LABEL IS "macrocell26";
+    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:quad_A_delayed_1\ : LABEL IS "macrocell27";
+    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:quad_A_delayed_2\ : LABEL IS "macrocell28";
+    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:quad_B_delayed_0\ : LABEL IS "macrocell29";
+    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:quad_B_delayed_1\ : LABEL IS "macrocell30";
+    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:quad_B_delayed_2\ : LABEL IS "macrocell31";
     ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:Stsreg\ : LABEL IS "statusicell5";
     ATTRIBUTE lib_model OF \QuadDec_2:Cnt8:CounterUDB:sCTRLReg:ctrlreg\ : LABEL IS "controlcell5";
     ATTRIBUTE lib_model OF \QuadDec_2:Cnt8:CounterUDB:sSTSReg:stsreg\ : LABEL IS "statusicell6";
     ATTRIBUTE lib_model OF \QuadDec_2:Cnt8:CounterUDB:sC8:counterdp:u0\ : LABEL IS "datapathcell7";
-    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:quad_A_delayed_0\ : LABEL IS "macrocell31";
-    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:quad_A_delayed_1\ : LABEL IS "macrocell32";
-    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:quad_A_delayed_2\ : LABEL IS "macrocell33";
-    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:quad_B_delayed_0\ : LABEL IS "macrocell34";
-    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:quad_B_delayed_1\ : LABEL IS "macrocell35";
-    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:quad_B_delayed_2\ : LABEL IS "macrocell36";
+    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:quad_A_delayed_0\ : LABEL IS "macrocell32";
+    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:quad_A_delayed_1\ : LABEL IS "macrocell33";
+    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:quad_A_delayed_2\ : LABEL IS "macrocell34";
+    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:quad_B_delayed_0\ : LABEL IS "macrocell35";
+    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:quad_B_delayed_1\ : LABEL IS "macrocell36";
+    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:quad_B_delayed_2\ : LABEL IS "macrocell37";
     ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:Stsreg\ : LABEL IS "statusicell7";
     ATTRIBUTE Location OF \ADC_SAR_Seq_1:SAR:ADC_SAR\ : LABEL IS "F(SAR,0)";
     ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:bSAR_SEQ:CtrlReg\ : LABEL IS "controlcell6";
@@ -525,132 +581,141 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     ATTRIBUTE lib_model OF \UART_1:BUART:sRX:RxShifter:u0\ : LABEL IS "datapathcell8";
     ATTRIBUTE lib_model OF \UART_1:BUART:sRX:RxSts\ : LABEL IS "statusicell8";
     ATTRIBUTE Location OF \USBUART:USB\ : LABEL IS "F(USB,0)";
-    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:runmode_enable\ : LABEL IS "macrocell37";
-    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:prevCompare1\ : LABEL IS "macrocell38";
-    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:prevCompare2\ : LABEL IS "macrocell39";
-    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:status_0\ : LABEL IS "macrocell40";
-    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:status_1\ : LABEL IS "macrocell41";
-    ATTRIBUTE lib_model OF Net_1671 : LABEL IS "macrocell42";
-    ATTRIBUTE lib_model OF Net_543 : LABEL IS "macrocell43";
-    ATTRIBUTE lib_model OF \PWM_2:PWMUDB:runmode_enable\ : LABEL IS "macrocell44";
-    ATTRIBUTE lib_model OF \PWM_2:PWMUDB:prevCompare1\ : LABEL IS "macrocell45";
-    ATTRIBUTE lib_model OF \PWM_2:PWMUDB:prevCompare2\ : LABEL IS "macrocell46";
-    ATTRIBUTE lib_model OF \PWM_2:PWMUDB:status_0\ : LABEL IS "macrocell47";
-    ATTRIBUTE lib_model OF \PWM_2:PWMUDB:status_1\ : LABEL IS "macrocell48";
-    ATTRIBUTE lib_model OF Net_1726 : LABEL IS "macrocell49";
-    ATTRIBUTE lib_model OF Net_1725 : LABEL IS "macrocell50";
-    ATTRIBUTE lib_model OF \QuadDec_1:Net_1251\ : LABEL IS "macrocell51";
-    ATTRIBUTE lib_model OF \QuadDec_1:Cnt8:CounterUDB:overflow_reg_i\ : LABEL IS "macrocell52";
-    ATTRIBUTE lib_model OF \QuadDec_1:Cnt8:CounterUDB:underflow_reg_i\ : LABEL IS "macrocell53";
-    ATTRIBUTE lib_model OF \QuadDec_1:Net_1276\ : LABEL IS "macrocell54";
-    ATTRIBUTE lib_model OF \QuadDec_1:Cnt8:CounterUDB:prevCompare\ : LABEL IS "macrocell55";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active_split\ : LABEL IS "macrocell56";
-    ATTRIBUTE lib_model OF \QuadDec_1:Cnt8:CounterUDB:count_stored_i\ : LABEL IS "macrocell57";
-    ATTRIBUTE lib_model OF \QuadDec_1:Net_1203\ : LABEL IS "macrocell58";
-    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:quad_A_filt\ : LABEL IS "macrocell59";
-    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:quad_B_filt\ : LABEL IS "macrocell60";
-    ATTRIBUTE lib_model OF \QuadDec_1:Net_1260\ : LABEL IS "macrocell61";
-    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:error\ : LABEL IS "macrocell62";
-    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:state_1\ : LABEL IS "macrocell63";
-    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:state_0\ : LABEL IS "macrocell64";
-    ATTRIBUTE lib_model OF \QuadDec_2:Net_1251\ : LABEL IS "macrocell65";
-    ATTRIBUTE lib_model OF \QuadDec_2:Cnt8:CounterUDB:overflow_reg_i\ : LABEL IS "macrocell66";
-    ATTRIBUTE lib_model OF \QuadDec_2:Cnt8:CounterUDB:underflow_reg_i\ : LABEL IS "macrocell67";
-    ATTRIBUTE lib_model OF \QuadDec_2:Net_1276\ : LABEL IS "macrocell68";
-    ATTRIBUTE lib_model OF \QuadDec_2:Cnt8:CounterUDB:prevCompare\ : LABEL IS "macrocell69";
-    ATTRIBUTE lib_model OF \QuadDec_1:Net_1251_split\ : LABEL IS "macrocell70";
-    ATTRIBUTE lib_model OF \QuadDec_2:Cnt8:CounterUDB:count_stored_i\ : LABEL IS "macrocell71";
-    ATTRIBUTE lib_model OF \QuadDec_2:Net_1203\ : LABEL IS "macrocell72";
-    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:quad_A_filt\ : LABEL IS "macrocell73";
-    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:quad_B_filt\ : LABEL IS "macrocell74";
-    ATTRIBUTE lib_model OF \QuadDec_2:Net_1260\ : LABEL IS "macrocell75";
-    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:error\ : LABEL IS "macrocell76";
-    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:state_1\ : LABEL IS "macrocell77";
-    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:state_0\ : LABEL IS "macrocell78";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ : LABEL IS "macrocell79";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ : LABEL IS "macrocell80";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ : LABEL IS "macrocell81";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ : LABEL IS "macrocell82";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ : LABEL IS "macrocell83";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ : LABEL IS "macrocell84";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_0\ : LABEL IS "macrocell85";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_1\ : LABEL IS "macrocell86";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_2\ : LABEL IS "macrocell87";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_3\ : LABEL IS "macrocell88";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_4\ : LABEL IS "macrocell89";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_5\ : LABEL IS "macrocell90";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_6\ : LABEL IS "macrocell91";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_7\ : LABEL IS "macrocell92";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_8\ : LABEL IS "macrocell93";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_9\ : LABEL IS "macrocell94";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_10\ : LABEL IS "macrocell95";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_11\ : LABEL IS "macrocell96";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_12\ : LABEL IS "macrocell97";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_13\ : LABEL IS "macrocell98";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_14\ : LABEL IS "macrocell99";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_15\ : LABEL IS "macrocell100";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_16\ : LABEL IS "macrocell101";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_17\ : LABEL IS "macrocell102";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_18\ : LABEL IS "macrocell103";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_19\ : LABEL IS "macrocell104";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_20\ : LABEL IS "macrocell105";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_21\ : LABEL IS "macrocell106";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_22\ : LABEL IS "macrocell107";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_23\ : LABEL IS "macrocell108";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_24\ : LABEL IS "macrocell109";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_25\ : LABEL IS "macrocell110";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_26\ : LABEL IS "macrocell111";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_27\ : LABEL IS "macrocell112";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_28\ : LABEL IS "macrocell113";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_29\ : LABEL IS "macrocell114";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_30\ : LABEL IS "macrocell115";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_31\ : LABEL IS "macrocell116";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_32\ : LABEL IS "macrocell117";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_33\ : LABEL IS "macrocell118";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_34\ : LABEL IS "macrocell119";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_35\ : LABEL IS "macrocell120";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_36\ : LABEL IS "macrocell121";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_37\ : LABEL IS "macrocell122";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_38\ : LABEL IS "macrocell123";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_39\ : LABEL IS "macrocell124";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_40\ : LABEL IS "macrocell125";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_41\ : LABEL IS "macrocell126";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_42\ : LABEL IS "macrocell127";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_43\ : LABEL IS "macrocell128";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_44\ : LABEL IS "macrocell129";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_45\ : LABEL IS "macrocell130";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_46\ : LABEL IS "macrocell131";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_47\ : LABEL IS "macrocell132";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_48\ : LABEL IS "macrocell133";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_49\ : LABEL IS "macrocell134";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_50\ : LABEL IS "macrocell135";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_51\ : LABEL IS "macrocell136";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_52\ : LABEL IS "macrocell137";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_53\ : LABEL IS "macrocell138";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_54\ : LABEL IS "macrocell139";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_55\ : LABEL IS "macrocell140";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_56\ : LABEL IS "macrocell141";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_57\ : LABEL IS "macrocell142";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_58\ : LABEL IS "macrocell143";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_59\ : LABEL IS "macrocell144";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_60\ : LABEL IS "macrocell145";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_61\ : LABEL IS "macrocell146";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_62\ : LABEL IS "macrocell147";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_63\ : LABEL IS "macrocell148";
-    ATTRIBUTE lib_model OF Net_6416 : LABEL IS "macrocell149";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:bSAR_SEQ:bus_clk_nrq_reg\ : LABEL IS "macrocell150";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:bSAR_SEQ:nrq_reg\ : LABEL IS "macrocell151";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_1\ : LABEL IS "macrocell152";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_0\ : LABEL IS "macrocell153";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_load_fifo\ : LABEL IS "macrocell154";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_3\ : LABEL IS "macrocell155";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_2\ : LABEL IS "macrocell156";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_bitclk_enable\ : LABEL IS "macrocell157";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_stop1_reg\ : LABEL IS "macrocell158";
-    ATTRIBUTE lib_model OF \UART_1:BUART:pollcount_1\ : LABEL IS "macrocell159";
-    ATTRIBUTE lib_model OF \UART_1:BUART:pollcount_0\ : LABEL IS "macrocell160";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_status_3\ : LABEL IS "macrocell161";
-    ATTRIBUTE lib_model OF \UART_1:BUART:rx_last\ : LABEL IS "macrocell162";
+    ATTRIBUTE lib_model OF \Timer_2:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell7";
+    ATTRIBUTE lib_model OF \Timer_2:TimerUDB:rstSts:stsreg\ : LABEL IS "statusicell9";
+    ATTRIBUTE lib_model OF \Timer_2:TimerUDB:sT32:timerdp:u0\ : LABEL IS "datapathcell9";
+    ATTRIBUTE lib_model OF \Timer_2:TimerUDB:sT32:timerdp:u1\ : LABEL IS "datapathcell10";
+    ATTRIBUTE lib_model OF \Timer_2:TimerUDB:sT32:timerdp:u2\ : LABEL IS "datapathcell11";
+    ATTRIBUTE lib_model OF \Timer_2:TimerUDB:sT32:timerdp:u3\ : LABEL IS "datapathcell12";
+    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:runmode_enable\ : LABEL IS "macrocell38";
+    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:prevCompare1\ : LABEL IS "macrocell39";
+    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:prevCompare2\ : LABEL IS "macrocell40";
+    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:status_0\ : LABEL IS "macrocell41";
+    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:status_1\ : LABEL IS "macrocell42";
+    ATTRIBUTE lib_model OF Net_1671 : LABEL IS "macrocell43";
+    ATTRIBUTE lib_model OF Net_543 : LABEL IS "macrocell44";
+    ATTRIBUTE lib_model OF \PWM_2:PWMUDB:runmode_enable\ : LABEL IS "macrocell45";
+    ATTRIBUTE lib_model OF \PWM_2:PWMUDB:prevCompare1\ : LABEL IS "macrocell46";
+    ATTRIBUTE lib_model OF \PWM_2:PWMUDB:prevCompare2\ : LABEL IS "macrocell47";
+    ATTRIBUTE lib_model OF \PWM_2:PWMUDB:status_0\ : LABEL IS "macrocell48";
+    ATTRIBUTE lib_model OF \PWM_2:PWMUDB:status_1\ : LABEL IS "macrocell49";
+    ATTRIBUTE lib_model OF Net_1726 : LABEL IS "macrocell50";
+    ATTRIBUTE lib_model OF Net_1725 : LABEL IS "macrocell51";
+    ATTRIBUTE lib_model OF \QuadDec_1:Net_1251\ : LABEL IS "macrocell52";
+    ATTRIBUTE lib_model OF \QuadDec_1:Cnt8:CounterUDB:overflow_reg_i\ : LABEL IS "macrocell53";
+    ATTRIBUTE lib_model OF \QuadDec_1:Cnt8:CounterUDB:underflow_reg_i\ : LABEL IS "macrocell54";
+    ATTRIBUTE lib_model OF \QuadDec_1:Net_1276\ : LABEL IS "macrocell55";
+    ATTRIBUTE lib_model OF \QuadDec_1:Cnt8:CounterUDB:prevCompare\ : LABEL IS "macrocell56";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_is_active_split\ : LABEL IS "macrocell57";
+    ATTRIBUTE lib_model OF \QuadDec_1:Cnt8:CounterUDB:count_stored_i\ : LABEL IS "macrocell58";
+    ATTRIBUTE lib_model OF \QuadDec_1:Net_1203\ : LABEL IS "macrocell59";
+    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:quad_A_filt\ : LABEL IS "macrocell60";
+    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:quad_B_filt\ : LABEL IS "macrocell61";
+    ATTRIBUTE lib_model OF \QuadDec_1:Net_1260\ : LABEL IS "macrocell62";
+    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:error\ : LABEL IS "macrocell63";
+    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:state_1\ : LABEL IS "macrocell64";
+    ATTRIBUTE lib_model OF \QuadDec_1:bQuadDec:state_0\ : LABEL IS "macrocell65";
+    ATTRIBUTE lib_model OF \QuadDec_2:Net_1251\ : LABEL IS "macrocell66";
+    ATTRIBUTE lib_model OF \QuadDec_2:Cnt8:CounterUDB:overflow_reg_i\ : LABEL IS "macrocell67";
+    ATTRIBUTE lib_model OF \QuadDec_2:Cnt8:CounterUDB:underflow_reg_i\ : LABEL IS "macrocell68";
+    ATTRIBUTE lib_model OF \QuadDec_2:Net_1276\ : LABEL IS "macrocell69";
+    ATTRIBUTE lib_model OF \QuadDec_2:Cnt8:CounterUDB:prevCompare\ : LABEL IS "macrocell70";
+    ATTRIBUTE lib_model OF \QuadDec_1:Net_1251_split\ : LABEL IS "macrocell71";
+    ATTRIBUTE lib_model OF \QuadDec_2:Cnt8:CounterUDB:count_stored_i\ : LABEL IS "macrocell72";
+    ATTRIBUTE lib_model OF \QuadDec_2:Net_1203\ : LABEL IS "macrocell73";
+    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:quad_A_filt\ : LABEL IS "macrocell74";
+    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:quad_B_filt\ : LABEL IS "macrocell75";
+    ATTRIBUTE lib_model OF \QuadDec_2:Net_1260\ : LABEL IS "macrocell76";
+    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:error\ : LABEL IS "macrocell77";
+    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:state_1\ : LABEL IS "macrocell78";
+    ATTRIBUTE lib_model OF \QuadDec_2:bQuadDec:state_0\ : LABEL IS "macrocell79";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_5\ : LABEL IS "macrocell80";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_4\ : LABEL IS "macrocell81";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_3\ : LABEL IS "macrocell82";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ : LABEL IS "macrocell83";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ : LABEL IS "macrocell84";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_0\ : LABEL IS "macrocell85";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_0\ : LABEL IS "macrocell86";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_1\ : LABEL IS "macrocell87";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_2\ : LABEL IS "macrocell88";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_3\ : LABEL IS "macrocell89";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_4\ : LABEL IS "macrocell90";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_5\ : LABEL IS "macrocell91";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_6\ : LABEL IS "macrocell92";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_7\ : LABEL IS "macrocell93";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_8\ : LABEL IS "macrocell94";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_9\ : LABEL IS "macrocell95";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_10\ : LABEL IS "macrocell96";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_11\ : LABEL IS "macrocell97";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_12\ : LABEL IS "macrocell98";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_13\ : LABEL IS "macrocell99";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_14\ : LABEL IS "macrocell100";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_15\ : LABEL IS "macrocell101";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_16\ : LABEL IS "macrocell102";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_17\ : LABEL IS "macrocell103";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_18\ : LABEL IS "macrocell104";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_19\ : LABEL IS "macrocell105";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_20\ : LABEL IS "macrocell106";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_21\ : LABEL IS "macrocell107";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_22\ : LABEL IS "macrocell108";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_23\ : LABEL IS "macrocell109";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_24\ : LABEL IS "macrocell110";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_25\ : LABEL IS "macrocell111";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_26\ : LABEL IS "macrocell112";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_27\ : LABEL IS "macrocell113";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_28\ : LABEL IS "macrocell114";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_29\ : LABEL IS "macrocell115";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_30\ : LABEL IS "macrocell116";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_31\ : LABEL IS "macrocell117";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_32\ : LABEL IS "macrocell118";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_33\ : LABEL IS "macrocell119";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_34\ : LABEL IS "macrocell120";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_35\ : LABEL IS "macrocell121";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_36\ : LABEL IS "macrocell122";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_37\ : LABEL IS "macrocell123";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_38\ : LABEL IS "macrocell124";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_39\ : LABEL IS "macrocell125";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_40\ : LABEL IS "macrocell126";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_41\ : LABEL IS "macrocell127";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_42\ : LABEL IS "macrocell128";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_43\ : LABEL IS "macrocell129";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_44\ : LABEL IS "macrocell130";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_45\ : LABEL IS "macrocell131";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_46\ : LABEL IS "macrocell132";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_47\ : LABEL IS "macrocell133";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_48\ : LABEL IS "macrocell134";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_49\ : LABEL IS "macrocell135";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_50\ : LABEL IS "macrocell136";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_51\ : LABEL IS "macrocell137";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_52\ : LABEL IS "macrocell138";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_53\ : LABEL IS "macrocell139";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_54\ : LABEL IS "macrocell140";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_55\ : LABEL IS "macrocell141";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_56\ : LABEL IS "macrocell142";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_57\ : LABEL IS "macrocell143";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_58\ : LABEL IS "macrocell144";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_59\ : LABEL IS "macrocell145";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_60\ : LABEL IS "macrocell146";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_61\ : LABEL IS "macrocell147";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_62\ : LABEL IS "macrocell148";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_63\ : LABEL IS "macrocell149";
+    ATTRIBUTE lib_model OF Net_6416 : LABEL IS "macrocell150";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:bSAR_SEQ:bus_clk_nrq_reg\ : LABEL IS "macrocell151";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq_1:bSAR_SEQ:nrq_reg\ : LABEL IS "macrocell152";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_1\ : LABEL IS "macrocell153";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_0\ : LABEL IS "macrocell154";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_load_fifo\ : LABEL IS "macrocell155";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_3\ : LABEL IS "macrocell156";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_2\ : LABEL IS "macrocell157";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_bitclk_enable\ : LABEL IS "macrocell158";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_state_stop1_reg\ : LABEL IS "macrocell159";
+    ATTRIBUTE lib_model OF \UART_1:BUART:pollcount_1\ : LABEL IS "macrocell160";
+    ATTRIBUTE lib_model OF \UART_1:BUART:pollcount_0\ : LABEL IS "macrocell161";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_status_3\ : LABEL IS "macrocell162";
+    ATTRIBUTE lib_model OF \UART_1:BUART:rx_last\ : LABEL IS "macrocell163";
+    ATTRIBUTE lib_model OF \Timer_2:TimerUDB:run_mode\ : LABEL IS "macrocell164";
+    ATTRIBUTE lib_model OF \Timer_2:TimerUDB:timer_enable\ : LABEL IS "macrocell165";
+    ATTRIBUTE lib_model OF \Timer_2:TimerUDB:trig_disable\ : LABEL IS "macrocell166";
     COMPONENT clockblockcell
         PORT (
             dclk_0 : OUT std_ulogic;
@@ -3055,6 +3120,15 @@ BEGIN
             main_0 => \UART_1:BUART:rx_fifonotempty\,
             main_1 => \UART_1:BUART:rx_state_stop1_reg\);
 
+    \Timer_2:TimerUDB:status_tc\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => \Timer_2:TimerUDB:status_tc\,
+            main_0 => \Timer_2:TimerUDB:run_mode\,
+            main_1 => \Timer_2:TimerUDB:per_zero\);
+
     \PWM_1:PWMUDB:genblk1:ctrlreg\:controlcell
         GENERIC MAP(
             cy_ctrl_mode_0 => "11111111",
@@ -4053,6 +4127,265 @@ BEGIN
             int_type => "10")
         PORT MAP(
             interrupt => Net_6580,
+            clock => ClockBlock_BUS_CLK);
+
+    \Timer_2:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "11111111",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => ClockBlock_BUS_CLK,
+            control_7 => \Timer_2:TimerUDB:control_7\,
+            control_6 => \Timer_2:TimerUDB:control_6\,
+            control_5 => \Timer_2:TimerUDB:control_5\,
+            control_4 => \Timer_2:TimerUDB:control_4\,
+            control_3 => \Timer_2:TimerUDB:control_3\,
+            control_2 => \Timer_2:TimerUDB:control_2\,
+            control_1 => \Timer_2:TimerUDB:control_1\,
+            control_0 => \Timer_2:TimerUDB:control_0\,
+            busclk => ClockBlock_BUS_CLK);
+
+    \Timer_2:TimerUDB:rstSts:stsreg\:statusicell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_int_mask => "1111111",
+            cy_md_select => "0000011",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => ClockBlock_BUS_CLK,
+            status_6 => open,
+            status_5 => open,
+            status_4 => open,
+            status_3 => \Timer_2:TimerUDB:status_3\,
+            status_2 => \Timer_2:TimerUDB:status_2\,
+            status_1 => open,
+            status_0 => \Timer_2:TimerUDB:status_tc\,
+            interrupt => Net_6608);
+
+    \Timer_2:TimerUDB:sT32:timerdp:u0\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111000000000000000000000001000000000000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => ClockBlock_BUS_CLK,
+            cs_addr_1 => \Timer_2:TimerUDB:timer_enable\,
+            cs_addr_0 => \Timer_2:TimerUDB:per_zero\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0 => \Timer_2:TimerUDB:sT32:timerdp:u0.ce0__sig\,
+            cl0 => \Timer_2:TimerUDB:sT32:timerdp:u0.cl0__sig\,
+            z0 => \Timer_2:TimerUDB:sT32:timerdp:u0.z0__sig\,
+            ff0 => \Timer_2:TimerUDB:sT32:timerdp:u0.ff0__sig\,
+            ce1 => \Timer_2:TimerUDB:sT32:timerdp:u0.ce1__sig\,
+            cl1 => \Timer_2:TimerUDB:sT32:timerdp:u0.cl1__sig\,
+            z1 => \Timer_2:TimerUDB:sT32:timerdp:u0.z1__sig\,
+            ff1 => \Timer_2:TimerUDB:sT32:timerdp:u0.ff1__sig\,
+            co_msb => \Timer_2:TimerUDB:sT32:timerdp:u0.co_msb__sig\,
+            sol_msb => \Timer_2:TimerUDB:sT32:timerdp:u0.sol_msb__sig\,
+            cfbo => \Timer_2:TimerUDB:sT32:timerdp:u0.cfbo__sig\,
+            sil => \Timer_2:TimerUDB:sT32:timerdp:u1.sor__sig\,
+            cmsbi => \Timer_2:TimerUDB:sT32:timerdp:u1.cmsbo__sig\);
+
+    \Timer_2:TimerUDB:sT32:timerdp:u1\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => ClockBlock_BUS_CLK,
+            cs_addr_1 => \Timer_2:TimerUDB:timer_enable\,
+            cs_addr_0 => \Timer_2:TimerUDB:per_zero\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \Timer_2:TimerUDB:sT32:timerdp:u0.ce0__sig\,
+            cl0i => \Timer_2:TimerUDB:sT32:timerdp:u0.cl0__sig\,
+            z0i => \Timer_2:TimerUDB:sT32:timerdp:u0.z0__sig\,
+            ff0i => \Timer_2:TimerUDB:sT32:timerdp:u0.ff0__sig\,
+            ce1i => \Timer_2:TimerUDB:sT32:timerdp:u0.ce1__sig\,
+            cl1i => \Timer_2:TimerUDB:sT32:timerdp:u0.cl1__sig\,
+            z1i => \Timer_2:TimerUDB:sT32:timerdp:u0.z1__sig\,
+            ff1i => \Timer_2:TimerUDB:sT32:timerdp:u0.ff1__sig\,
+            ci => \Timer_2:TimerUDB:sT32:timerdp:u0.co_msb__sig\,
+            sir => \Timer_2:TimerUDB:sT32:timerdp:u0.sol_msb__sig\,
+            cfbi => \Timer_2:TimerUDB:sT32:timerdp:u0.cfbo__sig\,
+            sor => \Timer_2:TimerUDB:sT32:timerdp:u1.sor__sig\,
+            cmsbo => \Timer_2:TimerUDB:sT32:timerdp:u1.cmsbo__sig\,
+            ce0 => \Timer_2:TimerUDB:sT32:timerdp:u1.ce0__sig\,
+            cl0 => \Timer_2:TimerUDB:sT32:timerdp:u1.cl0__sig\,
+            z0 => \Timer_2:TimerUDB:sT32:timerdp:u1.z0__sig\,
+            ff0 => \Timer_2:TimerUDB:sT32:timerdp:u1.ff0__sig\,
+            ce1 => \Timer_2:TimerUDB:sT32:timerdp:u1.ce1__sig\,
+            cl1 => \Timer_2:TimerUDB:sT32:timerdp:u1.cl1__sig\,
+            z1 => \Timer_2:TimerUDB:sT32:timerdp:u1.z1__sig\,
+            ff1 => \Timer_2:TimerUDB:sT32:timerdp:u1.ff1__sig\,
+            co_msb => \Timer_2:TimerUDB:sT32:timerdp:u1.co_msb__sig\,
+            sol_msb => \Timer_2:TimerUDB:sT32:timerdp:u1.sol_msb__sig\,
+            cfbo => \Timer_2:TimerUDB:sT32:timerdp:u1.cfbo__sig\,
+            sil => \Timer_2:TimerUDB:sT32:timerdp:u2.sor__sig\,
+            cmsbi => \Timer_2:TimerUDB:sT32:timerdp:u2.cmsbo__sig\);
+
+    \Timer_2:TimerUDB:sT32:timerdp:u2\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => ClockBlock_BUS_CLK,
+            cs_addr_1 => \Timer_2:TimerUDB:timer_enable\,
+            cs_addr_0 => \Timer_2:TimerUDB:per_zero\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \Timer_2:TimerUDB:sT32:timerdp:u1.ce0__sig\,
+            cl0i => \Timer_2:TimerUDB:sT32:timerdp:u1.cl0__sig\,
+            z0i => \Timer_2:TimerUDB:sT32:timerdp:u1.z0__sig\,
+            ff0i => \Timer_2:TimerUDB:sT32:timerdp:u1.ff0__sig\,
+            ce1i => \Timer_2:TimerUDB:sT32:timerdp:u1.ce1__sig\,
+            cl1i => \Timer_2:TimerUDB:sT32:timerdp:u1.cl1__sig\,
+            z1i => \Timer_2:TimerUDB:sT32:timerdp:u1.z1__sig\,
+            ff1i => \Timer_2:TimerUDB:sT32:timerdp:u1.ff1__sig\,
+            ci => \Timer_2:TimerUDB:sT32:timerdp:u1.co_msb__sig\,
+            sir => \Timer_2:TimerUDB:sT32:timerdp:u1.sol_msb__sig\,
+            cfbi => \Timer_2:TimerUDB:sT32:timerdp:u1.cfbo__sig\,
+            sor => \Timer_2:TimerUDB:sT32:timerdp:u2.sor__sig\,
+            cmsbo => \Timer_2:TimerUDB:sT32:timerdp:u2.cmsbo__sig\,
+            ce0 => \Timer_2:TimerUDB:sT32:timerdp:u2.ce0__sig\,
+            cl0 => \Timer_2:TimerUDB:sT32:timerdp:u2.cl0__sig\,
+            z0 => \Timer_2:TimerUDB:sT32:timerdp:u2.z0__sig\,
+            ff0 => \Timer_2:TimerUDB:sT32:timerdp:u2.ff0__sig\,
+            ce1 => \Timer_2:TimerUDB:sT32:timerdp:u2.ce1__sig\,
+            cl1 => \Timer_2:TimerUDB:sT32:timerdp:u2.cl1__sig\,
+            z1 => \Timer_2:TimerUDB:sT32:timerdp:u2.z1__sig\,
+            ff1 => \Timer_2:TimerUDB:sT32:timerdp:u2.ff1__sig\,
+            co_msb => \Timer_2:TimerUDB:sT32:timerdp:u2.co_msb__sig\,
+            sol_msb => \Timer_2:TimerUDB:sT32:timerdp:u2.sol_msb__sig\,
+            cfbo => \Timer_2:TimerUDB:sT32:timerdp:u2.cfbo__sig\,
+            sil => \Timer_2:TimerUDB:sT32:timerdp:u3.sor__sig\,
+            cmsbi => \Timer_2:TimerUDB:sT32:timerdp:u3.cmsbo__sig\);
+
+    \Timer_2:TimerUDB:sT32:timerdp:u3\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => ClockBlock_BUS_CLK,
+            cs_addr_1 => \Timer_2:TimerUDB:timer_enable\,
+            cs_addr_0 => \Timer_2:TimerUDB:per_zero\,
+            z0_comb => \Timer_2:TimerUDB:per_zero\,
+            f0_bus_stat_comb => \Timer_2:TimerUDB:status_3\,
+            f0_blk_stat_comb => \Timer_2:TimerUDB:status_2\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \Timer_2:TimerUDB:sT32:timerdp:u2.ce0__sig\,
+            cl0i => \Timer_2:TimerUDB:sT32:timerdp:u2.cl0__sig\,
+            z0i => \Timer_2:TimerUDB:sT32:timerdp:u2.z0__sig\,
+            ff0i => \Timer_2:TimerUDB:sT32:timerdp:u2.ff0__sig\,
+            ce1i => \Timer_2:TimerUDB:sT32:timerdp:u2.ce1__sig\,
+            cl1i => \Timer_2:TimerUDB:sT32:timerdp:u2.cl1__sig\,
+            z1i => \Timer_2:TimerUDB:sT32:timerdp:u2.z1__sig\,
+            ff1i => \Timer_2:TimerUDB:sT32:timerdp:u2.ff1__sig\,
+            ci => \Timer_2:TimerUDB:sT32:timerdp:u2.co_msb__sig\,
+            sir => \Timer_2:TimerUDB:sT32:timerdp:u2.sol_msb__sig\,
+            cfbi => \Timer_2:TimerUDB:sT32:timerdp:u2.cfbo__sig\,
+            sor => \Timer_2:TimerUDB:sT32:timerdp:u3.sor__sig\,
+            cmsbo => \Timer_2:TimerUDB:sT32:timerdp:u3.cmsbo__sig\);
+
+    isr_3:interrupt
+        GENERIC MAP(
+            int_type => "10")
+        PORT MAP(
+            interrupt => Net_6608,
             clock => ClockBlock_BUS_CLK);
 
     \PWM_1:PWMUDB:runmode_enable\:macrocell
@@ -5853,5 +6186,44 @@ BEGIN
             q => \UART_1:BUART:rx_last\,
             clock_0 => \UART_1:Net_9\,
             main_0 => Net_6515);
+
+    \Timer_2:TimerUDB:run_mode\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Timer_2:TimerUDB:run_mode\,
+            clock_0 => ClockBlock_BUS_CLK,
+            main_0 => \Timer_2:TimerUDB:control_7\);
+
+    \Timer_2:TimerUDB:timer_enable\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * !main_3 * !main_5) + (!main_0 * main_1 * !main_4 * !main_5) + (main_1 * !main_2 * !main_5)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Timer_2:TimerUDB:timer_enable\,
+            clock_0 => ClockBlock_BUS_CLK,
+            main_0 => Net_6608,
+            main_1 => \Timer_2:TimerUDB:control_7\,
+            main_2 => \Timer_2:TimerUDB:timer_enable\,
+            main_3 => \Timer_2:TimerUDB:run_mode\,
+            main_4 => \Timer_2:TimerUDB:per_zero\,
+            main_5 => \Timer_2:TimerUDB:trig_disable\);
+
+    \Timer_2:TimerUDB:trig_disable\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1 * !main_4) + (main_1 * main_2 * main_3 * !main_4)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Timer_2:TimerUDB:trig_disable\,
+            clock_0 => ClockBlock_BUS_CLK,
+            main_0 => Net_6608,
+            main_1 => \Timer_2:TimerUDB:timer_enable\,
+            main_2 => \Timer_2:TimerUDB:run_mode\,
+            main_3 => \Timer_2:TimerUDB:per_zero\,
+            main_4 => \Timer_2:TimerUDB:trig_disable\);
 
 END __DEFAULT__;

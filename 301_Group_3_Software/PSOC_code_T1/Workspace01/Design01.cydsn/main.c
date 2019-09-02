@@ -11,6 +11,7 @@
 */
 #include <project.h>
 #include <stdio.h>
+#include <linkedlist.h>
 
 
 /* Macros */
@@ -18,23 +19,25 @@
 #define LOW (0)
 #define HIGH (1)
 #define OPT_ROTS (10)
+#define turn360 (28800000) //90 counts // 34560000 108
+#define turn1 (80000)
 /* 
 
 OPT_ROTS equation
 
 ((1/(target frequency of ChaA)) x Num of rotations before adjustment) x (input clock 24mhz)
 
-1/55 x 10 x 24000000
+1/75 x 10 x 24000000
 */
-
+ 
 /* Global Varibles */
     int16 sensor1;
     int16 batteryVoltage;
     int16 adccount;
     int16 mVolts;
     uint8 disablePWM = 0;
-    uint8 pwm1_speed = 89; //hard coded init speeds
-    uint8 pwm2_speed = 93; //hard coded init speeds
+    uint8 pwm1_speed = 120; //hard coded init speeds
+    uint8 pwm2_speed = 124; //hard coded init speeds
     uint8 int_ready = 0;
     int8 Count1 = 10;
     int8 Count2 = 10;
@@ -52,6 +55,7 @@ OPT_ROTS equation
     uint8 UART_startString = 0;
     uint8 UART_comma = 0;
 	uint8 UART_index = 0;
+    uint8 rotateflag = 0;
     
 /* HELPER FUNCTIONS */
     
@@ -89,9 +93,28 @@ void moveForward(){
         
     }
     PWM_1_WriteCompare1(pwm1_speed);
-    PWM_1_WriteCompare2(pwm1_speed);
-    PWM_2_WriteCompare1(pwm2_speed);
+    PWM_1_WriteCompare2(0);
+    PWM_2_WriteCompare1(0);
     PWM_2_WriteCompare2(pwm2_speed);
+}
+
+void stop(){
+    PWM_1_WriteCompare1(0);
+    PWM_1_WriteCompare2(0);
+    PWM_2_WriteCompare1(0);
+    PWM_2_WriteCompare2(0);
+}
+
+void rotate(uint32 angle){
+    uint32 period = angle*turn1;
+    Timer_2_WriteCounter(0);
+    Timer_2_WritePeriod(period);
+    Timer_2_WriteCounter(0);
+    PWM_1_WriteCompare1(pwm1_speed);
+    PWM_1_WriteCompare2(0);
+    PWM_2_WriteCompare1(pwm2_speed);
+    PWM_2_WriteCompare2(0);
+    Timer_2_Enable();
 }
 
 void usbPutString(char *s)
@@ -290,6 +313,17 @@ CY_ISR(Timer_1_Int_Handler)
     Timer_1_Start();
 }
 
+CY_ISR(Timer_2_Int_Handler)
+{
+    LED_Write(HIGH);
+   
+    PWM_1_WriteCompare1(0);
+    PWM_1_WriteCompare2(0);
+    PWM_2_WriteCompare1(0);
+    PWM_2_WriteCompare2(0);
+    rotateflag = 1;
+}
+
 CY_ISR(USBUART_Int_Handler)
 {
     UART_dataReady = 1;
@@ -321,8 +355,10 @@ int main()
     PWM_2_Start();
     Timer_1_Enable();
     Timer_1_Start();
+    Timer_2_Init();
     isr_1_StartEx(Timer_1_Int_Handler);
     isr_2_StartEx(USBUART_Int_Handler);
+    isr_3_StartEx(Timer_2_Int_Handler);
     UART_1_Start();
     USBUART_Start(0,USBUART_5V_OPERATION);
     //PIN MAP//
@@ -355,11 +391,32 @@ int main()
     while(i != 100000){
         i++;
     }
-        
+    
+    
+    int index = 0; 
+    int movement;
+    linkedlist list;
+    createlinkedlist(&list,1);
+    addlast(&list,0);
+    addlast(&list,2);
+    addlast(&list,0);
+    int flag = 0;
+    i = 0;
+    LED_Write(LOW);    
     for(;;)
     {
-        
+        if(i < 1000000){
+            if(int_ready == 1){
+                int_ready = 0;
+                moveForward();
+            }
+        }else if (flag == 0){
+            rotate(360);
+            flag = 1;
             
+        }
+        i++;
+        /*    
         sensor1 = ADC_SAR_1_GetResult16();
         sensor1 = ADC_SAR_1_CountsTo_mVolts(sensor1); 
         batteryVoltage = ADC_SAR_Seq_1_GetResult16(0);
@@ -396,6 +453,7 @@ int main()
             }
             UART_dataReady = 0;
         }
+        */
     }
 }
 

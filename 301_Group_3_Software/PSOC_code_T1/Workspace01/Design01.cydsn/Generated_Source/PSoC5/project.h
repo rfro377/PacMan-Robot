@@ -67,6 +67,8 @@
 #include "USBUART_cydmac.h"
 #include "USBUART_msc.h"
 #include "isr_2.h"
+#include "Timer_2.h"
+#include "isr_3.h"
 #include "QuadDec_1_Cnt8.h"
 #include "QuadDec_2_Cnt8.h"
 #include "ADC_SAR_Seq_1_SAR.h"

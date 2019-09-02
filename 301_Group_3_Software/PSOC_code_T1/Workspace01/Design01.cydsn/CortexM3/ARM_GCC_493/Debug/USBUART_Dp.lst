@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cchB5EUT.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
   29:.\Generated_Source\PSoC5/USBUART_Dp.c **** * \brief Writes the value to the physical port (data output register), masking
   30:.\Generated_Source\PSoC5/USBUART_Dp.c **** *  and shifting the bits appropriately. 
   31:.\Generated_Source\PSoC5/USBUART_Dp.c **** *
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 2
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cchB5EUT.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/USBUART_Dp.c **** * The data output register controls the signal applied to the physical pin in 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
   52              		.section	.text.USBUART_Dp_SetDriveMode,"ax",%progbits
   53              		.align	2
   54              		.global	USBUART_Dp_SetDriveMode
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 3
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cchB5EUT.s 			page 3
 
 
   55              		.thumb
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
   77              	.L5:
   78 0014 7E500040 		.word	1073762430
   79              		.cfi_endproc
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 4
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cchB5EUT.s 			page 4
 
 
   80              	.LFE1:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
  110              		.global	USBUART_Dp_ReadDataReg
  111              		.thumb
  112              		.thumb_func
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 5
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cchB5EUT.s 			page 5
 
 
  113              		.type	USBUART_Dp_ReadDataReg, %function
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
  139              		.type	USBUART_Dp_SetInterruptMode, %function
  140              	USBUART_Dp_SetInterruptMode:
  141              	.LFB4:
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 6
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cchB5EUT.s 			page 6
 
 
  145:.\Generated_Source\PSoC5/USBUART_Dp.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
  151 0004 80B2     		uxth	r0, r0
  152 0006 10B1     		cbz	r0, .L13
  190:.\Generated_Source\PSoC5/USBUART_Dp.c **** 		{ 
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 7
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cchB5EUT.s 			page 7
 
 
  191:.\Generated_Source\PSoC5/USBUART_Dp.c **** 			 USBUART_Dp_0_INTTYPE_REG = (uint8)mode; 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
  218:.\Generated_Source\PSoC5/USBUART_Dp.c ****         return (USBUART_Dp_INTSTAT & USBUART_Dp_MASK) >> USBUART_Dp_SHIFT;
  180              		.loc 1 218 0
  181 0000 024B     		ldr	r3, .L18
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 8
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cchB5EUT.s 			page 8
 
 
  182 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
@@ -443,48 +443,48 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
  200 0006 00000000 		.4byte	.Ldebug_abbrev0
  201 000a 04       		.byte	0x4
  202 000b 01       		.uleb128 0x1
- 203 000c F7000000 		.4byte	.LASF24
+ 203 000c 20010000 		.4byte	.LASF24
  204 0010 01       		.byte	0x1
- 205 0011 49000000 		.4byte	.LASF25
- 206 0015 1E000000 		.4byte	.LASF26
+ 205 0011 7D000000 		.4byte	.LASF25
+ 206 0015 00000000 		.4byte	.LASF26
  207 0019 00000000 		.4byte	.Ldebug_ranges0+0
  208 001d 00000000 		.4byte	0
  209 0021 00000000 		.4byte	.Ldebug_line0
  210 0025 02       		.uleb128 0x2
  211 0026 01       		.byte	0x1
  212 0027 06       		.byte	0x6
- 213 0028 20020000 		.4byte	.LASF0
+ 213 0028 49020000 		.4byte	.LASF0
  214 002c 02       		.uleb128 0x2
  215 002d 01       		.byte	0x1
  216 002e 08       		.byte	0x8
- 217 002f 86000000 		.4byte	.LASF1
+ 217 002f BA000000 		.4byte	.LASF1
  218 0033 02       		.uleb128 0x2
  219 0034 02       		.byte	0x2
  220 0035 05       		.byte	0x5
- 221 0036 EB010000 		.4byte	.LASF2
+ 221 0036 14020000 		.4byte	.LASF2
  222 003a 02       		.uleb128 0x2
  223 003b 02       		.byte	0x2
  224 003c 07       		.byte	0x7
- 225 003d B6000000 		.4byte	.LASF3
+ 225 003d DF000000 		.4byte	.LASF3
  226 0041 02       		.uleb128 0x2
  227 0042 04       		.byte	0x4
  228 0043 05       		.byte	0x5
- 229 0044 FB010000 		.4byte	.LASF4
+ 229 0044 24020000 		.4byte	.LASF4
  230 0048 02       		.uleb128 0x2
  231 0049 04       		.byte	0x4
  232 004a 07       		.byte	0x7
- 233 004b A4000000 		.4byte	.LASF5
+ 233 004b CD000000 		.4byte	.LASF5
  234 004f 02       		.uleb128 0x2
  235 0050 08       		.byte	0x8
  236 0051 05       		.byte	0x5
- 237 0052 C8010000 		.4byte	.LASF6
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 9
+ 237 0052 F1010000 		.4byte	.LASF6
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cchB5EUT.s 			page 9
 
 
  238 0056 02       		.uleb128 0x2
  239 0057 08       		.byte	0x8
  240 0058 07       		.byte	0x7
- 241 0059 92010000 		.4byte	.LASF7
+ 241 0059 BB010000 		.4byte	.LASF7
  242 005d 03       		.uleb128 0x3
  243 005e 04       		.byte	0x4
  244 005f 05       		.byte	0x5
@@ -492,38 +492,38 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
  246 0064 02       		.uleb128 0x2
  247 0065 04       		.byte	0x4
  248 0066 07       		.byte	0x7
- 249 0067 85010000 		.4byte	.LASF8
+ 249 0067 AE010000 		.4byte	.LASF8
  250 006b 04       		.uleb128 0x4
- 251 006c F5010000 		.4byte	.LASF9
+ 251 006c 1E020000 		.4byte	.LASF9
  252 0070 02       		.byte	0x2
  253 0071 9201     		.2byte	0x192
  254 0073 2C000000 		.4byte	0x2c
  255 0077 04       		.uleb128 0x4
- 256 0078 E7000000 		.4byte	.LASF10
+ 256 0078 10010000 		.4byte	.LASF10
  257 007c 02       		.byte	0x2
  258 007d 9301     		.2byte	0x193
  259 007f 3A000000 		.4byte	0x3a
  260 0083 02       		.uleb128 0x2
  261 0084 04       		.byte	0x4
  262 0085 04       		.byte	0x4
- 263 0086 80000000 		.4byte	.LASF11
+ 263 0086 B4000000 		.4byte	.LASF11
  264 008a 02       		.uleb128 0x2
  265 008b 08       		.byte	0x8
  266 008c 04       		.byte	0x4
- 267 008d E0000000 		.4byte	.LASF12
+ 267 008d 09010000 		.4byte	.LASF12
  268 0091 02       		.uleb128 0x2
  269 0092 01       		.byte	0x1
  270 0093 08       		.byte	0x8
- 271 0094 D6010000 		.4byte	.LASF13
+ 271 0094 FF010000 		.4byte	.LASF13
  272 0098 04       		.uleb128 0x4
- 273 0099 9F000000 		.4byte	.LASF14
+ 273 0099 C8000000 		.4byte	.LASF14
  274 009d 02       		.byte	0x2
  275 009e 3C02     		.2byte	0x23c
  276 00a0 A4000000 		.4byte	0xa4
  277 00a4 05       		.uleb128 0x5
  278 00a5 6B000000 		.4byte	0x6b
  279 00a9 06       		.uleb128 0x6
- 280 00aa 6F000000 		.4byte	.LASF15
+ 280 00aa A3000000 		.4byte	.LASF15
  281 00ae 01       		.byte	0x1
  282 00af 39       		.byte	0x39
  283 00b0 00000000 		.4byte	.LFB0
@@ -532,16 +532,16 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
  286 00b9 9C       		.byte	0x9c
  287 00ba DB000000 		.4byte	0xdb
  288 00be 07       		.uleb128 0x7
- 289 00bf 00000000 		.4byte	.LASF17
+ 289 00bf 54000000 		.4byte	.LASF17
  290 00c3 01       		.byte	0x1
  291 00c4 39       		.byte	0x39
  292 00c5 6B000000 		.4byte	0x6b
  293 00c9 00000000 		.4byte	.LLST0
  294 00cd 08       		.uleb128 0x8
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 10
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cchB5EUT.s 			page 10
 
 
- 295 00ce 94000000 		.4byte	.LASF27
+ 295 00ce 72000000 		.4byte	.LASF27
  296 00d2 01       		.byte	0x1
  297 00d3 3B       		.byte	0x3b
  298 00d4 6B000000 		.4byte	0x6b
@@ -549,7 +549,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
  300 00d9 53       		.byte	0x53
  301 00da 00       		.byte	0
  302 00db 06       		.uleb128 0x6
- 303 00dc 06000000 		.4byte	.LASF16
+ 303 00dc 5A000000 		.4byte	.LASF16
  304 00e0 01       		.byte	0x1
  305 00e1 5A       		.byte	0x5a
  306 00e2 00000000 		.4byte	.LFB1
@@ -558,14 +558,14 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
  309 00eb 9C       		.byte	0x9c
  310 00ec 00010000 		.4byte	0x100
  311 00f0 07       		.uleb128 0x7
- 312 00f1 A9010000 		.4byte	.LASF18
+ 312 00f1 D2010000 		.4byte	.LASF18
  313 00f5 01       		.byte	0x1
  314 00f6 5A       		.byte	0x5a
  315 00f7 6B000000 		.4byte	0x6b
  316 00fb 21000000 		.4byte	.LLST1
  317 00ff 00       		.byte	0
  318 0100 09       		.uleb128 0x9
- 319 0101 DB010000 		.4byte	.LASF19
+ 319 0101 04020000 		.4byte	.LASF19
  320 0105 01       		.byte	0x1
  321 0106 71       		.byte	0x71
  322 0107 6B000000 		.4byte	0x6b
@@ -574,7 +574,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
  325 0113 01       		.uleb128 0x1
  326 0114 9C       		.byte	0x9c
  327 0115 09       		.uleb128 0x9
- 328 0116 C9000000 		.4byte	.LASF20
+ 328 0116 F2000000 		.4byte	.LASF20
  329 011a 01       		.byte	0x1
  330 011b 8D       		.byte	0x8d
  331 011c 6B000000 		.4byte	0x6b
@@ -583,7 +583,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
  334 0128 01       		.uleb128 0x1
  335 0129 9C       		.byte	0x9c
  336 012a 06       		.uleb128 0x6
- 337 012b 04020000 		.4byte	.LASF21
+ 337 012b 2D020000 		.4byte	.LASF21
  338 012f 01       		.byte	0x1
  339 0130 BB       		.byte	0xbb
  340 0131 00000000 		.4byte	.LFB4
@@ -592,23 +592,23 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
  343 013a 9C       		.byte	0x9c
  344 013b 5E010000 		.4byte	0x15e
  345 013f 07       		.uleb128 0x7
- 346 0140 EE000000 		.4byte	.LASF22
+ 346 0140 17010000 		.4byte	.LASF22
  347 0144 01       		.byte	0x1
  348 0145 BB       		.byte	0xbb
  349 0146 77000000 		.4byte	0x77
  350 014a 42000000 		.4byte	.LLST2
  351 014e 07       		.uleb128 0x7
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 11
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cchB5EUT.s 			page 11
 
 
- 352 014f A9010000 		.4byte	.LASF18
+ 352 014f D2010000 		.4byte	.LASF18
  353 0153 01       		.byte	0x1
  354 0154 BB       		.byte	0xbb
  355 0155 77000000 		.4byte	0x77
  356 0159 63000000 		.4byte	.LLST3
  357 015d 00       		.byte	0
  358 015e 09       		.uleb128 0x9
- 359 015f AE010000 		.4byte	.LASF23
+ 359 015f D7010000 		.4byte	.LASF23
  360 0163 01       		.byte	0x1
  361 0164 D8       		.byte	0xd8
  362 0165 6B000000 		.4byte	0x6b
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
  406 0024 0B       		.uleb128 0xb
  407 0025 03       		.uleb128 0x3
  408 0026 08       		.uleb128 0x8
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 12
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cchB5EUT.s 			page 12
 
 
  409 0027 00       		.byte	0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
  463 005e 3B       		.uleb128 0x3b
  464 005f 0B       		.uleb128 0xb
  465 0060 49       		.uleb128 0x49
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 13
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cchB5EUT.s 			page 13
 
 
  466 0061 13       		.uleb128 0x13
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
  520 000f 18000000 		.4byte	.LFE0
  521 0013 0400     		.2byte	0x4
  522 0015 F3       		.byte	0xf3
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 14
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cchB5EUT.s 			page 14
 
 
  523 0016 01       		.uleb128 0x1
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
  577 000e 0000     		.2byte	0
  578 0010 00000000 		.4byte	.LFB0
  579 0014 18000000 		.4byte	.LFE0-.LFB0
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 15
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cchB5EUT.s 			page 15
 
 
  580 0018 00000000 		.4byte	.LFB1
@@ -876,153 +876,158 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 1
  610      00000201 
  610      FB0E0D00 
  610      01010101 
- 611              	.LASF17:
- 612 0000 76616C75 		.ascii	"value\000"
- 612      6500
- 613              	.LASF16:
- 614 0006 55534255 		.ascii	"USBUART_Dp_SetDriveMode\000"
- 614      4152545F 
- 614      44705F53 
- 614      65744472 
- 614      6976654D 
- 615              	.LASF26:
- 616 001e 443A5C50 		.ascii	"D:\\PSOC_code_T1\\Workspace01\\Design01.cydsn\000"
- 616      534F435F 
- 616      636F6465 
- 616      5F54315C 
- 616      576F726B 
- 617              	.LASF25:
- 618 0049 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\USBUART_Dp.c\000"
- 618      6E657261 
- 618      7465645F 
- 618      536F7572 
- 618      63655C50 
- 619              	.LASF15:
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 16
+ 611              	.LASF26:
+ 612 0000 443A5C47 		.ascii	"D:\\Group3\\PacMan-Robot\\301_Group_3_Software\\PSO"
+ 612      726F7570 
+ 612      335C5061 
+ 612      634D616E 
+ 612      2D526F62 
+ 613 002f 435F636F 		.ascii	"C_code_T1\\Workspace01\\Design01.cydsn\000"
+ 613      64655F54 
+ 613      315C576F 
+ 613      726B7370 
+ 613      61636530 
+ 614              	.LASF17:
+ 615 0054 76616C75 		.ascii	"value\000"
+ 615      6500
+ 616              	.LASF16:
+ 617 005a 55534255 		.ascii	"USBUART_Dp_SetDriveMode\000"
+ 617      4152545F 
+ 617      44705F53 
+ 617      65744472 
+ 617      6976654D 
+ 618              	.LASF27:
+ 619 0072 73746174 		.ascii	"staticBits\000"
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cchB5EUT.s 			page 16
 
 
- 620 006f 55534255 		.ascii	"USBUART_Dp_Write\000"
- 620      4152545F 
- 620      44705F57 
- 620      72697465 
- 620      00
- 621              	.LASF11:
- 622 0080 666C6F61 		.ascii	"float\000"
- 622      7400
- 623              	.LASF1:
- 624 0086 756E7369 		.ascii	"unsigned char\000"
- 624      676E6564 
- 624      20636861 
- 624      7200
- 625              	.LASF27:
- 626 0094 73746174 		.ascii	"staticBits\000"
- 626      69634269 
- 626      747300
- 627              	.LASF14:
- 628 009f 72656738 		.ascii	"reg8\000"
- 628      00
- 629              	.LASF5:
- 630 00a4 6C6F6E67 		.ascii	"long unsigned int\000"
- 630      20756E73 
- 630      69676E65 
- 630      6420696E 
- 630      7400
- 631              	.LASF3:
- 632 00b6 73686F72 		.ascii	"short unsigned int\000"
- 632      7420756E 
- 632      7369676E 
- 632      65642069 
- 632      6E7400
- 633              	.LASF20:
- 634 00c9 55534255 		.ascii	"USBUART_Dp_ReadDataReg\000"
- 634      4152545F 
- 634      44705F52 
- 634      65616444 
- 634      61746152 
- 635              	.LASF12:
- 636 00e0 646F7562 		.ascii	"double\000"
- 636      6C6500
- 637              	.LASF10:
- 638 00e7 75696E74 		.ascii	"uint16\000"
- 638      313600
- 639              	.LASF22:
- 640 00ee 706F7369 		.ascii	"position\000"
- 640      74696F6E 
- 640      00
- 641              	.LASF24:
- 642 00f7 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 642      4320342E 
- 642      392E3320 
- 642      32303135 
- 642      30333033 
- 643 012a 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 643      20726576 
- 643      6973696F 
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 17
+ 619      69634269 
+ 619      747300
+ 620              	.LASF25:
+ 621 007d 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\USBUART_Dp.c\000"
+ 621      6E657261 
+ 621      7465645F 
+ 621      536F7572 
+ 621      63655C50 
+ 622              	.LASF15:
+ 623 00a3 55534255 		.ascii	"USBUART_Dp_Write\000"
+ 623      4152545F 
+ 623      44705F57 
+ 623      72697465 
+ 623      00
+ 624              	.LASF11:
+ 625 00b4 666C6F61 		.ascii	"float\000"
+ 625      7400
+ 626              	.LASF1:
+ 627 00ba 756E7369 		.ascii	"unsigned char\000"
+ 627      676E6564 
+ 627      20636861 
+ 627      7200
+ 628              	.LASF14:
+ 629 00c8 72656738 		.ascii	"reg8\000"
+ 629      00
+ 630              	.LASF5:
+ 631 00cd 6C6F6E67 		.ascii	"long unsigned int\000"
+ 631      20756E73 
+ 631      69676E65 
+ 631      6420696E 
+ 631      7400
+ 632              	.LASF3:
+ 633 00df 73686F72 		.ascii	"short unsigned int\000"
+ 633      7420756E 
+ 633      7369676E 
+ 633      65642069 
+ 633      6E7400
+ 634              	.LASF20:
+ 635 00f2 55534255 		.ascii	"USBUART_Dp_ReadDataReg\000"
+ 635      4152545F 
+ 635      44705F52 
+ 635      65616444 
+ 635      61746152 
+ 636              	.LASF12:
+ 637 0109 646F7562 		.ascii	"double\000"
+ 637      6C6500
+ 638              	.LASF10:
+ 639 0110 75696E74 		.ascii	"uint16\000"
+ 639      313600
+ 640              	.LASF22:
+ 641 0117 706F7369 		.ascii	"position\000"
+ 641      74696F6E 
+ 641      00
+ 642              	.LASF24:
+ 643 0120 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 643      4320342E 
+ 643      392E3320 
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cchB5EUT.s 			page 17
 
 
- 643      6E203232 
- 643      31323230 
- 644 015d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 644      66756E63 
- 644      74696F6E 
- 644      2D736563 
- 644      74696F6E 
- 645              	.LASF8:
- 646 0185 756E7369 		.ascii	"unsigned int\000"
- 646      676E6564 
- 646      20696E74 
- 646      00
- 647              	.LASF7:
- 648 0192 6C6F6E67 		.ascii	"long long unsigned int\000"
- 648      206C6F6E 
- 648      6720756E 
- 648      7369676E 
- 648      65642069 
- 649              	.LASF18:
- 650 01a9 6D6F6465 		.ascii	"mode\000"
- 650      00
- 651              	.LASF23:
- 652 01ae 55534255 		.ascii	"USBUART_Dp_ClearInterrupt\000"
- 652      4152545F 
- 652      44705F43 
- 652      6C656172 
- 652      496E7465 
- 653              	.LASF6:
- 654 01c8 6C6F6E67 		.ascii	"long long int\000"
- 654      206C6F6E 
- 654      6720696E 
- 654      7400
- 655              	.LASF13:
- 656 01d6 63686172 		.ascii	"char\000"
- 656      00
- 657              	.LASF19:
- 658 01db 55534255 		.ascii	"USBUART_Dp_Read\000"
- 658      4152545F 
- 658      44705F52 
- 658      65616400 
- 659              	.LASF2:
- 660 01eb 73686F72 		.ascii	"short int\000"
- 660      7420696E 
- 660      7400
- 661              	.LASF9:
- 662 01f5 75696E74 		.ascii	"uint8\000"
- 662      3800
- 663              	.LASF4:
- 664 01fb 6C6F6E67 		.ascii	"long int\000"
- 664      20696E74 
- 664      00
- 665              	.LASF21:
- 666 0204 55534255 		.ascii	"USBUART_Dp_SetInterruptMode\000"
- 666      4152545F 
- 666      44705F53 
- 666      6574496E 
- 666      74657272 
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccSKbUcF.s 			page 18
+ 643      32303135 
+ 643      30333033 
+ 644 0153 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 644      20726576 
+ 644      6973696F 
+ 644      6E203232 
+ 644      31323230 
+ 645 0186 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 645      66756E63 
+ 645      74696F6E 
+ 645      2D736563 
+ 645      74696F6E 
+ 646              	.LASF8:
+ 647 01ae 756E7369 		.ascii	"unsigned int\000"
+ 647      676E6564 
+ 647      20696E74 
+ 647      00
+ 648              	.LASF7:
+ 649 01bb 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 649      206C6F6E 
+ 649      6720756E 
+ 649      7369676E 
+ 649      65642069 
+ 650              	.LASF18:
+ 651 01d2 6D6F6465 		.ascii	"mode\000"
+ 651      00
+ 652              	.LASF23:
+ 653 01d7 55534255 		.ascii	"USBUART_Dp_ClearInterrupt\000"
+ 653      4152545F 
+ 653      44705F43 
+ 653      6C656172 
+ 653      496E7465 
+ 654              	.LASF6:
+ 655 01f1 6C6F6E67 		.ascii	"long long int\000"
+ 655      206C6F6E 
+ 655      6720696E 
+ 655      7400
+ 656              	.LASF13:
+ 657 01ff 63686172 		.ascii	"char\000"
+ 657      00
+ 658              	.LASF19:
+ 659 0204 55534255 		.ascii	"USBUART_Dp_Read\000"
+ 659      4152545F 
+ 659      44705F52 
+ 659      65616400 
+ 660              	.LASF2:
+ 661 0214 73686F72 		.ascii	"short int\000"
+ 661      7420696E 
+ 661      7400
+ 662              	.LASF9:
+ 663 021e 75696E74 		.ascii	"uint8\000"
+ 663      3800
+ 664              	.LASF4:
+ 665 0224 6C6F6E67 		.ascii	"long int\000"
+ 665      20696E74 
+ 665      00
+ 666              	.LASF21:
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cchB5EUT.s 			page 18
 
 
- 667              	.LASF0:
- 668 0220 7369676E 		.ascii	"signed char\000"
- 668      65642063 
- 668      68617200 
- 669              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 667 022d 55534255 		.ascii	"USBUART_Dp_SetInterruptMode\000"
+ 667      4152545F 
+ 667      44705F53 
+ 667      6574496E 
+ 667      74657272 
+ 668              	.LASF0:
+ 669 0249 7369676E 		.ascii	"signed char\000"
+ 669      65642063 
+ 669      68617200 
+ 670              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
