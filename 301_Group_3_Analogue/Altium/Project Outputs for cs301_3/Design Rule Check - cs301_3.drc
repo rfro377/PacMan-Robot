@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : E:\301\PacMan-Robot\301_Group_3_Analogue\Altium\cs301_3.PcbDoc
-Date     : 20/08/2019
-Time     : 20:22:50
+Date     : 04/09/2019
+Time     : 21:53:06
 
 Processing Rule : Clearance Constraint (Gap=0.5mm) (All),(All)
 Rule Violations :0
@@ -28,14 +28,13 @@ Processing Rule : Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)
 Rule Violations :0
 
 Processing Rule : Net Antennae (Tolerance=0mm) (All)
+   Violation between Net Antennae: Via (-30.25mm,-43.25mm) from Top Layer to Bottom Layer 
    Violation between Net Antennae: Via (-31.5mm,36.75mm) from Top Layer to Bottom Layer 
-   Violation between Net Antennae: Via (10.25mm,-54mm) from Top Layer to Bottom Layer 
-   Violation between Net Antennae: Via (-30mm,-43.25mm) from Top Layer to Bottom Layer 
-Rule Violations :3
+Rule Violations :2
 
 Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
 Rule Violations :0
 
 
-Violations Detected : 3
-Time Elapsed        : 00:00:07
+Violations Detected : 2
+Time Elapsed        : 00:00:06

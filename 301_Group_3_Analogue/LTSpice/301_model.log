@@ -1,21 +1,21 @@
-Circuit: * D:\PacMan-Robot\301_Group_3_Analogue\LTSpice\301_model.asc
+Circuit: * E:\301\PacMan-Robot\301_Group_3_Analogue\LTSpice\301_model.asc
 
 Direct Newton iteration for .op point succeeded.
 
-Date: Tue Aug 13 14:45:05 2019
-Total elapsed time: 0.417 seconds.
+Date: Tue Sep 03 15:47:47 2019
+Total elapsed time: 1.979 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 76560
-traniter = 76530
-tranpoints = 19320
-accept = 13057
-rejected = 6263
-matrix size = 23
+totiter = 59286
+traniter = 59239
+tranpoints = 15445
+accept = 10586
+rejected = 4859
+matrix size = 24
 fillins = 6
 solver = Normal
-Matrix Compiler1: 1.26 KB object code size  0.4/0.2/[0.1]
-Matrix Compiler2: off  [0.2]/0.2/0.3
+Matrix Compiler1: 1.18 KB object code size  1.4/0.7/[0.3]
+Matrix Compiler2: off  [0.8]/1.8/1.4
 

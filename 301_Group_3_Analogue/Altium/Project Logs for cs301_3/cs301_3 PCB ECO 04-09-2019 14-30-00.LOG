@@ -1,0 +1,80 @@
+Change Component Comment : Designator=C1_S1 Old Comment=2.7uF New Comment=1uF
+Change Component Comment : Designator=C1_S2 Old Comment=2.7uF New Comment=1uF
+Change Component Comment : Designator=C1_S3 Old Comment=2.7uF New Comment=1uF
+Change Component Comment : Designator=C1_S4 Old Comment=2.7uF New Comment=1uF
+Change Component Comment : Designator=C1_S5 Old Comment=2.7uF New Comment=1uF
+Change component parameters: Designator = "C1_S1"; Footprint = "ece-CC2012-0805"; UniqueID = "\1YROONBEJ\JWALMNQE"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C1_S2"; Footprint = "ece-CC2012-0805"; UniqueID = "\2YROONBEJ\JWALMNQE"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C1_S3"; Footprint = "ece-CC2012-0805"; UniqueID = "\3YROONBEJ\JWALMNQE"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C1_S4"; Footprint = "ece-CC2012-0805"; UniqueID = "\4YROONBEJ\JWALMNQE"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C1_S5"; Footprint = "ece-CC2012-0805"; UniqueID = "\5YROONBEJ\JWALMNQE"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C8_S1(ece-CC2012-0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C8_S2(ece-CC2012-0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C8_S3(ece-CC2012-0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C8_S4(ece-CC2012-0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C8_S5(ece-CC2012-0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C9_S1(ece-CC2012-0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C9_S2(ece-CC2012-0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C9_S3(ece-CC2012-0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C9_S4(ece-CC2012-0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C9_S5(ece-CC2012-0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC1_S1_1 Pin=C8_S1-1
+Added Pin To Net: NetName=NetC1_S1_2 Pin=C8_S1-2
+Added Pin To Net: NetName=NetC1_S2_1 Pin=C8_S2-1
+Added Pin To Net: NetName=NetC1_S2_2 Pin=C8_S2-2
+Added Pin To Net: NetName=NetC1_S3_1 Pin=C8_S3-1
+Added Pin To Net: NetName=NetC1_S3_2 Pin=C8_S3-2
+Added Pin To Net: NetName=NetC1_S4_1 Pin=C8_S4-1
+Added Pin To Net: NetName=NetC1_S4_2 Pin=C8_S4-2
+Added Pin To Net: NetName=NetC1_S5_1 Pin=C8_S5-1
+Added Pin To Net: NetName=NetC1_S5_2 Pin=C8_S5-2
+Added Pin To Net: NetName=NetC1_S1_1 Pin=C9_S1-1
+Added Pin To Net: NetName=NetC1_S1_2 Pin=C9_S1-2
+Added Pin To Net: NetName=NetC1_S2_1 Pin=C9_S2-1
+Added Pin To Net: NetName=NetC1_S2_2 Pin=C9_S2-2
+Added Pin To Net: NetName=NetC1_S3_1 Pin=C9_S3-1
+Added Pin To Net: NetName=NetC1_S3_2 Pin=C9_S3-2
+Added Pin To Net: NetName=NetC1_S4_1 Pin=C9_S4-1
+Added Pin To Net: NetName=NetC1_S4_2 Pin=C9_S4-2
+Added Pin To Net: NetName=NetC1_S5_1 Pin=C9_S5-1
+Added Pin To Net: NetName=NetC1_S5_2 Pin=C9_S5-2
+Added Member To Class: ClassName=S1 Member=Component C8_S1 (C8) 1uF
+Added Member To Class: ClassName=S2 Member=Component C8_S2 (C8) 1uF
+Added Member To Class: ClassName=S3 Member=Component C8_S3 (C8) 1uF
+Added Member To Class: ClassName=S4 Member=Component C8_S4 (C8) 1uF
+Added Member To Class: ClassName=S5 Member=Component C8_S5 (C8) 1uF
+Added Member To Class: ClassName=S1 Member=Component C9_S1 (C9) 1uF
+Added Member To Class: ClassName=S2 Member=Component C9_S2 (C9) 1uF
+Added Member To Class: ClassName=S3 Member=Component C9_S3 (C9) 1uF
+Added Member To Class: ClassName=S4 Member=Component C9_S4 (C9) 1uF
+Added Member To Class: ClassName=S5 Member=Component C9_S5 (C9) 1uF
