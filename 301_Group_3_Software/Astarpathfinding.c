@@ -1,81 +1,136 @@
 
 #include "stdio.h"
+#include "linkedlist.h"
+#include "map.h"
+#include <math.h>
 
-struct Node
-{
-    int x;
-    int y;
-    int score;
-    int distfromstart;
-    int esttoend;
-};
-// the struct node is a place holder for our Linked List
-struct Node Open[100] = {NULL};
-struct Node Closed[100] = {NULL};
-struct Node startNode = {0,0,0,0,0};
-struct Node endNode = {0,0,0,0,0};
-struct Node up,down,left,right = {0,0,0,0,0};
-struct Node currentNode = {0,0,0,0,0};
+int valid = 0;
+node closedList[15][19]= {-1};
+node openList[15*19] = {-1};
+node startloc = {-1};
+node endloc = {-1};
+node up = {-1};
+node left = {-1};
+node right = {-1};
+node down = {-1};
 
-// variables used to check state of lists
-int emptyOpen = 0;
-int destreached = 0;
-
-
+int u,z;
 int main (){
-
-Open[0] = startNode; // Loads startPos into Open List
-
-while(emptyOpen.size() != 0){ // checks if Open List is not empty
-//used to find node with the lowest score
-int curlowestf = 0;
-
-// loops to find the node in Open with the lowest score f.
-for (int i = 0;i<Open.size();i++){
-    if(Open[i].f <Open[curlowestf].f ){
-        curlowestf = i;
+    u = 15;
+    z = 19;
+    for(int y =0;y < u;y++){
+        for(int x = 0;x < z;x++){
+            closedList[y][x].x = 0;
+            closedList[y][x].y = 0;
+            closedList[y][x].f = 999;
+            closedList[y][x].g = 999;
+            closedList[y][x].h = 999;
+            closedList[y][x].px = 0;
+            closedList[y][x].py = 0;
+        }
     }
-}
-//current node is the node with lowest f
-currentNode = Open[curlowestf];
-//remove curr node from the Open List and add to the Closed List
-Open.remove[curlowestf];
-Closed.add[curlowestf];
 
-// checks if we have reached the end destination. checks the Closed list
-for(int i = 0;i<Closed.size(); i++){
-    if(Closed[i] == endNode){
-        destreached = 1;
+    while (valid == 0){
+        //startloc.x =
+        //startloc.y = 
+        startloc.f = 0;
+        startloc.g = 0;
+        startloc.h = 0;
+        startloc.px = 0;
+        startloc.py = 0;
+
+        //endloc.x =
+        //endloc.y =
+
+        if(map[startloc.y][startloc.x] == 1 || map[endloc.y][endloc.x] == 1){
+            valid = 0;
+        } else {
+            valid = 1;
+        }
     }
-}
-//if we found destination exit loop
-if(destreached == 1) {break;}
+    openList[0] = startloc; 
+    int founddest = 0;
+    int a;
+    while (openList[0].x != -1 && founddest == 0){
+        a = 1;
+        for(int i = 0;i<15*19;i++){
+            if(openList[i].f < openList[a].f){
+                a =i;
+            } else if(openList[i].x = -1){
+                break;
+            }
+        }
 
-//get all adjacent squares
-struct Node adjacentsquares = {up,down,left,right}
+        node q = openList[a];
+        openList[a].x = -1;
 
-/*d) for each square in adjacent squares
-        i) if square is the goal, stop search
-          square.g = currentNode.g + distance between square and currentNode
-          square.h = distance from goal to square 
-          
-          square.f = square.g + square.h
+        up = q;
+        up.y = up.y -1;
+        up.f = 999;
+        down = q;
+        down.y = down.y +1;
+        down.f = 999;
+        left = q;
+        left.x = left.x -1;
+        left.f = 999;
+        right = q;
+        right.x = right.x +1;
+        right.f = 999;
 
-        ii) if a node with the same position as 
-            square is in the OPEN list which has a 
-           lower f than square, skip this square
+        if(up.y<0||map[up.y][up.x] == 1){
+            up.x = -1; 
+        }
+        if(down.y>=u||map[down.y][down.x] == 1){
+        down.x = -1; 
+        }
+        if(left.x<0||map[left.y][left.x] == 1){
+        left.x = -1; 
+        }
+        if(right.y>=z||map[right.y][right.x] == 1){
+        right.x = -1; 
+        }
 
-        iii) if a node with the same position as 
-            square is in the CLOSED list which has
-            a lower f than square, skip this square
-            
-        iv) else add  the node to the open list
-     end (for loop)
+        node successors[4] = {up,down,left,right};
+        int found = 0;
+        for (int i =0;i<4; i++){
+            if(successors[i].x == -1){
+            }else{
+                successors[i].px = q.x;
+                successors[i].py = q.y;
 
-*/
-closed.add(currentNode);
+                if(successors[i].x == endloc.x && successors[i].y == endloc.y){
+                    endloc.px=q.x;
+                    endloc.py =q.y;
+                    founddest = 1;
+                    break;
+                } else if (closedList[successors[i].y][successors[i].x].f == 999){
+                    successors[i].g = q.g+1;
+                    successors[i].h = (int) sqrt( ((successors[i].x-endloc.x)^2 + (successors[i].y - endloc.y)^2));
+                    successors[i].f = successors[i].g+successors[i].h;
+                    for (int b = 0;b<15*19;b++){
 
-}
+                        if((openList[b].x == successors[i].x) && (openList[b].y == successors[i].y)){
+                            found = 1;
+                            if(openList[b].f>successors[i].f){
+                                openList[b] = successors[i];
+                            }
+                        }
+                    }
+                }
+
+                if (found == 0 && founddest != 1){
+                    for (int b = 0;b<15*19;b++){
+                        if(openList[b].x == -1){
+                            openList[b] = successors[i];
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        closedList[q.y][q.x] = q;
+    }
+
 
 return 0;
 

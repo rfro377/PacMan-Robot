@@ -1,0 +1,40 @@
+Change Component Comment : Designator=R5_S1 Old Comment=25K New Comment=12K
+Change Component Comment : Designator=R5_S2 Old Comment=25K New Comment=12K
+Change Component Comment : Designator=R5_S3 Old Comment=25K New Comment=12K
+Change Component Comment : Designator=R5_S4 Old Comment=25K New Comment=12K
+Change Component Comment : Designator=R5_S5 Old Comment=25K New Comment=12K
+Change Component Comment : Designator=R8_S1 Old Comment=100K New Comment=68K
+Change Component Comment : Designator=R8_S2 Old Comment=100K New Comment=68K
+Change Component Comment : Designator=R8_S3 Old Comment=100K New Comment=68K
+Change Component Comment : Designator=R8_S4 Old Comment=100K New Comment=68K
+Change Component Comment : Designator=R8_S5 Old Comment=100K New Comment=68K
+Change component parameters: Designator = "R5_S1"; Footprint = "RESC2012-0805SM"; UniqueID = "\1YROONBEJ\QUJSCBEA"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Value"; Value = "12K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R5_S2"; Footprint = "RESC2012-0805SM"; UniqueID = "\2YROONBEJ\QUJSCBEA"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Value"; Value = "12K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R5_S3"; Footprint = "RESC2012-0805SM"; UniqueID = "\3YROONBEJ\QUJSCBEA"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Value"; Value = "12K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R5_S4"; Footprint = "RESC2012-0805SM"; UniqueID = "\4YROONBEJ\QUJSCBEA"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Value"; Value = "12K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R5_S5"; Footprint = "RESC2012-0805SM"; UniqueID = "\5YROONBEJ\QUJSCBEA"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Value"; Value = "12K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R8_S1"; Footprint = "RESC2012-0805SM"; UniqueID = "\1YROONBEJ\KANYBJXX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Value"; Value = "68K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R8_S2"; Footprint = "RESC2012-0805SM"; UniqueID = "\2YROONBEJ\KANYBJXX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Value"; Value = "68K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R8_S3"; Footprint = "RESC2012-0805SM"; UniqueID = "\3YROONBEJ\KANYBJXX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Value"; Value = "68K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R8_S4"; Footprint = "RESC2012-0805SM"; UniqueID = "\4YROONBEJ\KANYBJXX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Value"; Value = "68K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R8_S5"; Footprint = "RESC2012-0805SM"; UniqueID = "\5YROONBEJ\KANYBJXX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Value"; Value = "68K"; VariantName = "[No Variations]"

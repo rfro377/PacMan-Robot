@@ -12,7 +12,7 @@
 #include <stdlib.h>
 
 typedef struct node {
-	int data;
+	int x,y,f,g,h,px,py;
 	struct node * next;
 }node;
 	
