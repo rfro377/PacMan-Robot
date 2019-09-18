@@ -11,62 +11,63 @@
 */
 #include <stdlib.h>
 #include <linkedlist.h>
+#define INVALID 4294967295
 	
-void createlinkedlist(linkedlist * ll, int data){
+void createlinkedlist(linkedlist * ll, node* data){
         ll->head = NULL;
 		ll->head = malloc(sizeof(node));
 		if (ll->head == NULL){
 			return;
 		}
-		ll->head->data = data;
+		ll->head = data;
 		ll->head->next = NULL;
 }
 
-void addfirst(linkedlist * ll , int data){
+void addfirst(linkedlist * ll , node* data){
 	node *newn;
 	newn = malloc(sizeof(node));
 	if (newn == NULL){
 		return;
 	}
-	newn->data = data;
+	newn = data;
 	newn->next = ll->head;
 	ll->head = newn;
 }
 
-void addat(linkedlist * ll, int data , int index){
+void addat(linkedlist * ll, node* data , int index){
 	if(index == 0){
 		addfirst(ll,data);
 		return;
 	}
 	node * previous = nodeat(ll->head, index-1);
-	if(previous->data == NULL){
+	if(previous == INVALID){
 		return;
 	}
 	node *newn = malloc(sizeof(node));
 	newn->next = previous->next;
-	newn->data=data;
-	previous->data=newn->data;
+	newn =data;
+	previous->next=newn;
 }
 
-void addlast(linkedlist * ll,int data){
+void addlast(linkedlist * ll,node* data){
 	node * last = nodelast(ll->head);
 	last->next = malloc(sizeof(node));
-	last->next->data = data;
+	last->next = data;
 	last->next->next = NULL;
 }
 
-int getfirst(linkedlist * ll){
-	return ll->head->data;
+node* getfirst(linkedlist * ll){
+	return ll->head;
 }
 
-int getat(linkedlist * ll, int index){
+node* getat(linkedlist * ll, int index){
 	node * current = nodeat(ll->head, index);
-	return current->data;
+	return current;
 }
 
-int getlast(linkedlist * ll){
+node* getlast(linkedlist * ll){
 	node *last = nodelast(ll->head);
-	return last->data;
+	return last;
 }
 
 void removefirst(linkedlist * ll){
@@ -79,10 +80,10 @@ void removefirst(linkedlist * ll){
 }
 
 void removelast(linkedlist * ll){
-	node * secondlast = nodesecondlast(ll->head);
-    if(secondlast->data == NULL){
-		return;
+	if (ll->head->next == NULL){
+        return;
 	}
+	node * secondlast = nodesecondlast(ll->head);
 	free(secondlast->next);
 	secondlast->next = NULL;
 }
@@ -98,9 +99,9 @@ node * nodeat(node * current, int index){
     int i = 0;
 	while(i < index){
 		current = current->next;
-		if (current->next == NULL && i < index){
+		if (current->next == NULL && i != index-1){
             node * invalid;
-            invalid->data = NULL;
+            invalid = INVALID;
 			return invalid;
 		}
         i++;
@@ -109,11 +110,6 @@ node * nodeat(node * current, int index){
 }
 
 node * nodesecondlast(node * current){
-	if (current->next == NULL){
-        node * invalid;
-        invalid->data = NULL;
-        return invalid;
-	}
 	while(current->next->next != NULL){
 		current = current->next;
 	}
@@ -135,11 +131,11 @@ node * nodelast(node * current){
 void printlist(linkedlist * ll){
 	node *current = ll->head;
 	while(current->next != NULL){
-		printf(current->data);
+		printf(current);
 		printf("/n");
 		current = current->next;
 	}
-	printf(current->data);
+	printf(current);
 }
 
 /*

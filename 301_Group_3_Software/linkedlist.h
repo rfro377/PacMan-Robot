@@ -20,20 +20,20 @@ typedef struct linkedlist{
 	node * head;
 }linkedlist;
 	
-void createlinkedlist(linkedlist * ll, int data);
+void createlinkedlist(linkedlist * ll, node data);
 
 
-void addfirst( linkedlist * ll , int data);
+void addfirst( linkedlist * ll , node data);
 
-void addat(linkedlist * ll, int data , int index);
+void addat(linkedlist * ll, node data , int index);
 
-void addlast(linkedlist * ll,int data );
+void addlast(linkedlist * ll,node data );
 
-int getfirst(linkedlist * ll);
+node* getfirst(linkedlist * ll);
 
-int getat(linkedlist * ll, int index);
+node* getat(linkedlist * ll, int index);
 
-int getlast(linkedlist * ll);
+node* getlast(linkedlist * ll);
 
 void removefirst(linkedlist * ll);
 

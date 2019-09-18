@@ -13,6 +13,8 @@ node up = {-1};
 node left = {-1};
 node right = {-1};
 node down = {-1};
+node printcur;
+linkedlist* path;
 
 int u,z;
 int main (){
@@ -130,7 +132,12 @@ int main (){
         }
         closedList[q.y][q.x] = q;
     }
-
+    printcur = endloc;
+    createlinkedlist(path,printcur);
+    while (printcur.x != startloc.x || printcur.y != startloc.y){
+        addfirst(path,printcur);
+        printcur = closedList[printcur.y][printcur.x];
+    }
 
 return 0;
 
