@@ -9,17 +9,10 @@
  *
  * ========================================
 */
-#ifndef _MY_HEADER_H_
-#define _MY_HEADER_H_
 #include <stdlib.h>
-#include <stdio.h>
 
-typedef struct data {
-	int x,y,f,g,h,px,py;
-}data;
-    
 typedef struct node {
-    data data; 
+	int x,y,f,g,h,px,py;
 	struct node * next;
 }node;
 	
@@ -27,19 +20,20 @@ typedef struct linkedlist{
 	node * head;
 }linkedlist;
 	
-void createlinkedlist(linkedlist * ll, data data);
+void createlinkedlist(linkedlist * ll, node data);
 
-void addfirst( linkedlist * ll , data data);
 
-void addat(linkedlist * ll, data data , int index);
+void addfirst( linkedlist * ll , node data);
 
-void addlast(linkedlist * ll, data data );
+void addat(linkedlist * ll, node data , int index);
 
-data getfirst(linkedlist * ll);
+void addlast(linkedlist * ll,node data );
 
-data getat(linkedlist * ll, int index);
+node* getfirst(linkedlist * ll);
 
-data getlast(linkedlist * ll);
+node* getat(linkedlist * ll, int index);
+
+node* getlast(linkedlist * ll);
 
 void removefirst(linkedlist * ll);
 
@@ -58,11 +52,4 @@ node * nodeat(node * current, int index);
 node * nodesecondlast(node * current);
 
 node * nodelast(node * current);
-
-void setdata(data* data, int x, int y, int f, int g, int h, int px, int py);
-
-void copydata(data * left, data right);
-
-data createdata(int x, int y, int f, int g, int h, int px, int py);
 /* [] END OF FILE */
-#endif /* _MY_HEADER_H_ */
