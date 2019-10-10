@@ -1,25 +1,13 @@
 
-#include "stdio.h"
-#include "linkedlist.h"
-#include "map.h"
-#include <math.h>
+#include <Astarpathfinding.h>
 
-int valid = 0;
-node closedList[15][19]= {-1};
-node openList[15*19] = {-1};
-node startloc = {-1};
-node endloc = {-1};
-node up = {-1};
-node left = {-1};
-node right = {-1};
-node down = {-1};
-
-int u,z;
-int main (){
+void Pathfinder (start_x,start_y,end_x,end_y){
     u = 15;
     z = 19;
-    for(int y =0;y < u;y++){
-        for(int x = 0;x < z;x++){
+    int y;
+    int x;
+    for( y=0; y < u; y++){
+        for(x = 0; x < z; x++){
             closedList[y][x].x = 0;
             closedList[y][x].y = 0;
             closedList[y][x].f = 999;
@@ -31,16 +19,16 @@ int main (){
     }
 
     while (valid == 0){
-        //startloc.x =
-        //startloc.y = 
+        startloc.x = start_x;
+        startloc.y = start_y;
         startloc.f = 0;
         startloc.g = 0;
         startloc.h = 0;
         startloc.px = 0;
         startloc.py = 0;
 
-        //endloc.x =
-        //endloc.y =
+        endloc.x = end_x;
+        endloc.y = end_y;
 
         if(map[startloc.y][startloc.x] == 1 || map[endloc.y][endloc.x] == 1){
             valid = 0;
@@ -51,12 +39,13 @@ int main (){
     openList[0] = startloc; 
     int founddest = 0;
     int a;
+    int i;
     while (openList[0].x != -1 && founddest == 0){
         a = 1;
-        for(int i = 0;i<15*19;i++){
+        for(i = 0;i<15*19;i++){
             if(openList[i].f < openList[a].f){
                 a =i;
-            } else if(openList[i].x = -1){
+            } else if(openList[i].x == -1){
                 break;
             }
         }
@@ -90,9 +79,11 @@ int main (){
         right.x = -1; 
         }
 
-        node successors[4] = {up,down,left,right};
+        node_t successors[4] = {up,down,left,right};
         int found = 0;
-        for (int i =0;i<4; i++){
+        int i;
+        int b;
+        for (i=0; i<4; i++){
             if(successors[i].x == -1){
             }else{
                 successors[i].px = q.x;
@@ -107,7 +98,7 @@ int main (){
                     successors[i].g = q.g+1;
                     successors[i].h = (int) sqrt( ((successors[i].x-endloc.x)^2 + (successors[i].y - endloc.y)^2));
                     successors[i].f = successors[i].g+successors[i].h;
-                    for (int b = 0;b<15*19;b++){
+                    for (b = 0;b<15*19;b++){
 
                         if((openList[b].x == successors[i].x) && (openList[b].y == successors[i].y)){
                             found = 1;
@@ -119,7 +110,7 @@ int main (){
                 }
 
                 if (found == 0 && founddest != 1){
-                    for (int b = 0;b<15*19;b++){
+                    for (b = 0;b<15*19;b++){
                         if(openList[b].x == -1){
                             openList[b] = successors[i];
                             break;
@@ -130,8 +121,11 @@ int main (){
         }
         closedList[q.y][q.x] = q;
     }
-
-
-return 0;
+    printcur = endloc;
+    createlinkedlist(path,printcur);
+    while (printcur.x != startloc.x || printcur.y != startloc.y){
+        addfirst(path,printcur);
+        printcur = closedList[printcur.y][printcur.x];
+    }
 
 }

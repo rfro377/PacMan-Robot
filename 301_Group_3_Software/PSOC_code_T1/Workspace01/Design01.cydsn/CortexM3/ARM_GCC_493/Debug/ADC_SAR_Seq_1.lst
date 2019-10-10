@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
   29:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** 
   30:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** 
   31:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** /****************************************************************************
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 2
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** * Function Name: ADC_SAR_Seq_1_Disable()
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
   58:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** 
   59:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c ****     (void) CyDmaChDisable(ADC_SAR_Seq_1_finalChan);
   55              		.loc 1 59 0
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 3
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 3
 
 
   56 0020 7078     		ldrb	r0, [r6, #1]	@ zero_extendqisi2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
   85              		@ args = 0, pretend = 0, frame = 0
   86              		@ frame_needed = 0, uses_anonymous_args = 0
   87 0000 10B5     		push	{r4, lr}
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 4
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 4
 
 
   88              		.cfi_def_cfa_offset 8
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  129              		.thumb_func
  130              		.type	ADC_SAR_Seq_1_Enable, %function
  131              	ADC_SAR_Seq_1_Enable:
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 5
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 5
 
 
  132              	.LFB2:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  132:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c ****     
  133:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c ****     /* Provides initialization procedure for the TempBuf DMA
  134:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c ****     * Configure this Td as follows:
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 6
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 6
 
 
  135:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c ****     *  - The TD is looping on itself
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  156:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c ****     * Configure this Td as follows:
  157:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c ****     *  - The TD is looping on itself
  158:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c ****     *  - Increment the source and destination address
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 7
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 7
 
 
  159:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c ****     */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  178:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c ****     (void) CyDmaChEnable(ADC_SAR_Seq_1_finalChan, 1u);
  220              		.loc 1 178 0
  221 0080 6078     		ldrb	r0, [r4, #1]	@ zero_extendqisi2
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 8
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 8
 
 
  222 0082 0121     		movs	r1, #1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  263              		.align	2
  264              		.global	ADC_SAR_Seq_1_Start
  265              		.thumb
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 9
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 9
 
 
  266              		.thumb_func
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  289              	.L16:
  223:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c ****     }
  224:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** 
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 10
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 10
 
 
  225:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c ****     ADC_SAR_Seq_1_Enable();
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  253:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** {
  316              		.loc 1 253 0
  317              		.cfi_startproc
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 11
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 11
 
 
  318              		@ args = 0, pretend = 0, frame = 0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  342              		.loc 1 283 0
  343              		.cfi_startproc
  344              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 12
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 12
 
 
  345              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  318:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c ****     *  No.
  319:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c ****     *
  320:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c ****     *******************************************************************************/
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 13
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 13
 
 
  321:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c ****     void ADC_SAR_Seq_1_StopConvert(void)
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  352:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *
  353:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** * Reentrant:
  354:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *  No.
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 14
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 14
 
 
  355:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  372:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** ********************************************************************************
  373:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *
  374:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** * Summary:
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 15
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 15
 
 
  375:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *  Returns the ADC result for channel chan
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  396:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** 
  397:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** /*******************************************************************************
  398:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** * Function Name: ADC_SAR_Seq_1_GetAdcResult
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 16
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 16
 
 
  399:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** ********************************************************************************
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  429:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *  _CountsTo_mVolts() and _CountsTo_Volts() to substract the offset from the
  430:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *  given reading before calculating the voltage conversion
  431:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 17
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 17
 
 
  432:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** * Parameters:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  460:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *  This function does not affect the actual conversion with PSoC5 ES1 silicon.
  461:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *
  462:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** * Parameters:
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 18
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 18
 
 
  463:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *  resolution:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  531              	.LFB12:
  494:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** }
  495:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** 
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 19
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 19
 
 
  496:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** 
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  524:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** * Function Name: ADC_SAR_Seq_1_SetScaledGain
  525:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** ********************************************************************************
  526:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 20
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 20
 
 
  527:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** * Summary:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  557:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *
  558:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** * Summary:
  559:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *  Converts the ADC output to mVolts as a 32-bit integer
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 21
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 21
 
 
  560:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  589:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *
  590:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** * Return:
  591:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *  Result in uV
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 22
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 22
 
 
  592:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  621:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *
  622:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** * Reentrant:
  623:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *  No.
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 23
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 23
 
 
  624:.\Generated_Source\PSoC5/ADC_SAR_Seq_1.c **** *
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  679              	ADC_SAR_Seq_1_initVar:
  680 000c 00000000 		.space	4
  681              		.text
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 24
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 24
 
 
  682              	.Letext0:
@@ -1399,7 +1399,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  697 000c 61060000 		.4byte	.LASF82
  698 0010 01       		.byte	0x1
  699 0011 93010000 		.4byte	.LASF83
- 700 0015 EE020000 		.4byte	.LASF84
+ 700 0015 6D020000 		.4byte	.LASF84
  701 0019 00000000 		.4byte	.Ldebug_ranges0+0
  702 001d 00000000 		.4byte	0
  703 0021 00000000 		.4byte	.Ldebug_line0
@@ -1438,14 +1438,14 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  736 005d 03       		.uleb128 0x3
  737 005e 04       		.byte	0x4
  738 005f 05       		.byte	0x5
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 25
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 25
 
 
  739 0060 696E7400 		.ascii	"int\000"
  740 0064 02       		.uleb128 0x2
  741 0065 04       		.byte	0x4
  742 0066 07       		.byte	0x7
- 743 0067 E1020000 		.4byte	.LASF8
+ 743 0067 35030000 		.4byte	.LASF8
  744 006b 04       		.uleb128 0x4
  745 006c 60020000 		.4byte	.LASF9
  746 0070 02       		.byte	0x2
@@ -1457,7 +1457,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  752 007d 9301     		.2byte	0x193
  753 007f 3A000000 		.4byte	0x3a
  754 0083 04       		.uleb128 0x4
- 755 0084 92020000 		.4byte	.LASF11
+ 755 0084 E6020000 		.4byte	.LASF11
  756 0088 02       		.byte	0x2
  757 0089 9401     		.2byte	0x194
  758 008b 48000000 		.4byte	0x48
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  793 00d9 02       		.byte	0x2
  794 00da 3C02     		.2byte	0x23c
  795 00dc E0000000 		.4byte	0xe0
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 26
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 26
 
 
  796 00e0 05       		.uleb128 0x5
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  850 0160 12000000 		.4byte	.LVL4
  851 0164 11060000 		.4byte	0x611
  852 0168 85010000 		.4byte	0x185
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 27
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 27
 
 
  853 016c 0B       		.uleb128 0xb
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  907 01b5 32000000 		.4byte	.LVL7
  908 01b9 6A060000 		.4byte	0x66a
  909 01bd 0B       		.uleb128 0xb
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 28
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 28
 
 
  910 01be 01       		.uleb128 0x1
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  964 022d 40000000 		.4byte	.LVL12
  965 0231 BF060000 		.4byte	0x6bf
  966 0235 47020000 		.4byte	0x247
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 29
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 29
 
 
  967 0239 0B       		.uleb128 0xb
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1021 0297 0A       		.uleb128 0xa
  1022 0298 80000000 		.4byte	.LVL18
  1023 029c F8060000 		.4byte	0x6f8
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 30
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 30
 
 
  1024 02a0 AA020000 		.4byte	0x2aa
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1078 0318 00000000 		.4byte	.LFB4
  1079 031c 0C000000 		.4byte	.LFE4-.LFB4
  1080 0320 01       		.uleb128 0x1
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 31
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 31
 
 
  1081 0321 9C       		.byte	0x9c
@@ -1847,7 +1847,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1124 038e 9C       		.byte	0x9c
  1125 038f B2030000 		.4byte	0x3b2
  1126 0393 13       		.uleb128 0x13
- 1127 0394 C3020000 		.4byte	.LASF35
+ 1127 0394 17030000 		.4byte	.LASF35
  1128 0398 01       		.byte	0x1
  1129 0399 6501     		.2byte	0x165
  1130 039b 6B000000 		.4byte	0x6b
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1135 03a9 6701     		.2byte	0x167
  1136 03ab 6B000000 		.4byte	0x6b
  1137 03af 01       		.uleb128 0x1
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 32
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 32
 
 
  1138 03b0 53       		.byte	0x53
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1192 0433 03       		.uleb128 0x3
  1193 0434 F3       		.byte	0xf3
  1194 0435 01       		.uleb128 0x1
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 33
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 33
 
 
  1195 0436 50       		.byte	0x50
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1249 04ad 08000000 		.4byte	.LFE13-.LFB13
  1250 04b1 01       		.uleb128 0x1
  1251 04b2 9C       		.byte	0x9c
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 34
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 34
 
 
  1252 04b3 D9040000 		.4byte	0x4d9
@@ -2001,7 +2001,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1269 04d7 00       		.byte	0
  1270 04d8 00       		.byte	0
  1271 04d9 12       		.uleb128 0x12
- 1272 04da A5020000 		.4byte	.LASF45
+ 1272 04da F9020000 		.4byte	.LASF45
  1273 04de 01       		.byte	0x1
  1274 04df 3E02     		.2byte	0x23e
  1275 04e1 9B000000 		.4byte	0x9b
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1306 0533 FA000000 		.4byte	.LLST8
  1307 0537 09       		.uleb128 0x9
  1308 0538 06000000 		.4byte	.LVL48
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 35
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 35
 
 
  1309 053c AE070000 		.4byte	0x7ae
@@ -2088,7 +2088,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1353 05a3 03       		.byte	0x3
  1354 05a4 00000000 		.4byte	ADC_SAR_Seq_1_tempTD
  1355 05a8 0E       		.uleb128 0xe
- 1356 05a9 CB020000 		.4byte	.LASF52
+ 1356 05a9 1F030000 		.4byte	.LASF52
  1357 05ad 01       		.byte	0x1
  1358 05ae 1C       		.byte	0x1c
  1359 05af 6B000000 		.4byte	0x6b
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1363 05b9 15       		.uleb128 0x15
  1364 05ba EF060000 		.4byte	.LASF53
  1365 05be 03       		.byte	0x3
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 36
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 36
 
 
  1366 05bf 5B       		.byte	0x5b
@@ -2131,7 +2131,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1393 05fb 6B000000 		.4byte	0x6b
  1394 05ff 00       		.byte	0
  1395 0600 19       		.uleb128 0x19
- 1396 0601 99020000 		.4byte	.LASF59
+ 1396 0601 ED020000 		.4byte	.LASF59
  1397 0605 04       		.byte	0x4
  1398 0606 39       		.byte	0x39
  1399 0607 11060000 		.4byte	0x611
@@ -2154,11 +2154,11 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1416 0630 77000000 		.4byte	0x77
  1417 0634 00       		.byte	0
  1418 0635 17       		.uleb128 0x17
- 1419 0636 6D020000 		.4byte	.LASF58
+ 1419 0636 C1020000 		.4byte	.LASF58
  1420 063a 06       		.byte	0x6
  1421 063b 1E       		.byte	0x1e
  1422 063c 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 37
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 37
 
 
  1423 0640 59060000 		.4byte	0x659
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1477 06be 00       		.byte	0
  1478 06bf 17       		.uleb128 0x17
  1479 06c0 55040000 		.4byte	.LASF64
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 38
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 38
 
 
  1480 06c4 04       		.byte	0x4
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1534 073c 1B       		.uleb128 0x1b
  1535 073d 41020000 		.4byte	.LASF72
  1536 0741 03       		.byte	0x3
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 39
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 39
 
 
  1537 0742 D1       		.byte	0xd1
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1591 07b4 40       		.byte	0x40
  1592 07b5 9B000000 		.4byte	0x9b
  1593 07b9 C3070000 		.4byte	0x7c3
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 40
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 40
 
 
  1594 07bd 18       		.uleb128 0x18
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1648 0028 00       		.byte	0
  1649 0029 04       		.uleb128 0x4
  1650 002a 16       		.uleb128 0x16
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 41
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 41
 
 
  1651 002b 00       		.byte	0
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1705 0062 19       		.uleb128 0x19
  1706 0063 01       		.uleb128 0x1
  1707 0064 13       		.uleb128 0x13
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 42
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 42
 
 
  1708 0065 00       		.byte	0
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1762 00a4 00       		.byte	0
  1763 00a5 0E       		.uleb128 0xe
  1764 00a6 34       		.uleb128 0x34
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 43
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 43
 
 
  1765 00a7 00       		.byte	0
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1819 00de 00       		.byte	0
  1820 00df 00       		.byte	0
  1821 00e0 12       		.uleb128 0x12
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 44
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 44
 
 
  1822 00e1 2E       		.uleb128 0x2e
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1876 0118 00       		.byte	0
  1877 0119 00       		.byte	0
  1878 011a 15       		.uleb128 0x15
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 45
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 45
 
 
  1879 011b 34       		.uleb128 0x34
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1933 0151 18       		.uleb128 0x18
  1934 0152 05       		.uleb128 0x5
  1935 0153 00       		.byte	0
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 46
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 46
 
 
  1936 0154 49       		.uleb128 0x49
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  1990 018a 19       		.uleb128 0x19
  1991 018b 3C       		.uleb128 0x3c
  1992 018c 19       		.uleb128 0x19
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 47
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 47
 
 
  1993 018d 00       		.byte	0
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  2047 004a 01       		.uleb128 0x1
  2048 004b 50       		.byte	0x50
  2049 004c 9F       		.byte	0x9f
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 48
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 48
 
 
  2050 004d 00000000 		.4byte	0
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  2104 00cf 50       		.byte	0x50
  2105 00d0 9F       		.byte	0x9f
  2106 00d1 00000000 		.4byte	0
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 49
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 49
 
 
  2107 00d5 00000000 		.4byte	0
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  2161 001c 3C000000 		.4byte	.LFE1-.LFB1
  2162 0020 00000000 		.4byte	.LFB2
  2163 0024 CC000000 		.4byte	.LFE2-.LFB2
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 50
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 50
 
 
  2164 0028 00000000 		.4byte	.LFB3
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  2218 0058 00000000 		.4byte	.LFB11
  2219 005c 08000000 		.4byte	.LFE11
  2220 0060 00000000 		.4byte	.LFB12
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 51
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 51
 
 
  2221 0064 0A000000 		.4byte	.LFE12
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  2250 0078 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_CountsTo_mVolts\000"
  2250      5341525F 
  2250      5365715F 
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 52
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 52
 
 
  2250      315F5341 
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  2270      5341525F 
  2270      5365715F 
  2270      315F4765 
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 53
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 53
 
 
  2270      74526573 
@@ -3178,57 +3178,57 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  2290      525F5374 
  2291              	.LASF9:
  2292 0260 75696E74 		.ascii	"uint8\000"
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 54
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 54
 
 
  2292      3800
  2293              	.LASF16:
  2294 0266 646F7562 		.ascii	"double\000"
  2294      6C6500
- 2295              	.LASF58:
- 2296 026d 4144435F 		.ascii	"ADC_SAR_Seq_1_FinalBuf_DmaInitialize\000"
- 2296      5341525F 
- 2296      5365715F 
- 2296      315F4669 
- 2296      6E616C42 
- 2297              	.LASF11:
- 2298 0292 75696E74 		.ascii	"uint32\000"
- 2298      333200
- 2299              	.LASF59:
- 2300 0299 4379446D 		.ascii	"CyDmaTdFree\000"
- 2300      61546446 
- 2300      72656500 
- 2301              	.LASF45:
- 2302 02a5 4144435F 		.ascii	"ADC_SAR_Seq_1_CountsTo_mVolts\000"
- 2302      5341525F 
- 2302      5365715F 
- 2302      315F436F 
- 2302      756E7473 
- 2303              	.LASF35:
- 2304 02c3 7265744D 		.ascii	"retMode\000"
- 2304      6F646500 
- 2305              	.LASF52:
- 2306 02cb 4144435F 		.ascii	"ADC_SAR_Seq_1_finalTD\000"
- 2306      5341525F 
- 2306      5365715F 
- 2306      315F6669 
- 2306      6E616C54 
- 2307              	.LASF8:
- 2308 02e1 756E7369 		.ascii	"unsigned int\000"
- 2308      676E6564 
- 2308      20696E74 
- 2308      00
- 2309              	.LASF84:
- 2310 02ee 443A5C47 		.ascii	"D:\\Group3\\PacMan-Robot\\301_Group_3_Software\\PSO"
- 2310      726F7570 
- 2310      335C5061 
- 2310      634D616E 
- 2310      2D526F62 
- 2311 031d 435F636F 		.ascii	"C_code_T1\\Workspace01\\Design01.cydsn\000"
- 2311      64655F54 
- 2311      315C576F 
- 2311      726B7370 
- 2311      61636530 
+ 2295              	.LASF84:
+ 2296 026d 483A5C47 		.ascii	"H:\\Group3\\PacMan-Robot\\301_Group_3_Software\\PSO"
+ 2296      726F7570 
+ 2296      335C5061 
+ 2296      634D616E 
+ 2296      2D526F62 
+ 2297 029c 435F636F 		.ascii	"C_code_T1\\Workspace01\\Design01.cydsn\000"
+ 2297      64655F54 
+ 2297      315C576F 
+ 2297      726B7370 
+ 2297      61636530 
+ 2298              	.LASF58:
+ 2299 02c1 4144435F 		.ascii	"ADC_SAR_Seq_1_FinalBuf_DmaInitialize\000"
+ 2299      5341525F 
+ 2299      5365715F 
+ 2299      315F4669 
+ 2299      6E616C42 
+ 2300              	.LASF11:
+ 2301 02e6 75696E74 		.ascii	"uint32\000"
+ 2301      333200
+ 2302              	.LASF59:
+ 2303 02ed 4379446D 		.ascii	"CyDmaTdFree\000"
+ 2303      61546446 
+ 2303      72656500 
+ 2304              	.LASF45:
+ 2305 02f9 4144435F 		.ascii	"ADC_SAR_Seq_1_CountsTo_mVolts\000"
+ 2305      5341525F 
+ 2305      5365715F 
+ 2305      315F436F 
+ 2305      756E7473 
+ 2306              	.LASF35:
+ 2307 0317 7265744D 		.ascii	"retMode\000"
+ 2307      6F646500 
+ 2308              	.LASF52:
+ 2309 031f 4144435F 		.ascii	"ADC_SAR_Seq_1_finalTD\000"
+ 2309      5341525F 
+ 2309      5365715F 
+ 2309      315F6669 
+ 2309      6E616C54 
+ 2310              	.LASF8:
+ 2311 0335 756E7369 		.ascii	"unsigned int\000"
+ 2311      676E6564 
+ 2311      20696E74 
+ 2311      00
  2312              	.LASF5:
  2313 0342 6C6F6E67 		.ascii	"long unsigned int\000"
  2313      20756E73 
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  2314              	.LASF68:
  2315 0354 4379456E 		.ascii	"CyEnterCriticalSection\000"
  2315      74657243 
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 55
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 55
 
 
  2315      72697469 
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  2335      00
  2336              	.LASF33:
  2337 0437 4144435F 		.ascii	"ADC_SAR_Seq_1_IsEndConversion\000"
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 56
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 56
 
 
  2337      5341525F 
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  2355      525F5374 
  2356              	.LASF74:
  2357 050f 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_GetResult16\000"
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 57
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 57
 
 
  2357      5341525F 
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  2379 05eb 63686172 		.ascii	"char\000"
  2379      00
  2380              	.LASF21:
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 58
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 58
 
 
  2381 05f0 63796973 		.ascii	"cyisraddress\000"
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 1
  2400              	.LASF12:
  2401 0707 696E7431 		.ascii	"int16\000"
  2401      3600
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cclVmdv2.s 			page 59
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccml7cem.s 			page 59
 
 
  2402              	.LASF65:

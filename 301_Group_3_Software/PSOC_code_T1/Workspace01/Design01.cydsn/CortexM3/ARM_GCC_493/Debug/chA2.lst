@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 1
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc22PfMp.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 1
   29:.\Generated_Source\PSoC5/chA2.c **** * \brief Writes the value to the physical port (data output register), masking
   30:.\Generated_Source\PSoC5/chA2.c **** *  and shifting the bits appropriately. 
   31:.\Generated_Source\PSoC5/chA2.c **** *
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 2
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc22PfMp.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/chA2.c **** * The data output register controls the signal applied to the physical pin in 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 1
   52              		.section	.text.chA2_SetDriveMode,"ax",%progbits
   53              		.align	2
   54              		.global	chA2_SetDriveMode
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 3
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc22PfMp.s 			page 3
 
 
   55              		.thumb
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 1
   77              	.L5:
   78 0014 0C500040 		.word	1073762316
   79              		.cfi_endproc
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 4
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc22PfMp.s 			page 4
 
 
   80              	.LFE1:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 1
  110              		.global	chA2_ReadDataReg
  111              		.thumb
  112              		.thumb_func
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 5
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc22PfMp.s 			page 5
 
 
  113              		.type	chA2_ReadDataReg, %function
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 1
  139 0000 1B010000 		.4byte	0x11b
  140 0004 0400     		.2byte	0x4
  141 0006 00000000 		.4byte	.Ldebug_abbrev0
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 6
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc22PfMp.s 			page 6
 
 
  142 000a 04       		.byte	0x4
@@ -306,7 +306,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 1
  144 000c CD000000 		.4byte	.LASF20
  145 0010 01       		.byte	0x1
  146 0011 AB010000 		.4byte	.LASF21
- 147 0015 00000000 		.4byte	.LASF22
+ 147 0015 1C000000 		.4byte	.LASF22
  148 0019 00000000 		.4byte	.Ldebug_ranges0+0
  149 001d 00000000 		.4byte	0
  150 0021 00000000 		.4byte	.Ldebug_line0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 1
  196 0077 02       		.uleb128 0x2
  197 0078 04       		.byte	0x4
  198 0079 04       		.byte	0x4
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 7
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc22PfMp.s 			page 7
 
 
  199 007a 70000000 		.4byte	.LASF9
@@ -378,7 +378,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 1
  213 0098 05       		.uleb128 0x5
  214 0099 6B000000 		.4byte	0x6b
  215 009d 06       		.uleb128 0x6
- 216 009e 54000000 		.4byte	.LASF14
+ 216 009e 00000000 		.4byte	.LASF14
  217 00a2 01       		.byte	0x1
  218 00a3 39       		.byte	0x39
  219 00a4 00000000 		.4byte	.LFB0
@@ -387,13 +387,13 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 1
  222 00ad 9C       		.byte	0x9c
  223 00ae CF000000 		.4byte	0xcf
  224 00b2 07       		.uleb128 0x7
- 225 00b3 5F000000 		.4byte	.LASF16
+ 225 00b3 0B000000 		.4byte	.LASF16
  226 00b7 01       		.byte	0x1
  227 00b8 39       		.byte	0x39
  228 00b9 6B000000 		.4byte	0x6b
  229 00bd 00000000 		.4byte	.LLST0
  230 00c1 08       		.uleb128 0x8
- 231 00c2 65000000 		.4byte	.LASF23
+ 231 00c2 11000000 		.4byte	.LASF23
  232 00c6 01       		.byte	0x1
  233 00c7 3B       		.byte	0x3b
  234 00c8 6B000000 		.4byte	0x6b
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 1
  253 00f3 00       		.byte	0
  254 00f4 09       		.uleb128 0x9
  255 00f5 84010000 		.4byte	.LASF18
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 8
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc22PfMp.s 			page 8
 
 
  256 00f9 01       		.byte	0x1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 1
  310 0023 3E       		.uleb128 0x3e
  311 0024 0B       		.uleb128 0xb
  312 0025 03       		.uleb128 0x3
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 9
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc22PfMp.s 			page 9
 
 
  313 0026 08       		.uleb128 0x8
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 1
  367 005d 0B       		.uleb128 0xb
  368 005e 3B       		.uleb128 0x3b
  369 005f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 10
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc22PfMp.s 			page 10
 
 
  370 0060 49       		.uleb128 0x49
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 1
  424 000b 0A000000 		.4byte	.LVL2
  425 000f 18000000 		.4byte	.LFE0
  426 0013 0400     		.2byte	0x4
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 11
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc22PfMp.s 			page 11
 
 
  427 0015 F3       		.byte	0xf3
@@ -658,31 +658,31 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 1
  479      00000201 
  479      FB0E0D00 
  479      01010101 
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 12
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc22PfMp.s 			page 12
 
 
- 480              	.LASF22:
- 481 0000 443A5C47 		.ascii	"D:\\Group3\\PacMan-Robot\\301_Group_3_Software\\PSO"
- 481      726F7570 
- 481      335C5061 
- 481      634D616E 
- 481      2D526F62 
- 482 002f 435F636F 		.ascii	"C_code_T1\\Workspace01\\Design01.cydsn\000"
- 482      64655F54 
- 482      315C576F 
- 482      726B7370 
- 482      61636530 
- 483              	.LASF14:
- 484 0054 63684132 		.ascii	"chA2_Write\000"
- 484      5F577269 
- 484      746500
- 485              	.LASF16:
- 486 005f 76616C75 		.ascii	"value\000"
- 486      6500
- 487              	.LASF23:
- 488 0065 73746174 		.ascii	"staticBits\000"
- 488      69634269 
- 488      747300
+ 480              	.LASF14:
+ 481 0000 63684132 		.ascii	"chA2_Write\000"
+ 481      5F577269 
+ 481      746500
+ 482              	.LASF16:
+ 483 000b 76616C75 		.ascii	"value\000"
+ 483      6500
+ 484              	.LASF23:
+ 485 0011 73746174 		.ascii	"staticBits\000"
+ 485      69634269 
+ 485      747300
+ 486              	.LASF22:
+ 487 001c 483A5C47 		.ascii	"H:\\Group3\\PacMan-Robot\\301_Group_3_Software\\PSO"
+ 487      726F7570 
+ 487      335C5061 
+ 487      634D616E 
+ 487      2D526F62 
+ 488 004b 435F636F 		.ascii	"C_code_T1\\Workspace01\\Design01.cydsn\000"
+ 488      64655F54 
+ 488      315C576F 
+ 488      726B7370 
+ 488      61636530 
  489              	.LASF9:
  490 0070 666C6F61 		.ascii	"float\000"
  490      7400
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 1
  504      44726976 
  504      654D6F64 
  504      6500
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 13
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc22PfMp.s 			page 13
 
 
  505              	.LASF20:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 1
  526      5F526561 
  526      64446174 
  526      61526567 
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccaAdTY5.s 			page 14
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc22PfMp.s 			page 14
 
 
  526      00

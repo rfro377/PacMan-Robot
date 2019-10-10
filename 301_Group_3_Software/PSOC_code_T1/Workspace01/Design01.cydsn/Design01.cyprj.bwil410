@@ -13,15 +13,32 @@
 <v>Off-Chip</v>
 </tree_states_tab_names>
 <tree_states>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Cypress Component Catalog\Digital">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Cypress Component Catalog\Ports and Pins\Analog Pin [v2.20]">
 <ExpandedNodeIds>
 <v>Cypress Component Catalog</v>
+<v>Cypress Component Catalog\Analog</v>
+<v>Cypress Component Catalog\Analog\Manual Routing</v>
 <v>Cypress Component Catalog\Digital</v>
 <v>Cypress Component Catalog\Ports and Pins</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Cypress Component Catalog</v>
 <v>Cypress Component Catalog\Analog</v>
+<v>Cypress Component Catalog\Analog\ADC</v>
+<v>Cypress Component Catalog\Analog\Amplifiers</v>
+<v>Cypress Component Catalog\Analog\Analog MUX</v>
+<v>Cypress Component Catalog\Analog\Comparators</v>
+<v>Cypress Component Catalog\Analog\DAC</v>
+<v>Cypress Component Catalog\Analog\Manual Routing</v>
+<v>Cypress Component Catalog\Analog\Manual Routing\Mux Constraint [v1.50]</v>
+<v>Cypress Component Catalog\Analog\Manual Routing\Net Constraint [v1.50]</v>
+<v>Cypress Component Catalog\Analog\Manual Routing\Net Tie [v1.50]</v>
+<v>Cypress Component Catalog\Analog\Manual Routing\Resource Reserve [v1.50]</v>
+<v>Cypress Component Catalog\Analog\Manual Routing\Stay Awake [v1.50]</v>
+<v>Cypress Component Catalog\Analog\Manual Routing\Terminal Reserve [v1.50]</v>
+<v>Cypress Component Catalog\Analog\Mixer [v2.0]</v>
+<v>Cypress Component Catalog\Analog\Sample/Track and Hold [v1.40]</v>
+<v>Cypress Component Catalog\Analog\VRef [v1.70]</v>
 <v>Cypress Component Catalog\CapSense</v>
 <v>Cypress Component Catalog\Communications</v>
 <v>Cypress Component Catalog\Digital</v>
@@ -74,6 +91,12 @@
 <CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256 type_name="CyDesigner.Common.ProjMgmt.Model.CyConfigDependencies" version="1">
 <dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" xml_contents_version="2">
 <CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1">
+<file name=".\CortexM3\ARM_GCC_493\Debug\linkedlist.o">
+<dep name=".\linkedlist.c" />
+<dep name=".\linkedlist.h" />
+</file>
+<file name=".\linkedlist.c" />
+<file name=".\linkedlist.h" />
 <file name=".\CortexM3\ARM_GCC_493\Debug\main.o">
 <dep name=".\Generated_Source\PSoC5\ADC_SAR_1.h" />
 <dep name=".\Generated_Source\PSoC5\ADC_SAR_1_ExtVref.h" />
@@ -260,8 +283,16 @@
 <file name=".\Generated_Source\PSoC5\isr_3.h" />
 <file name=".\Generated_Source\PSoC5\project.h" />
 <file name=".\cyapicallbacks.h" />
-<file name=".\linkedlist.h" />
 <file name=".\main.c" />
+<file name=".\CortexM3\ARM_GCC_493\Debug\Astarpathfinding.o">
+<dep name=".\Astarpathfinding.c" />
+<dep name=".\Astarpathfinding.h" />
+<dep name=".\linkedlist.h" />
+<dep name=".\map.h" />
+</file>
+<file name=".\Astarpathfinding.c" />
+<file name=".\Astarpathfinding.h" />
+<file name=".\map.h" />
 <file name=".\CortexM3\ARM_GCC_493\Debug\ADC_SAR_1.o">
 <dep name=".\Generated_Source\PSoC5\ADC_SAR_1.c" />
 <dep name=".\Generated_Source\PSoC5\ADC_SAR_1.h" />
@@ -1406,11 +1437,33 @@
 <file name=".\Generated_Source\PSoC5\cydevicegnu.inc" />
 <file name=".\Generated_Source\PSoC5\cydevicegnu_trm.inc" />
 <file name=".\Generated_Source\PSoC5\cyfittergnu.inc" />
-<file name=".\CortexM3\ARM_GCC_493\Debug\linkedlist.o">
-<dep name=".\linkedlist.c" />
-<dep name=".\linkedlist.h" />
+<file name=".\defines.h" />
+<file name=".\Generated_Source\PSoC5\Enable1.h" />
+<file name=".\Generated_Source\PSoC5\Enable1_aliases.h" />
+<file name=".\Generated_Source\PSoC5\Enable2.h" />
+<file name=".\Generated_Source\PSoC5\Enable2_aliases.h" />
+<file name=".\CortexM3\ARM_GCC_493\Debug\Enable1.o">
+<dep name=".\Generated_Source\PSoC5\Enable1.c" />
+<dep name=".\Generated_Source\PSoC5\Enable1.h" />
+<dep name=".\Generated_Source\PSoC5\Enable1_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
 </file>
-<file name=".\linkedlist.c" />
+<file name=".\Generated_Source\PSoC5\Enable1.c" />
+<file name=".\CortexM3\ARM_GCC_493\Debug\Enable2.o">
+<dep name=".\Generated_Source\PSoC5\Enable2.c" />
+<dep name=".\Generated_Source\PSoC5\Enable2.h" />
+<dep name=".\Generated_Source\PSoC5\Enable2_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\Enable2.c" />
 <file name=".\Generated_Source\PSoC5\UART_2.h" />
 <file name=".\Generated_Source\PSoC5\UART_2_IntClock.h" />
 <file name=".\CortexM3\ARM_GCC_493\Debug\UART_2.o">
@@ -2030,9 +2083,13 @@
 <name_val_pair name=".\linkedlist.c" v="-mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
 <name_val_pair name="D:\Group3\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn\CortexM3\ARM_GCC_493\Debug\Design01.hex" v="-mcpu=cortex-m3 -mthumb -g -ffunction-sections -Og -ffat-lto-objects -L Generated_Source\PSoC5 -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections" />
 <name_val_pair name=".\Generated_Source\PSoC5\isr_3.c" v="-mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
+<name_val_pair name="H:\Group3\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn\CortexM3\ARM_GCC_493\Debug\Design01.hex" v="-mcpu=cortex-m3 -mthumb -g -ffunction-sections -Og -ffat-lto-objects -l m -L Generated_Source\PSoC5 -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections" />
+<name_val_pair name=".\Generated_Source\PSoC5\Enable1.c" v="-mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
+<name_val_pair name=".\Generated_Source\PSoC5\Enable2.c" v="-mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
+<name_val_pair name=".\Astarpathfinding.c" v="-mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects" />
 </name>
 </genericCmdLineData>
-<codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\bwil410\AppData\Local\Cypress Semiconductor\PSoC Creator\3.3&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p D:\Group3\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn\Design01.cyprj -d CY8C5888LTI-LP097 -s D:\Group3\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
+<codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\bwil410\AppData\Local\Cypress Semiconductor\PSoC Creator\3.3&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p H:\Group3\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn\Design01.cyprj -d CY8C5888LTI-LP097 -s H:\Group3\PacMan-Robot\301_Group_3_Software\PSOC_code_T1\Workspace01\Design01.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
 </CyGuid_b0374e30-ce3a-47f2-ad85-821643292c68>
 </dataGuid>
 <dataGuid v="925cc1e1-309e-4e08-b0a1-09a83c35b157">
@@ -4039,6 +4096,12 @@
 <v>.\Generated_Source\PSoC5\USBUART_Dp.h</v>
 <v>.\Generated_Source\PSoC5\isr_3.c</v>
 <v>.\Generated_Source\PSoC5\isr_3.h</v>
+<v>.\Generated_Source\PSoC5\Enable1_aliases.h</v>
+<v>.\Generated_Source\PSoC5\Enable1.c</v>
+<v>.\Generated_Source\PSoC5\Enable1.h</v>
+<v>.\Generated_Source\PSoC5\Enable2_aliases.h</v>
+<v>.\Generated_Source\PSoC5\Enable2.c</v>
+<v>.\Generated_Source\PSoC5\Enable2.h</v>
 </gen_list>
 <warp_dep>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
@@ -4048,14 +4111,14 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="132118796896302246" />
+<deps_time v="132151454544286909" />
 <top_block v="TopDesign" />
 <last_generation v="1" />
 </CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157>
 </dataGuid>
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
-<deps_time v="132118797110015288" />
+<deps_time v="132151507769675675" />
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>
 <dataGuid v="504337dd-7d07-4bc7-9057-90e60cf6c469">

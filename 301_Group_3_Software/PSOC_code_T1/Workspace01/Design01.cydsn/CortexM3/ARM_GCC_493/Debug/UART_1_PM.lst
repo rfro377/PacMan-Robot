@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 1
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccAX6268.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 1
   29:.\Generated_Source\PSoC5/UART_1_PM.c **** 
   30:.\Generated_Source\PSoC5/UART_1_PM.c **** 
   31:.\Generated_Source\PSoC5/UART_1_PM.c **** 
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 2
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccAX6268.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/UART_1_PM.c **** /*******************************************************************************
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 1
   69:.\Generated_Source\PSoC5/UART_1_PM.c **** *
   70:.\Generated_Source\PSoC5/UART_1_PM.c **** * Parameters:
   71:.\Generated_Source\PSoC5/UART_1_PM.c **** *  None.
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 3
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccAX6268.s 			page 3
 
 
   72:.\Generated_Source\PSoC5/UART_1_PM.c **** *
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 1
  109:.\Generated_Source\PSoC5/UART_1_PM.c **** *
  110:.\Generated_Source\PSoC5/UART_1_PM.c **** * Return:
  111:.\Generated_Source\PSoC5/UART_1_PM.c **** *  None.
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 4
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccAX6268.s 			page 4
 
 
  112:.\Generated_Source\PSoC5/UART_1_PM.c **** *
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 1
  141:.\Generated_Source\PSoC5/UART_1_PM.c **** 
  142:.\Generated_Source\PSoC5/UART_1_PM.c ****     UART_1_Stop();
   86              		.loc 1 142 0
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 5
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccAX6268.s 			page 5
 
 
   87 001a FFF7FEFF 		bl	UART_1_Stop
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 1
  110 0000 08B5     		push	{r3, lr}
  111              		.cfi_def_cfa_offset 8
  112              		.cfi_offset 3, -8
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 6
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccAX6268.s 			page 6
 
 
  113              		.cfi_offset 14, -4
@@ -350,36 +350,36 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 1
  148 0006 00000000 		.4byte	.Ldebug_abbrev0
  149 000a 04       		.byte	0x4
  150 000b 01       		.uleb128 0x1
- 151 000c C9000000 		.4byte	.LASF23
+ 151 000c 75000000 		.4byte	.LASF23
  152 0010 01       		.byte	0x1
- 153 0011 B2010000 		.4byte	.LASF24
- 154 0015 75000000 		.4byte	.LASF25
+ 153 0011 5E010000 		.4byte	.LASF24
+ 154 0015 12020000 		.4byte	.LASF25
  155 0019 00000000 		.4byte	.Ldebug_ranges0+0
  156 001d 00000000 		.4byte	0
  157 0021 00000000 		.4byte	.Ldebug_line0
  158 0025 02       		.uleb128 0x2
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 7
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccAX6268.s 			page 7
 
 
  159 0026 01       		.byte	0x1
  160 0027 06       		.byte	0x6
- 161 0028 F6010000 		.4byte	.LASF0
+ 161 0028 A2010000 		.4byte	.LASF0
  162 002c 02       		.uleb128 0x2
  163 002d 01       		.byte	0x1
  164 002e 08       		.byte	0x8
- 165 002f 6C010000 		.4byte	.LASF1
+ 165 002f 18010000 		.4byte	.LASF1
  166 0033 02       		.uleb128 0x2
  167 0034 02       		.byte	0x2
  168 0035 05       		.byte	0x5
- 169 0036 2B020000 		.4byte	.LASF2
+ 169 0036 D7010000 		.4byte	.LASF2
  170 003a 02       		.uleb128 0x2
  171 003b 02       		.byte	0x2
  172 003c 07       		.byte	0x7
- 173 003d E3010000 		.4byte	.LASF3
+ 173 003d 8F010000 		.4byte	.LASF3
  174 0041 02       		.uleb128 0x2
  175 0042 04       		.byte	0x4
  176 0043 05       		.byte	0x5
- 177 0044 7F010000 		.4byte	.LASF4
+ 177 0044 2B010000 		.4byte	.LASF4
  178 0048 02       		.uleb128 0x2
  179 0049 04       		.byte	0x4
  180 004a 07       		.byte	0x7
@@ -408,20 +408,20 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 1
  203 0077 02       		.uleb128 0x2
  204 0078 04       		.byte	0x4
  205 0079 04       		.byte	0x4
- 206 007a 17020000 		.4byte	.LASF9
+ 206 007a C3010000 		.4byte	.LASF9
  207 007e 02       		.uleb128 0x2
  208 007f 08       		.byte	0x8
  209 0080 04       		.byte	0x4
- 210 0081 9D010000 		.4byte	.LASF10
+ 210 0081 49010000 		.4byte	.LASF10
  211 0085 02       		.uleb128 0x2
  212 0086 01       		.byte	0x1
  213 0087 08       		.byte	0x8
- 214 0088 7A010000 		.4byte	.LASF11
+ 214 0088 26010000 		.4byte	.LASF11
  215 008c 04       		.uleb128 0x4
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 8
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccAX6268.s 			page 8
 
 
- 216 008d 35020000 		.4byte	.LASF13
+ 216 008d E1010000 		.4byte	.LASF13
  217 0091 02       		.byte	0x2
  218 0092 3C02     		.2byte	0x23c
  219 0094 98000000 		.4byte	0x98
@@ -430,9 +430,9 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 1
  222 009d 02       		.uleb128 0x2
  223 009e 04       		.byte	0x4
  224 009f 07       		.byte	0x7
- 225 00a0 48020000 		.4byte	.LASF14
+ 225 00a0 F4010000 		.4byte	.LASF14
  226 00a4 06       		.uleb128 0x6
- 227 00a5 57010000 		.4byte	.LASF26
+ 227 00a5 03010000 		.4byte	.LASF26
  228 00a9 01       		.byte	0x1
  229 00aa 03       		.byte	0x3
  230 00ab 45       		.byte	0x45
@@ -445,7 +445,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 1
  237 00bb 00       		.byte	0
  238 00bc 00       		.byte	0
  239 00bd 08       		.uleb128 0x8
- 240 00be 51020000 		.4byte	.LASF15
+ 240 00be FD010000 		.4byte	.LASF15
  241 00c2 03       		.byte	0x3
  242 00c3 4D       		.byte	0x4d
  243 00c4 A4000000 		.4byte	0xa4
@@ -458,7 +458,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 1
  250 00d7 01       		.uleb128 0x1
  251 00d8 9C       		.byte	0x9c
  252 00d9 09       		.uleb128 0x9
- 253 00da 02020000 		.4byte	.LASF17
+ 253 00da AE010000 		.4byte	.LASF17
  254 00de 01       		.byte	0x1
  255 00df 57       		.byte	0x57
  256 00e0 00000000 		.4byte	.LFB1
@@ -478,11 +478,11 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 1
  270 0100 1E000000 		.4byte	.LVL0
  271 0104 42010000 		.4byte	0x142
  272 0108 00       		.byte	0
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 9
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccAX6268.s 			page 9
 
 
  273 0109 0A       		.uleb128 0xa
- 274 010a 3A020000 		.4byte	.LASF19
+ 274 010a E6010000 		.4byte	.LASF19
  275 010e 01       		.byte	0x1
  276 010f AC       		.byte	0xac
  277 0110 00000000 		.4byte	.LFB3
@@ -498,7 +498,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 1
  287 012c 50010000 		.4byte	0x150
  288 0130 00       		.byte	0
  289 0131 0C       		.uleb128 0xc
- 290 0132 A4010000 		.4byte	.LASF28
+ 290 0132 50010000 		.4byte	.LASF28
  291 0136 01       		.byte	0x1
  292 0137 18       		.byte	0x18
  293 0138 BD000000 		.4byte	0xbd
@@ -506,15 +506,15 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 1
  295 013d 03       		.byte	0x3
  296 013e 00000000 		.4byte	UART_1_backup
  297 0142 0D       		.uleb128 0xd
- 298 0143 D7010000 		.4byte	.LASF20
+ 298 0143 83010000 		.4byte	.LASF20
  299 0147 03       		.byte	0x3
  300 0148 55       		.byte	0x55
  301 0149 0D       		.uleb128 0xd
- 302 014a 88010000 		.4byte	.LASF21
+ 302 014a 34010000 		.4byte	.LASF21
  303 014e 03       		.byte	0x3
  304 014f 75       		.byte	0x75
  305 0150 0D       		.uleb128 0xd
- 306 0151 1D020000 		.4byte	.LASF22
+ 306 0151 C9010000 		.4byte	.LASF22
  307 0155 03       		.byte	0x3
  308 0156 5A       		.byte	0x5a
  309 0157 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 1
  327 000f 10       		.uleb128 0x10
  328 0010 17       		.uleb128 0x17
  329 0011 00       		.byte	0
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 10
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccAX6268.s 			page 10
 
 
  330 0012 00       		.byte	0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 1
  384 0048 01       		.uleb128 0x1
  385 0049 13       		.uleb128 0x13
  386 004a 00       		.byte	0
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 11
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccAX6268.s 			page 11
 
 
  387 004b 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 1
  441 0082 01       		.byte	0x1
  442 0083 3F       		.uleb128 0x3f
  443 0084 19       		.uleb128 0x19
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 12
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccAX6268.s 			page 12
 
 
  444 0085 03       		.uleb128 0x3
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 1
  498 00be 0B       		.uleb128 0xb
  499 00bf 27       		.uleb128 0x27
  500 00c0 19       		.uleb128 0x19
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 13
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccAX6268.s 			page 13
 
 
  501 00c1 3C       		.uleb128 0x3c
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 1
  544      20696E74 
  544      00
  545              	.LASF18:
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 14
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccAX6268.s 			page 14
 
 
  546 0027 55415254 		.ascii	"UART_1_Sleep\000"
@@ -806,125 +806,125 @@ ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 1
  554      6720756E 
  554      7369676E 
  554      65642069 
- 555              	.LASF25:
- 556 0075 443A5C47 		.ascii	"D:\\Group3\\PacMan-Robot\\301_Group_3_Software\\PSO"
- 556      726F7570 
- 556      335C5061 
- 556      634D616E 
- 556      2D526F62 
- 557 00a4 435F636F 		.ascii	"C_code_T1\\Workspace01\\Design01.cydsn\000"
- 557      64655F54 
- 557      315C576F 
- 557      726B7370 
- 557      61636530 
- 558              	.LASF23:
- 559 00c9 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 559      4320342E 
- 559      392E3320 
- 559      32303135 
- 559      30333033 
- 560 00fc 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 560      20726576 
- 560      6973696F 
- 560      6E203232 
- 560      31323230 
- 561 012f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 561      66756E63 
- 561      74696F6E 
- 561      2D736563 
- 561      74696F6E 
- 562              	.LASF26:
- 563 0157 55415254 		.ascii	"UART_1_backupStruct_\000"
- 563      5F315F62 
- 563      61636B75 
- 563      70537472 
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 15
+ 555              	.LASF23:
+ 556 0075 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 556      4320342E 
+ 556      392E3320 
+ 556      32303135 
+ 556      30333033 
+ 557 00a8 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 557      20726576 
+ 557      6973696F 
+ 557      6E203232 
+ 557      31323230 
+ 558 00db 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 558      66756E63 
+ 558      74696F6E 
+ 558      2D736563 
+ 558      74696F6E 
+ 559              	.LASF26:
+ 560 0103 55415254 		.ascii	"UART_1_backupStruct_\000"
+ 560      5F315F62 
+ 560      61636B75 
+ 560      70537472 
+ 560      7563745F 
+ 561              	.LASF1:
+ 562 0118 756E7369 		.ascii	"unsigned char\000"
+ 562      676E6564 
+ 562      20636861 
+ 562      7200
+ 563              	.LASF11:
+ 564 0126 63686172 		.ascii	"char\000"
+ 564      00
+ 565              	.LASF4:
+ 566 012b 6C6F6E67 		.ascii	"long int\000"
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccAX6268.s 			page 15
 
 
- 563      7563745F 
- 564              	.LASF1:
- 565 016c 756E7369 		.ascii	"unsigned char\000"
- 565      676E6564 
- 565      20636861 
- 565      7200
- 566              	.LASF11:
- 567 017a 63686172 		.ascii	"char\000"
- 567      00
- 568              	.LASF4:
- 569 017f 6C6F6E67 		.ascii	"long int\000"
- 569      20696E74 
- 569      00
- 570              	.LASF21:
- 571 0188 55415254 		.ascii	"UART_1_ClearRxBuffer\000"
- 571      5F315F43 
- 571      6C656172 
- 571      52784275 
- 571      66666572 
- 572              	.LASF10:
- 573 019d 646F7562 		.ascii	"double\000"
- 573      6C6500
- 574              	.LASF28:
- 575 01a4 55415254 		.ascii	"UART_1_backup\000"
- 575      5F315F62 
- 575      61636B75 
- 575      7000
- 576              	.LASF24:
- 577 01b2 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\UART_1_PM.c\000"
- 577      6E657261 
- 577      7465645F 
- 577      536F7572 
- 577      63655C50 
- 578              	.LASF20:
- 579 01d7 55415254 		.ascii	"UART_1_Stop\000"
- 579      5F315F53 
- 579      746F7000 
- 580              	.LASF3:
- 581 01e3 73686F72 		.ascii	"short unsigned int\000"
- 581      7420756E 
- 581      7369676E 
- 581      65642069 
- 581      6E7400
- 582              	.LASF0:
- 583 01f6 7369676E 		.ascii	"signed char\000"
- 583      65642063 
- 583      68617200 
- 584              	.LASF17:
- 585 0202 55415254 		.ascii	"UART_1_RestoreConfig\000"
- 585      5F315F52 
- 585      6573746F 
- 585      7265436F 
- 585      6E666967 
- 586              	.LASF9:
- 587 0217 666C6F61 		.ascii	"float\000"
- 587      7400
- 588              	.LASF22:
-ARM GAS  C:\Users\bwil410\AppData\Local\Temp\cc0Kebqe.s 			page 16
+ 566      20696E74 
+ 566      00
+ 567              	.LASF21:
+ 568 0134 55415254 		.ascii	"UART_1_ClearRxBuffer\000"
+ 568      5F315F43 
+ 568      6C656172 
+ 568      52784275 
+ 568      66666572 
+ 569              	.LASF10:
+ 570 0149 646F7562 		.ascii	"double\000"
+ 570      6C6500
+ 571              	.LASF28:
+ 572 0150 55415254 		.ascii	"UART_1_backup\000"
+ 572      5F315F62 
+ 572      61636B75 
+ 572      7000
+ 573              	.LASF24:
+ 574 015e 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\UART_1_PM.c\000"
+ 574      6E657261 
+ 574      7465645F 
+ 574      536F7572 
+ 574      63655C50 
+ 575              	.LASF20:
+ 576 0183 55415254 		.ascii	"UART_1_Stop\000"
+ 576      5F315F53 
+ 576      746F7000 
+ 577              	.LASF3:
+ 578 018f 73686F72 		.ascii	"short unsigned int\000"
+ 578      7420756E 
+ 578      7369676E 
+ 578      65642069 
+ 578      6E7400
+ 579              	.LASF0:
+ 580 01a2 7369676E 		.ascii	"signed char\000"
+ 580      65642063 
+ 580      68617200 
+ 581              	.LASF17:
+ 582 01ae 55415254 		.ascii	"UART_1_RestoreConfig\000"
+ 582      5F315F52 
+ 582      6573746F 
+ 582      7265436F 
+ 582      6E666967 
+ 583              	.LASF9:
+ 584 01c3 666C6F61 		.ascii	"float\000"
+ 584      7400
+ 585              	.LASF22:
+ 586 01c9 55415254 		.ascii	"UART_1_Enable\000"
+ 586      5F315F45 
+ 586      6E61626C 
+ 586      6500
+ 587              	.LASF2:
+ 588 01d7 73686F72 		.ascii	"short int\000"
+ 588      7420696E 
+ 588      7400
+ 589              	.LASF13:
+ 590 01e1 72656738 		.ascii	"reg8\000"
+ 590      00
+ARM GAS  C:\Users\bwil410\AppData\Local\Temp\ccAX6268.s 			page 16
 
 
- 589 021d 55415254 		.ascii	"UART_1_Enable\000"
- 589      5F315F45 
- 589      6E61626C 
- 589      6500
- 590              	.LASF2:
- 591 022b 73686F72 		.ascii	"short int\000"
- 591      7420696E 
- 591      7400
- 592              	.LASF13:
- 593 0235 72656738 		.ascii	"reg8\000"
- 593      00
- 594              	.LASF19:
- 595 023a 55415254 		.ascii	"UART_1_Wakeup\000"
- 595      5F315F57 
- 595      616B6575 
- 595      7000
- 596              	.LASF14:
- 597 0248 73697A65 		.ascii	"sizetype\000"
- 597      74797065 
- 597      00
- 598              	.LASF15:
- 599 0251 55415254 		.ascii	"UART_1_BACKUP_STRUCT\000"
- 599      5F315F42 
- 599      41434B55 
- 599      505F5354 
- 599      52554354 
+ 591              	.LASF19:
+ 592 01e6 55415254 		.ascii	"UART_1_Wakeup\000"
+ 592      5F315F57 
+ 592      616B6575 
+ 592      7000
+ 593              	.LASF14:
+ 594 01f4 73697A65 		.ascii	"sizetype\000"
+ 594      74797065 
+ 594      00
+ 595              	.LASF15:
+ 596 01fd 55415254 		.ascii	"UART_1_BACKUP_STRUCT\000"
+ 596      5F315F42 
+ 596      41434B55 
+ 596      505F5354 
+ 596      52554354 
+ 597              	.LASF25:
+ 598 0212 483A5C47 		.ascii	"H:\\Group3\\PacMan-Robot\\301_Group_3_Software\\PSO"
+ 598      726F7570 
+ 598      335C5061 
+ 598      634D616E 
+ 598      2D526F62 
+ 599 0241 435F636F 		.ascii	"C_code_T1\\Workspace01\\Design01.cydsn\000"
+ 599      64655F54 
+ 599      315C576F 
+ 599      726B7370 
+ 599      61636530 
  600              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
