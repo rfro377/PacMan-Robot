@@ -11,7 +11,7 @@
 */
 #include <project.h>
 #include <stdio.h>
-#include <linkedlist.h>
+//#include <linkedlist.h>
 #include <math.h>
 
 
@@ -24,7 +24,7 @@
 #define OPT_ROTS (10)
 #define turn360 (28800000) //90 counts // 34560000 108
 #define turn1 (80000)
-#define mode (7)           //MODE1 = Speed Line  //MODE 2 Curves/U BETTA  //MODE 3 Right turn //MODE 4 Speed No Line //MODE 5 RF //MODE 6 straight
+#define mode (3)           //MODE1 = Speed Line  //MODE 2 Curves/U BETTA  //MODE 3 Right turn //MODE 4 Speed No Line //MODE 5 RF //MODE 6 straight
 #define int_speed1 (100)
 #define int_speed2 (100)
 #define int_speedmode1 (120)
@@ -38,6 +38,16 @@ OPT_ROTS equation
 ((1/(target frequency of ChaA)) x Num of rotations before adjustment) x (input clock 24mhz)
 1/75 x 10 x 24000000
 */
+
+/* IMPORTANT STATE LOGIC */
+
+    enum turn {L, R, I}; // LEFT RIGHT IGNORE
+    enum turn state;
+    enum turn array[3];
+    array[0] = L;
+    array[1] = R;
+    array[2] = I;
+    state = I;
  
 /* Global Varibles */
     int16 sensor1_mv;
@@ -85,8 +95,10 @@ OPT_ROTS equation
     uint16 robot_ypos = 9999;
     uint16 last_diffx = 0;
     uint16 last_diffy = 0;
+    uint16 leftTurn = 0;
+    uint16 rightTurn = 0;
     
-    
+     
 /* UART VARIBLES */
     
     char displaystring[64];
@@ -630,7 +642,7 @@ int main()
                     PWM_1_WriteCompare2(0);
                     PWM_2_WriteCompare1(pwm2_speed);
                     PWM_2_WriteCompare2(0);
-                    if(sensor4 == 0){
+                    if(sensor4 == 0 && (leftTurn == 1)){
                         turnState = 1;
                         turnFlagL = 1;
                     }
@@ -642,7 +654,7 @@ int main()
                     PWM_1_WriteCompare2(pwm1_speed);
                     PWM_2_WriteCompare1(0);
                     PWM_2_WriteCompare2(0); 
-                    if(sensor5 == 0){
+                    if(sensor5 == 0 && (rightTurn == 1)){
                         turnState = 1;
                         turnFlagR = 1;
                     }
@@ -786,7 +798,7 @@ int main()
                 PWM_2_WriteCompare2(0); 
             }
         }
-        if(mode == 7){
+        /*if(mode == 7){
             linkedlist ll;
             data d;
             setdata(&d,1,2,3,4,5,6,7); 
@@ -796,6 +808,7 @@ int main()
             data data = getlast(&ll);
             data = getfirst(&ll);
         }
+        */
             
         
         /*sensor1 = ADC_SAR_1_GetResult16();
