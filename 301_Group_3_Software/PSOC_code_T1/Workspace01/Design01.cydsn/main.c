@@ -44,9 +44,9 @@ OPT_ROTS equation
     enum turn {L, R, I}; // LEFT RIGHT IGNORE
     enum turn state;
     enum turn array[3];
-    array[0] = L;
-    array[1] = R;
-    array[2] = I;
+    //array[0] = L;
+    //array[1] = R;
+    //array[2] = I;
     state = I;
  
 /* Global Varibles */
